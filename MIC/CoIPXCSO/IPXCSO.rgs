@@ -1,0 +1,26 @@
+HKCR
+{
+	CoIPXCSO.IPXCSO.1 = s 'IPXCSO Class'
+	{
+		CLSID = s '{C2186BC1-FADA-440A-A7E8-8B1CEF2E8B5E}'
+	}
+	CoIPXCSO.IPXCSO = s 'IPXCSO Class'
+	{
+		CLSID = s '{C2186BC1-FADA-440A-A7E8-8B1CEF2E8B5E}'
+		CurVer = s 'CoIPXCSO.IPXCSO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {C2186BC1-FADA-440A-A7E8-8B1CEF2E8B5E} = s 'IPXCSO Class'
+		{
+			ProgID = s 'CoIPXCSO.IPXCSO.1'
+			VersionIndependentProgID = s 'CoIPXCSO.IPXCSO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{FB9331BA-611A-4C21-A905-65E2ADFC5BF4}'
+		}
+	}
+}

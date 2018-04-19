@@ -1,0 +1,756 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CoISRISO.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,0,0,6
+ PRODUCTVERSION 2,0,0,6
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", ""
+            VALUE "CompanyName", "Los Alamos National Laboratory"
+            VALUE "FileDescription", "CoISRISO Module April 18, 2018"
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "CoISRISO"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "OriginalFilename", "CoISRISO.DLL"
+            VALUE "PrivateBuild", ""
+            VALUE "ProductName", "CoISRISO Module April 18, 2018"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_ISRISO              REGISTRY DISCARDABLE    "ISRISO.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_LEGEND DIALOG DISCARDABLE  0, 0, 400, 225
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Legend"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | ES_READONLY | 
+                    WS_BORDER | WS_VSCROLL,0,0,399,225
+END
+
+IDD_ISRCDDATA_PAGE DIALOG DISCARDABLE  0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Configure ISR"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "This page reserved for future development.",IDC_STATIC,
+                    115,85,190,15
+END
+
+IDD_ISRMODPARAMS_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Modify Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ISRMODPARAMS_PORT,30,10,75,70,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ISRMODPARAMS_NODE,130,10,64,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_ISRMODPARAMS_NODE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,196,9,11,14
+    PUSHBUTTON      "&Browse",IDC_ISRMODPARAMS_BROWSE,8,48,32,13
+    EDITTEXT        IDC_ISRMODPARAMS_SAVELOC,40,40,172,20,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ISRMODPARAMS_FILEID,46,65,20,14,ES_CENTER | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_ISRMODPARAMS_FILEID_SPIN,"msctls_updown32",
+                    UDS_WRAP | UDS_ARROWKEYS | UDS_NOTHOUSANDS,66,65,11,14
+    CONTROL         "Log Data Filtering Msgs",IDC_ISRMODPARAMS_LOGFILTER,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | 
+                    WS_TABSTOP,123,61,88,10
+    CONTROL         "Do Dump File",IDC_ISRMODPARAMS_DODUMP,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,
+                    151,73,60,10
+    EDITTEXT        IDC_ISRMODPARAMS_HIGHVOLTH,90,101,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin9",IDC_ISRMODPARAMS_HIGHVOLTH_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,101,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_HIGHVOLTL,155,101,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin10",IDC_ISRMODPARAMS_HIGHVOLTL_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,101,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_BATVOLTH,90,121,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin9",IDC_ISRMODPARAMS_BATVOLTH_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,121,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_BATVOLTL,155,121,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin10",IDC_ISRMODPARAMS_BATVOLTL_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,121,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SUP_P15H,90,141,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin11",IDC_ISRMODPARAMS_SUP_P15H_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,141,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SUP_P15L,155,141,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin12",IDC_ISRMODPARAMS_SUP_P15L_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,141,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SUP_M15H,90,161,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin13",IDC_ISRMODPARAMS_SUP_M15H_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,161,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SUP_M15L,155,161,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin14",IDC_ISRMODPARAMS_SUP_M15L_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,161,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SUP_P05H,90,181,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin15",IDC_ISRMODPARAMS_SUP_P05H_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,181,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SUP_P05L,155,181,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin16",IDC_ISRMODPARAMS_SUP_P05L_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,181,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_TIME_ERR,65,202,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin8",IDC_ISRMODPARAMS_TIME_ERR_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,100,202,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_SLOW_RESET,170,202,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ISRMODPARAMS_SLOW_RESET_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,202,203,10,14
+    EDITTEXT        IDC_ISRMODPARAMS_MAXCYCLE,320,10,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_ISRMODPARAMS_MAXCYCLE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,375,10,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_MAXPAUSE,320,30,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_ISRMODPARAMS_MAXPAUSE_SPIN,"msctls_updown32",
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,30,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_MAXBBM,320,50,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin7",IDC_ISRMODPARAMS_MAXBBM_SPIN,"msctls_updown32",
+                    UDS_WRAP | UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,50,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_COMMFAIL,320,70,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ISRMODPARAMS_COMMFAIL_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,376,70,
+                    11,14
+    PUSHBUTTON      "Force Instrument Date && Time to Computer's",
+                    IDC_ISRMODPARAMS_DATETIME,225,88,164,12
+    CONTROL         "Set Date\\Time\nif < 1980",IDC_CHECK_ALLOWAUTODATE,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,225,
+                    102,64,18
+    CTEXT           "These items are multiples of ""Message Cycle Time"".",
+                    IDC_STATIC,224,123,39,52
+    EDITTEXT        IDC_ISRMODPARAMS_MAXINQUIRE,320,123,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin5",IDC_ISRMODPARAMS_MAXINQUIRE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,375,123,11,14
+    EDITTEXT        IDC_ISRMODPARAMS_TIMEOUT,320,143,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_ISRMODPARAMS_TIMEOUT_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,376,143,
+                    11,14
+    EDITTEXT        IDC_ISRMODPARAMS_MAXSTATUS,320,163,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin4",IDC_ISRMODPARAMS_MAXSTATUS_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,375,163,11,14
+    PUSHBUTTON      "&Load Default Values",
+                    IDC_ISRMODPARAMS_LOAD_DEFAULT_VALUES,225,195,55,25,
+                    BS_CENTER | BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "&Reset to Last Applied",
+                    IDC_ISRMODPARAMS_RESET_TO_LAST_APPLIED,287,195,50,25,
+                    BS_CENTER | BS_VCENTER | BS_MULTILINE
+    DEFPUSHBUTTON   "&Apply",IDC_ISRMODPARAMS_APPLY,341,192,53,31,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    LTEXT           "Slow Reset (Sec.)",IDC_STATIC,111,205,58,8
+    GROUPBOX        "Communications",IDC_STATIC,5,0,210,30
+    GROUPBOX        "Error Limits",IDC_STATIC,5,85,210,135
+    GROUPBOX        "File Output",IDC_STATIC,5,30,210,55
+    GROUPBOX        "General",IDC_STATIC,220,0,175,180
+    RTEXT           "Port:",IDC_STATIC,10,10,20,15,SS_CENTERIMAGE
+    RTEXT           "Node:",IDC_STATIC,105,9,25,15,SS_CENTERIMAGE
+    RTEXT           "Message Cycle Time (mSec):",IDC_STATIC,225,13,94,8
+    RTEXT           "Maximum Pause Time (Sec):",IDC_STATIC,225,33,94,8
+    RTEXT           "Maximum BBM (Bytes):",IDC_STATIC,225,53,94,8
+    CTEXT           "High",IDC_STATIC,98,90,20,8
+    CTEXT           "Low",IDC_STATIC,160,90,25,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,118,200,83
+    RTEXT           "Battery Voltage",IDC_STATIC,15,124,60,8
+    RTEXT           "+12 Volt Supply",IDC_STATIC,15,144,60,8
+    RTEXT           "-12 Volt Supply",IDC_STATIC,15,164,60,8
+    RTEXT           "5 Volt Supply",IDC_STATIC,15,184,60,8
+    RTEXT           "Time Delta (Sec.):",IDC_STATIC,8,205,57,8
+    RTEXT           "Take Status Every (units):",IDC_STATIC,267,163,50,15
+    RTEXT           "Inquire Every (units):",IDC_STATIC,275,123,42,18
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,80,98,130,103
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,145,98,65,103
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,138,200,63
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,158,200,43
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,178,200,23
+    RTEXT           "Location:",IDC_STATIC,9,39,30,8
+    CTEXT           "Changes will NOT take effect until you click on ""Apply"".",
+                    IDC_ISRMODPARAMS_STATICTEXT,220,182,175,10
+    RTEXT           "Station ID:",IDC_STATIC,10,68,34,8
+    RTEXT           "Response Time-Out (units):",IDC_STATIC,264,142,53,17
+    RTEXT           "# of Retransmits Before Fail:",IDC_STATIC,225,72,94,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,98,200,103
+    RTEXT           "High Voltage",IDC_STATIC,20,104,55,8
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | DTS_SHOWNONE | WS_TABSTOP | 
+                    0x8,320,103,68,15
+    RTEXT           "Auto\nSet at:",IDC_STATIC,293,103,24,16,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_ISRSUMMARY DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Summary"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "",IDC_ISRSUMMARY_HIGHVOLT1,121,26,42,8
+    CTEXT           "",IDC_ISRSUMMARY_HIGHVOLT2,177,26,42,8
+    CTEXT           "",IDC_ISRSUMMARY_HIGHVOLT3,233,26,42,8
+    CTEXT           "",IDC_ISRSUMMARY_BATTERY1,121,36,42,8
+    CTEXT           "",IDC_ISRSUMMARY_BATTERY2,177,36,42,8
+    CTEXT           "",IDC_ISRSUMMARY_BATTERY3,233,36,42,8
+    CTEXT           "",IDC_ISRSUMMARY_P15VOLT1,121,46,42,8
+    CTEXT           "",IDC_ISRSUMMARY_P15VOLT2,177,46,42,8
+    CTEXT           "",IDC_ISRSUMMARY_P15VOLT3,233,46,42,8
+    CTEXT           "",IDC_ISRSUMMARY_M15VOLT1,121,56,42,8
+    CTEXT           "",IDC_ISRSUMMARY_M15VOLT2,177,56,42,8
+    CTEXT           "",IDC_ISRSUMMARY_M15VOLT3,233,56,42,8
+    CTEXT           "",IDC_ISRSUMMARY_P5VOLT1,121,66,42,8
+    CTEXT           "",IDC_ISRSUMMARY_P5VOLT2,177,66,42,8
+    CTEXT           "",IDC_ISRSUMMARY_P5VOLT3,233,66,42,8
+    LTEXT           "",IDC_ISRSUMMARY_ACPOWER,131,100,170,8
+    LTEXT           "",IDC_ISRSUMMARY_BATTERYOK,131,110,170,8
+    LTEXT           "",IDC_ISRSUMMARY_BBMOK,131,120,170,8
+    LTEXT           "",IDC_ISRSUMMARY_INQUIRETIME,131,130,254,9
+    LTEXT           "",IDC_ISRSUMMARY_COMMAND6,10,150,290,10
+    LTEXT           "",IDC_ISRSUMMARY_COMMAND5,10,162,290,10
+    LTEXT           "",IDC_ISRSUMMARY_COMMAND4,10,174,290,10
+    LTEXT           "",IDC_ISRSUMMARY_COMMAND3,10,186,290,10
+    LTEXT           "",IDC_ISRSUMMARY_COMMAND2,10,198,290,10
+    LTEXT           "",IDC_ISRSUMMARY_COMMAND1,10,210,290,10
+    GROUPBOX        "ISR Setup",IDC_STATIC,5,5,385,75
+    GROUPBOX        "Data Status",IDC_STATIC,5,80,385,60
+    PUSHBUTTON      "Go To\n&ISR Setup Page",IDC_GOTO_ISR_SETUP_PAGE,310,15,
+                    75,40,BS_CENTER | BS_VCENTER | BS_MULTILINE,
+                    WS_EX_CLIENTEDGE | WS_EX_RIGHT
+    PUSHBUTTON      "Go To \n&Data Status Page",IDC_GOTO_DATASTAT,310,88,75,
+                    40,BS_MULTILINE,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Go To\n&Monitor Parameters Page",
+                    IDC_GOTO_ISR_MONITOR_PARAMS_PAGE,310,155,75,40,
+                    BS_MULTILINE,WS_EX_CLIENTEDGE
+    RTEXT           "-12 Volt Supply",IDC_STATIC,40,56,71,8
+    RTEXT           "+12 Volt Supply",IDC_STATIC,40,46,71,8
+    RTEXT           "Battery Voltage",IDC_STATIC,40,36,71,8
+    RTEXT           "+5 Volt Supply",IDC_STATIC,40,66,71,8
+    RTEXT           "Battery:",IDC_STATIC,81,110,48,8
+    RTEXT           "Battery Backed Up Memory:",IDC_STATIC,36,120,93,8
+    RTEXT           "Ext. Power:",IDC_STATIC,30,100,99,8
+    RTEXT           "Last INQUIRE Status (Y.M.D H:M:S):",IDC_STATIC,12,130,
+                    117,8
+    RTEXT           "High Voltage",IDC_STATIC,40,26,71,8
+    CTEXT           "Current",IDC_STATIC,177,16,42,8
+    CTEXT           "Minimum",IDC_STATIC,121,16,42,8
+    CTEXT           "Maximum",IDC_STATIC,233,16,42,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,35,25,245,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,225,15,55,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,35,35,245,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,35,45,245,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,35,55,245,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,35,65,245,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,170,15,110,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,115,15,165,60
+    GROUPBOX        "Recent Commands and Responses",IDC_STATIC,5,140,298,81
+END
+
+IDD_ISRGENERALSTAT_PAGE DIALOG DISCARDABLE  0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "ISR Setup"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Battery:",IDC_STATIC,19,55,26,8
+    RTEXT           "HV Set Point:",IDC_STATIC,18,30,46,8
+    RTEXT           "-12 Volt Supply",IDC_STATIC,120,91,76,8
+    RTEXT           "High Voltage",IDC_STATIC,120,61,76,8
+    RTEXT           "+12 Volt Supply",IDC_STATIC,116,81,81,8
+    RTEXT           "Battery Voltage",IDC_STATIC,116,71,81,8
+    RTEXT           "+5 Volt Supply",IDC_STATIC,120,101,76,8
+    RTEXT           "Date && Time (Y.M.D H:M:S):",IDC_STATIC,10,10,96,8
+    LTEXT           "",IDC_ISRSETUP_TIME,110,10,275,8
+    LTEXT           "",IDC_ISRSETUP_BATTERY,48,55,49,8
+    LTEXT           "",IDC_ISRSETUP_HVSETPOINT,65,30,49,8
+    CTEXT           "",IDC_ISRSETUP_HV1,206,61,46,8
+    CTEXT           "",IDC_ISRSETUP_BV1,206,71,46,8
+    CTEXT           "",IDC_ISRSETUP_P15VOLT1,206,81,46,8
+    CTEXT           "",IDC_ISRSETUP_M15VOLT1,206,91,46,8
+    CTEXT           "",IDC_ISRSETUP_P5VOLT1,206,101,46,8
+    GROUPBOX        "Recent Trigger Signal Records (Status YYYY.MM.DD HH:MM:SS)",
+                    IDC_STATIC,5,115,385,65,BS_LEFT
+    GROUPBOX        "Most Recent STATUS SR Record",IDC_STATIC,5,0,385,115
+    ICON            IDR_MAINFRAME,IDC_STATIC,268,192,20,20
+    GROUPBOX        "",IDC_STATIC,259,180,131,40
+    LTEXT           "No",IDC_ISRSETUP_CHECKSUM,10,189,241,29,SS_NOPREFIX
+    RTEXT           "Count Time (Sec.):",IDC_STATIC,115,30,62,8
+    RTEXT           "Pre-Delay (uSec):",IDC_STATIC,7,40,57,8
+    RTEXT           "Gate Width (uSec):",IDC_STATIC,115,40,62,8
+    LTEXT           "",IDC_ISRSETUP_COUNTT,180,30,60,8
+    LTEXT           "",IDC_ISRSETUP_PREDELAY,65,40,48,8
+    LTEXT           "",IDC_ISRSETUP_GATEWIDTH,180,40,60,8
+    RTEXT           "Temperature On Board (C):",IDC_STATIC,240,30,86,8
+    RTEXT           "Temperature Off Board (C):",IDC_STATIC,240,40,86,8
+    LTEXT           "",IDC_ISRSETUP_TEMPONN,329,30,51,8
+    LTEXT           "",IDC_ISRSETUP_TEMPOFF,329,40,51,8
+    CTEXT           "",IDC_ISRSETUP_HV2,268,61,46,8
+    CTEXT           "",IDC_ISRSETUP_BV2,268,71,46,8
+    CTEXT           "",IDC_ISRSETUP_P15VOLT2,268,81,46,8
+    CTEXT           "",IDC_ISRSETUP_M15VOLT2,268,91,46,8
+    CTEXT           "",IDC_ISRSETUP_P5VOLT2,268,101,46,8
+    CTEXT           "",IDC_ISRSETUP_HV3,330,61,46,8
+    CTEXT           "",IDC_ISRSETUP_BV3,330,71,46,8
+    CTEXT           "",IDC_ISRSETUP_P15VOLT3,330,81,46,8
+    CTEXT           "",IDC_ISRSETUP_M15VOLT3,330,91,46,8
+    CTEXT           "",IDC_ISRSETUP_P5VOLT3,330,101,46,8
+    CTEXT           "Minimum",IDC_STATIC,206,51,46,8
+    CTEXT           "Current",IDC_STATIC,268,51,46,8
+    CTEXT           "Maximum",IDC_STATIC,330,51,46,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,110,60,275,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,320,50,65,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,260,50,125,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,200,50,185,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,110,70,275,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,110,80,275,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,110,90,275,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,110,100,275,10
+    GROUPBOX        "Checksum or Length Error in Any Message and Communications Status",
+                    IDC_STATIC,5,180,250,40
+    RTEXT           "Ext. Power:",IDC_STATIC,18,20,46,8
+    LTEXT           "",IDC_ISRSETUP_ACPOWER,65,20,321,8
+    RTEXT           "Baud:",IDC_STATIC,15,65,30,8
+    LTEXT           "",IDC_ISRSETUP_BAUD,48,65,49,8
+    RTEXT           "Port Set:",IDC_STATIC,16,75,29,8
+    LTEXT           "",IDC_ISRSETUP_PORTSET,48,75,49,8
+    RTEXT           "Chan. 0",IDC_STATIC,10,125,25,8
+    RTEXT           "Chan. 1",IDC_STATIC,10,135,25,8
+    RTEXT           "Chan. 2",IDC_STATIC,10,145,25,8
+    RTEXT           "Chan. 3",IDC_STATIC,10,155,25,8
+    LTEXT           "",IDC_ISRSETUP_CH0A,40,125,164,8
+    LTEXT           "",IDC_ISRSETUP_CH0B,216,125,164,8
+    LTEXT           "",IDC_ISRSETUP_CH1A,40,135,164,8
+    LTEXT           "",IDC_ISRSETUP_CH1B,216,135,164,8
+    LTEXT           "",IDC_ISRSETUP_CH2A,40,145,164,8
+    LTEXT           "",IDC_ISRSETUP_CH2B,216,145,164,8
+    LTEXT           "",IDC_ISRSETUP_CH3A,40,155,164,8
+    LTEXT           "",IDC_ISRSETUP_CH3B,216,155,164,8
+    RTEXT           "Sig. Ch.",IDC_STATIC,10,165,25,8
+    LTEXT           "",IDC_ISRSETUP_CH4A,40,165,164,8
+    LTEXT           "",IDC_ISRSETUP_CH4B,216,165,164,8
+    CTEXT           "ISR/AMSR",IDC_STATIC,293,186,94,8
+    CTEXT           "Version x.x.x.x MMM dd yyyy",IDC_GENERAL_STATIC_ADVERT,
+                    293,202,94,8
+    CTEXT           "MIC Instrument Component",IDC_STATIC,293,193,95,8
+    CTEXT           "Debug or Release",IDC_STATIC_DEBUG,294,210,94,8
+END
+
+IDD_ISRUSERPROGSTAT_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Monitor Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "Date && Time (Y.M.D H:M:S):",IDC_STATIC,7,9,108,8
+    CONTROL         "",IDC_ISRUSERPROG_TIME,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,120,9,270,8
+    RTEXT           "Immediate Buffer Size / Save Size:",IDC_STATIC,10,27,
+                    110,8
+    CONTROL         "",IDC_ISRUSERPROG_IMMEDIATE,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,121,27,265,10
+    RTEXT           "Local Background Definition:",IDC_STATIC,10,36,110,8
+    CONTROL         "",IDC_ISRUSERPROG_LOCALBACK,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,121,36,265,10
+    RTEXT           "No Filter Condition:",IDC_STATIC,46,46,74,8
+    CONTROL         "",IDC_ISRUSERPROG_NOFILTER,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,121,46,265,10
+    RTEXT           "Filter Method:",IDC_STATIC,240,56,55,8
+    CONTROL         "",IDC_ISRUSERPROG_FILTERMETH,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,296,56,90,8
+    RTEXT           "Type && Active Polarity:",IDC_STATIC,18,88,76,8
+    CTEXT           "",IDC_ISRUSERPROG_TRIGPOLAR0,100,88,53,9,SS_NOPREFIX
+    RTEXT           "Delay (Sec)  Width (mSec):",IDC_STATIC,10,99,85,8
+    CTEXT           "",IDC_ISRUSERPROG_TRIGWIDTH0,100,99,53,9,SS_NOPREFIX
+    RTEXT           "Filtering Enabled:",IDC_STATIC,60,56,60,8
+    CONTROL         "",IDC_ISRUSERPROG_FILTERENAB,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,121,56,78,8
+    CONTROL         "",IDC_ISRUSERPROG_TOTALSF,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,197,125,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_AUX1F,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,251,125,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_AUX2F,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,311,125,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_REALSF,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,133,125,55,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_TOTALSTH,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,197,135,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_AUX1TH,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,251,135,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_AUX2TH,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,312,135,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_REALSTH,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,133,135,55,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_TOTALS3ST,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,197,153,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_AUX13ST,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,251,153,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_AUX23ST,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,312,153,45,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_ISRUSERPROG_REALS3ST,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,133,153,55,8,WS_EX_TRANSPARENT
+    RTEXT           "Synchronization Enabled && Interval:",IDC_STATIC,10,179,
+                    125,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_ISRUSERPROG_SYNCE,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,138,179,81,10
+    RTEXT           "Synchronization time (hh:mm:ss):",IDC_STATIC,10,189,125,
+                    8,SS_CENTERIMAGE
+    CONTROL         "",IDC_ISRUSERPROG_SYNCT,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,138,189,81,8
+    RTEXT           "Synchronization Lower Limit (Seconds):",IDC_STATIC,10,
+                    199,125,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_ISRUSERPROG_SYNCL,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,138,199,79,8
+    RTEXT           "Synchronization Upper Limit (Minutes):",IDC_STATIC,10,
+                    209,125,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_ISRUSERPROG_SYNCU,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,138,209,79,8
+    RTEXT           "Log Battery Info Every (Minutes):",IDC_STATIC,229,209,
+                    106,8
+    CONTROL         "",IDC_ISRUSERPROG_LOGBATT,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,340,209,50,8
+    RTEXT           "Filtering Threshold / Sigma",IDC_STATIC,30,124,89,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "High Threshold",IDC_STATIC,30,134,89,8,0,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Chan. 1 (Totals)",IDC_STATIC,192,114,54,8,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    CTEXT           "Chan. 2 (Aux 1)",IDC_STATIC,247,114,54,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Chan. 3 (Aux 2)",IDC_STATIC,307,114,54,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Chan. 0 (Reals)",IDC_STATIC,133,114,54,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,5,20,390,155
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,26,123,340,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,26,133,340,30
+    RTEXT           "Triggering Sigma Test",IDC_STATIC,35,153,84,8,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "Most Recent Monitor Parameters Status Record",
+                    IDC_STATIC,6,0,390,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,126,113,240,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,191,113,175,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,301,113,65,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,246,113,120,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,26,143,340,10
+    RTEXT           "Status Check Every (Minutes):",IDC_STATIC,237,199,98,8,
+                    WS_TABSTOP
+    CONTROL         "",IDC_ISRUSERPROG_STATCHECK,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,340,199,50,8
+    RTEXT           "Low Limit",IDC_STATIC,59,144,60,8
+    CONTROL         " ",IDC_ISRUSERPROG_TOTALSTL,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,197,144,45,8
+    CONTROL         "",IDC_ISRUSERPROG_AUX1TL,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,251,144,45,8
+    CONTROL         "",IDC_ISRUSERPROG_AUX2TL,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,312,144,45,8
+    CONTROL         "",IDC_ISRUSERPROG_REALSTL,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,133,144,55,8
+    GROUPBOX        "",IDC_STATIC,5,174,217,45
+    GROUPBOX        "",IDC_STATIC,226,174,169,45
+    CTEXT           "",IDC_ISRUSERPROG_TRIGPOLAR1,160,88,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGWIDTH1,160,99,53,9,SS_NOPREFIX
+    RTEXT           "A/T Test Totals Threshold:",IDC_STATIC,12,165,88,8
+    LTEXT           " ",IDC_ISRUSERPROG_ATTESTTH,100,165,50,8
+    RTEXT           "A/T Test Bias Limit (%):",IDC_STATIC,153,165,74,8
+    LTEXT           " ",IDC_ISRUSERPROG_ATTESTBIAS,230,165,46,8
+    RTEXT           "A/T Test Sigma Limit:",IDC_STATIC,281,165,69,8
+    LTEXT           " ",IDC_ISRUSERPROG_ATTESTLIMIT,353,165,37,8
+    CTEXT           "",IDC_ISRUSERPROG_TRIGPOLAR2,219,88,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGWIDTH2,219,99,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGPOLAR3,276,88,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGWIDTH3,276,99,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGPOLAR4,334,88,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGWIDTH4,334,99,53,9,SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,9,65,381,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,9,98,381,11
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,330,65,61,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,275,65,115,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,215,65,175,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,155,65,235,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,95,65,295,44
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,9,76,381,33
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,9,87,381,22
+    RTEXT           "Trigger Chan - Enabled:",IDC_STATIC,17,66,76,8
+    LTEXT           "High Threshold:",IDC_STATIC,43,77,51,8
+    CTEXT           "",IDC_ISRUSERPROG_TRIGCHENAB0,100,66,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGCHENAB1,160,66,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGCHENAB2,219,66,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGCHENAB3,276,66,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGCHENAB4,334,66,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGHIGHT0,100,77,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGHIGHT1,160,77,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGHIGHT2,219,77,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGHIGHT3,276,77,53,9,SS_NOPREFIX
+    CTEXT           "",IDC_ISRUSERPROG_TRIGHIGHT4,334,77,53,9,SS_NOPREFIX
+END
+
+IDD_ISRDATASTATUS_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Data Status"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_ISRDATA_INQUIRETIME,114,10,276,10
+    LTEXT           "",IDC_ISRDATA_UNITID,114,20,116,8
+    LTEXT           "",IDC_ISRDATA_BYTESMEM,114,30,276,8
+    LTEXT           "",IDC_ISRDATA_ACPOWER,114,40,276,8
+    LTEXT           "",IDC_ISRDATA_BATTERYOK,114,50,276,8
+    LTEXT           "",IDC_ISRDATA_BBMOK,114,60,276,8
+    LTEXT           "",IDC_ISRDATA_DATAFILTER,114,70,276,8
+    LTEXT           "",IDC_ISRDATA_LONOK,262,20,130,8
+    CTEXT           "",IDC_ISRDATA_DATADATE1,71,106,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIME1,71,116,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIMEAUX1,71,126,77,8
+    CTEXT           "",IDC_ISRDATA_BATTERY1,71,136,77,8
+    CTEXT           "",IDC_ISRDATA_TOTALS1,71,146,77,8
+    CTEXT           "",IDC_ISRDATA_AUX1TOTALS1,71,156,77,8
+    CTEXT           "",IDC_ISRDATA_AUX2TOTALS1,71,166,77,8
+    CTEXT           "",IDC_ISRDATA_REALACC1,71,176,77,8
+    CTEXT           "",IDC_ISRDATA_ACCIDENT1,71,186,77,8
+    CTEXT           "",IDC_ISRDATA_ETIME1,71,206,77,8
+    CTEXT           "",IDC_ISRDATA_DATADATE2,151,106,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIME2,151,116,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIMEAUX2,151,126,77,8
+    CTEXT           "",IDC_ISRDATA_BATTERY2,151,136,77,8
+    CTEXT           "",IDC_ISRDATA_TOTALS2,151,146,77,8
+    CTEXT           "",IDC_ISRDATA_AUX1TOTALS2,151,156,77,8
+    CTEXT           "",IDC_ISRDATA_AUX2TOTALS2,151,166,77,8
+    CTEXT           "",IDC_ISRDATA_REALACC2,151,176,77,8
+    CTEXT           "",IDC_ISRDATA_ACCIDENT2,151,186,77,8
+    CTEXT           "",IDC_ISRDATA_ETIME2,151,206,77,8
+    CTEXT           "",IDC_ISRDATA_DATADATE3,232,106,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIME3,232,116,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIMEAUX3,232,126,77,8
+    CTEXT           "",IDC_ISRDATA_BATTERY3,232,136,77,8
+    CTEXT           "",IDC_ISRDATA_TOTALS3,232,146,77,8
+    CTEXT           "",IDC_ISRDATA_AUX1TOTALS3,232,156,77,8
+    CTEXT           "",IDC_ISRDATA_AUX2TOTALS3,232,166,77,8
+    CTEXT           "",IDC_ISRDATA_REALACC3,232,176,77,8
+    CTEXT           "",IDC_ISRDATA_ACCIDENT3,232,186,77,8
+    CTEXT           "",IDC_ISRDATA_ETIME3,232,206,77,8
+    CTEXT           "",IDC_ISRDATA_DATADATE4,312,106,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIME4,312,116,77,8
+    CTEXT           "",IDC_ISRDATA_DATATIMEAUX4,312,126,77,8
+    CTEXT           "",IDC_ISRDATA_BATTERY4,312,136,77,8
+    CTEXT           "",IDC_ISRDATA_TOTALS4,312,146,77,8
+    CTEXT           "",IDC_ISRDATA_AUX1TOTALS4,312,156,77,8
+    CTEXT           "",IDC_ISRDATA_AUX2TOTALS4,312,166,77,8
+    CTEXT           "",IDC_ISRDATA_REALACC4,312,176,77,8
+    CTEXT           "",IDC_ISRDATA_ACCIDENT4,312,186,77,8
+    CTEXT           "",IDC_ISRDATA_ETIME4,312,206,77,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,185,380,30
+    RTEXT           "Date && Time (Y.M.D H:M:S):",IDC_STATIC,10,10,100,8
+    RTEXT           "Main Unit ID:",IDC_STATIC,10,20,100,8
+    RTEXT           "Bytes of Data in Memory:",IDC_STATIC,10,30,100,8
+    RTEXT           "Ext. Power Present:",IDC_STATIC,10,40,100,8
+    RTEXT           "Battery:",IDC_STATIC,10,50,100,8
+    RTEXT           "Battery Backed Up Memory:",IDC_STATIC,10,60,100,8
+    RTEXT           "Data Filter Status:",IDC_STATIC,10,70,100,8
+    RTEXT           "LON:",IDC_STATIC,228,20,30,8
+    RTEXT           "Date (Y/M/D)",IDC_STATIC,13,106,54,8
+    RTEXT           "Time (H:M:S)",IDC_STATIC,13,116,54,8
+    RTEXT           "Bat. - Ext. Power",IDC_STATIC,13,136,54,8
+    RTEXT           "Totals",IDC_STATIC,13,146,54,8
+    RTEXT           "Aux 1 Totals",IDC_STATIC,13,156,54,8
+    RTEXT           "Aux 2 Totals",IDC_STATIC,13,166,54,8
+    RTEXT           "Reals + Acc.",IDC_STATIC,13,176,54,8
+    RTEXT           "Accidentals",IDC_STATIC,13,186,54,8
+    RTEXT           "Elapsed Time",IDC_STATIC,13,206,54,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,105,380,110
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,205,380,10,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,195,380,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,175,380,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,165,380,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,155,380,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,145,380,70
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,135,380,80
+    GROUPBOX        "Most Recent ACQUIRE Records Received",IDC_STATIC,5,83,
+                    390,137
+    GROUPBOX        "Most Recent Response to INQUIRE2 ",IDC_STATIC,5,0,390,
+                    81
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,125,380,90
+    LTEXT           "Julian Aux. Byte",IDC_STATIC,13,126,54,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,310,105,80,110
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,230,105,80,110
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,150,105,80,110
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,70,105,80,110
+    CONTROL         "Show Raw",IDC_ISRRADIO_RAW,"Button",BS_AUTORADIOBUTTON,
+                    9,91,51,10
+    CONTROL         "Show Rates",IDC_ISRRADIO_RATES,"Button",
+                    BS_AUTORADIOBUTTON,83,91,55,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,115,380,100
+    RTEXT           "Reals",IDC_STATIC,13,196,54,8
+    CTEXT           "",IDC_ISRDATA_REAL1,72,196,77,8
+    CTEXT           "",IDC_ISRDATA_REAL2,152,196,77,8
+    CTEXT           "",IDC_ISRDATA_REAL3,232,196,77,8
+    CTEXT           "",IDC_ISRDATA_REAL4,312,196,77,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\mic.ico"
+IDI_CLOCK               ICON    DISCARDABLE     "res\\clock.ico"
+IDI_BELL                ICON    DISCARDABLE     "res\\ico00006.ico"
+IDI_FLOPPY              ICON    DISCARDABLE     "res\\ico00007.ico"
+IDI_FACE                ICON    DISCARDABLE     "res\\ico00008.ico"
+IDI_BOMB                ICON    DISCARDABLE     "res\\ico00009.ico"
+IDI_SKULL               ICON    DISCARDABLE     "res\\ico00010.ico"
+IDI_FLAG                ICON    DISCARDABLE     "res\\ico00011.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_ALL             BITMAP  DISCARDABLE     "res\\bmp_red.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CoISRISO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CoISRISO.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

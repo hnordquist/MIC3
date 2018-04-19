@@ -1,0 +1,489 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""CoHHMRISO.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "NEN-1"
+            VALUE "CompanyName", "Los Alamos National Laboratory"
+            VALUE "FileDescription", "HHMR ISO Module April 18, 2018"
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "CoHHMRISO"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "OriginalFilename", "CoHHMRISO.DLL"
+            VALUE "ProductName", "HHMR MIC ISO Module April 18, 2018"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_HHMRISO             REGISTRY                "HHMRISO.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PROPPAGE_LEGEND DIALOG 0, 0, 400, 225
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Legend"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",TCS_RAGGEDRIGHT | TCS_MULTISELECT | WS_BORDER | WS_VSCROLL,0,0,399,225
+END
+
+IDD_HHMRSUMMARY DIALOGEX 0, 0, 400, 225
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Summary"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "",IDC_HHMRSUMMARY_HIGHVOLT1,121,21,42,8
+    CTEXT           "",IDC_HHMRSUMMARY_HIGHVOLT2,177,21,42,8
+    CTEXT           "",IDC_HHMRSUMMARY_HIGHVOLT3,233,21,42,8
+    PUSHBUTTON      "Go To \n&Data Status Page",IDC_GOTO_DATASTAT,309,11,75,40,BS_MULTILINE,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Go To\n&Modify Parameters Page",IDC_GOTO_MODIFYPARAMETERS_PAGE,310,155,75,40,BS_MULTILINE,WS_EX_CLIENTEDGE
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND13,9,85,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND12,9,95,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND11,9,105,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND10,9,115,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND9,9,125,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND8,9,135,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND7,9,145,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND6,9,155,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND5,9,165,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND4,9,175,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND3,9,185,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND2,9,195,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_COMMAND1,9,205,290,10
+    LTEXT           "",IDC_HHMRSUMMARY_INQUIRETIME,122,34,180,9
+    LTEXT           "",IDC_HHMRSUMMARY_CONFIGURATION,122,43,185,8
+    RTEXT           "Last Data Status (Y.M.D H:M:S):",IDC_STATIC,16,34,105,8
+    RTEXT           "MIC vs. Instrument Configuration:",IDC_STATIC,16,43,105,8
+    CTEXT           "Minimum",IDC_STATIC,121,11,42,8
+    CTEXT           "Current",IDC_STATIC,177,11,42,8
+    CTEXT           "Maximum",IDC_STATIC,233,11,42,8
+    GROUPBOX        "Data Status",IDC_STATIC,5,0,385,74
+    GROUPBOX        "Recent Commands and Responses",IDC_STATIC,5,75,298,146
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,35,20,245,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,170,10,110,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,115,10,165,20
+    RTEXT           "High Voltage",IDC_STATIC,40,21,71,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,225,10,55,20
+    RTEXT           "Last Camera Trigger (Y.M.D H:M:S):",IDC_STATIC,7,52,114,8
+    LTEXT           "",IDC_HHMRSUMMARY_CAMERA_TRIG,122,52,263,10
+    GROUPBOX        "Notes",IDC_STATIC_LASTDATA,309,75,81,75
+    LTEXT           "",IDC_STATIC_NOTE1,316,88,67,10
+    LTEXT           "",IDC_STATIC_NOTE2,316,100,67,10
+    LTEXT           "",IDC_STATIC_NOTE3,316,112,67,10
+    LTEXT           "",IDC_STATIC_NOTE4,316,124,67,10
+    LTEXT           "",IDC_STATIC_NOTE5,315,136,67,10
+    CONTROL         "Allow click on\nRecent Command\nto decode message.",IDC_CHECK_ALLOWCLICK,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,310,199,86,22
+    RTEXT           "Totals Below LOW Threshold at:",IDC_STATIC,17,61,104,8
+    LTEXT           "",IDC_HHMRSUMMARY_ZEROVALUE,122,61,264,10
+END
+
+IDD_HHMRMODPARAMS_PAGE DIALOGEX 0, 0, 400, 225
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION | WS_SYSMENU
+CAPTION "Modify Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_HHMRMODPARAMS_PORT,30,10,75,70,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_HHMRMODPARAMS_NODE,130,10,64,12,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_HHMRMODPARAMS_NODE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,196,9,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_SAVELOC,40,39,171,20,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+    PUSHBUTTON      "&Browse",IDC_HHMRMODPARAMS_BROWSE,10,49,30,10
+    EDITTEXT        IDC_HHMRMODPARAMS_FILEID,40,66,20,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin1",IDC_HHMRMODPARAMS_FILEID_SPIN,"msctls_updown32",UDS_WRAP | UDS_ARROWKEYS | UDS_NOTHOUSANDS,60,66,11,14
+    CONTROL         "Log Data Filtering Msgs",IDC_HHMRMODPARAMS_LOGFILTER,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | NOT WS_VISIBLE | WS_TABSTOP,123,60,88,10
+    CONTROL         "Do Dump File",IDC_HHMRMODPARAMS_DODUMP,"Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,151,72,60,10
+    EDITTEXT        IDC_HHMRMODPARAMS_HIGHVOLTH,90,104,35,14,ES_CENTER | ES_NUMBER | NOT WS_TABSTOP
+    CONTROL         "Spin9",IDC_HHMRMODPARAMS_HIGHVOLTH_SPIN,"msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | WS_TABSTOP,126,104,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_HIGHVOLTL,155,104,35,14,ES_CENTER | ES_NUMBER | NOT WS_TABSTOP
+    CONTROL         "Spin10",IDC_HHMRMODPARAMS_HIGHVOLTL_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | WS_TABSTOP,191,104,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_SLOW_RESET,157,129,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_HHMRMODPARAMS_SLOW_RESET_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,198,129,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_MAXCYCLE,319,13,55,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_HHMRMODPARAMS_MAXCYCLE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,13,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_MAXPAUSE,319,28,55,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_HHMRMODPARAMS_MAXPAUSE_SPIN,"msctls_updown32",UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,28,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_REALSTHRESH,272,77,24,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin5",IDC_HHMRMODPARAMS_REALSTHRESH_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,296,77,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_MAXCOMPRESS,357,96,24,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "Spin6",IDC_HHMRMODPARAMS_MAXCOMPRESS_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,382,96,11,14
+    PUSHBUTTON      "&Load Default Values",IDC_HHMRMODPARAMS_DEFAULT,225,128,55,25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "&Reset to Last Applied",IDC_HHMRMODPARAMS_RESET,287,128,50,25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    DEFPUSHBUTTON   "&Apply all to MIC only",IDC_HHMRMODPARAMS_APPLY,341,125,53,31,BS_MULTILINE,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_HHMRMODPARAMS_CT_UNITS,39,176,38,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_HHMRMODPARAMS_CT_UNITS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,77,176,10,14
+    EDITTEXT        IDC_HHMRMODPARAMS_CT_EXP,39,194,38,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE
+    CONTROL         "Spin4",IDC_HHMRMODPARAMS_CT_EXP_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS | NOT WS_VISIBLE,77,194,10,14
+    COMBOBOX        IDC_HHMRMODPARAMS_PREDELAY,165,167,62,89,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_HHMRMODPARAMS_GATEWIDTH,165,184,48,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_HHMRMODPARAMS_GATEWIDTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,214,184,11,14
+    EDITTEXT        IDC_HHMRMODPARAMS_HIGHV,165,203,48,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_HHMRMODPARAMS_HIGHV_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,214,203,11,14
+    RTEXT           "Message Cycle Time (mSec):",IDC_STATIC,225,16,94,8
+    PUSHBUTTON      "Apply &New HHMR\nConfiguration To Instrument && MIC",IDC_HHMRMODPARAMS_APPLYHHMR,309,172,81,37,BS_MULTILINE,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    GROUPBOX        "Communications",IDC_STATIC,5,0,210,30
+    GROUPBOX        "Error Limits",IDC_STATIC,5,86,210,64
+    GROUPBOX        "File Output",IDC_STATIC,5,30,210,55
+    GROUPBOX        "General",IDC_STATIC,219,0,175,48
+    RTEXT           "Port:",IDC_STATIC,10,10,20,15,SS_CENTERIMAGE
+    RTEXT           "Node:",IDC_STATIC,105,9,25,15,SS_CENTERIMAGE
+    RTEXT           "Maximum Pause Time (Sec):",IDC_STATIC,225,31,94,8
+    CTEXT           "High",IDC_STATIC,98,92,20,8
+    CTEXT           "Low",IDC_STATIC,160,92,25,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,80,100,130,22
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,145,100,65,22
+    RTEXT           "Location:",IDC_STATIC,9,40,30,8
+    CTEXT           "Changes will NOT take effect until you click on ""Apply"".",IDC_HHMRMODPARAMS_STATICTEXT,219,115,175,10
+    RTEXT           "Station\n/ File ID:",IDC_STATIC,9,64,30,17
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,100,200,22
+    RTEXT           "High Voltage (V)",IDC_STATIC,14,107,61,8
+    RTEXT           "Slow Reset (Sec.)",IDC_STATIC,120,129,36,18
+    GROUPBOX        "HHMR Configuration",IDC_STATIC,5,154,389,68
+    RTEXT           "0.1 sec\nUnits:",IDC_STATIC,7,176,27,18
+    RTEXT           "Gate Width (uSec.):",IDC_STATIC,99,187,64,8
+    RTEXT           "Exp:",IDC_STATIC,19,195,15,8,NOT WS_VISIBLE
+    RTEXT           "High Voltage (Volts):",IDC_STATIC,98,206,65,8
+    RTEXT           "Pre-Delay (uSec.):",IDC_STATIC,105,170,58,8
+    CTEXT           "HHMR Configuration may be changed only while the instrument is NOT taking data (e.g. is paused).",IDC_STATIC_MESSAGE,236,167,66,51
+    GROUPBOX        "Data Compression Rates",IDC_STATIC,219,48,175,65
+    RTEXT           "Reals Thresh. Rate (R/t):",IDC_STATIC,223,75,46,17
+    RTEXT           "Max. Data Points:",IDC_STATIC,319,95,37,15
+    LTEXT           "Count Time (seconds):",IDC_STATIC,9,165,72,8
+    CTEXT           "",IDC_STATIC_CT_RESULT,39,210,39,8,NOT WS_VISIBLE
+    RTEXT           "Result:",IDC_STATIC,11,209,23,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_HHMRMODPARAMS_SIGMATHRESH,272,97,24,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "Spin6",IDC_HHMRMODPARAMS_SIGMATHRESH_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,296,97,11,14
+    RTEXT           "Sigma Thresh. (0.1 Units):",IDC_STATIC,223,96,48,15
+    EDITTEXT        IDC_HHMRMODPARAMS_TOTALSTHRESH,357,57,24,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin5",IDC_HHMRMODPARAMS_TOTALSTHRESH_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,382,57,11,14
+    RTEXT           "Totals Thresh. Rate (T/t):",IDC_STATIC,309,56,47,17
+    EDITTEXT        IDC_HHMRMODPARAMS_TOTALS1THRESH,357,77,24,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin5",IDC_HHMRMODPARAMS_TOTALS1THRESH_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,381,77,11,14
+    RTEXT           "Aux Totals Thresh (T1/t):",IDC_STATIC,310,75,45,17
+    EDITTEXT        IDC_HHMRMODPARAMS_TOTALSLTHRESH,272,58,24,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin5",IDC_HHMRMODPARAMS_TOTALSLTHRESH_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,297,58,11,14
+    RTEXT           "LOW Totals Thresh. (T/t):",IDC_STATIC,224,57,47,17
+    RTEXT           "# Timeouts before fail:",IDC_STATIC,10,128,36,18
+    EDITTEXT        IDC_HHMRMODPARAMS_MAX_TIMEOUT,50,130,25,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_HHMRMODPARAMS_MAX_TIMEOUT_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,75,130,11,14
+END
+
+IDD_HHMRDATASTATUS_PAGE DIALOGEX 0, 0, 400, 225
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Data Status"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Show Raw",IDC_RADIO_RAW,"Button",BS_AUTORADIOBUTTON,10,104,51,10
+    CONTROL         "Show Rates",IDC_RADIO_RATES,"Button",BS_AUTORADIOBUTTON,83,104,55,10
+    CTEXT           "",IDC_HHMRDATA_DATADATE1,71,125,77,8
+    CTEXT           "",IDC_HHMRDATA_DATADATE2,151,125,77,8
+    CTEXT           "",IDC_HHMRDATA_DATADATE3,232,125,77,8
+    CTEXT           "",IDC_HHMRDATA_DATADATE4,312,125,77,8
+    CTEXT           "",IDC_HHMRDATA_DATATIME1,71,135,77,8
+    CTEXT           "",IDC_HHMRDATA_DATATIME2,151,135,77,8
+    CTEXT           "",IDC_HHMRDATA_DATATIME3,232,135,77,8
+    CTEXT           "",IDC_HHMRDATA_DATATIME4,312,135,77,8
+    CTEXT           "",IDC_HHMRDATA_FILTERFACTOR1,71,145,77,8
+    CTEXT           "",IDC_HHMRDATA_FILTERFACTOR2,151,145,77,8
+    CTEXT           "",IDC_HHMRDATA_FILTERFACTOR3,231,145,77,8
+    CTEXT           "",IDC_HHMRDATA_FILTERFACTOR4,311,145,77,8
+    CTEXT           "",IDC_HHMRDATA_TOTALS1,71,156,77,8
+    CTEXT           "",IDC_HHMRDATA_TOTALS2,151,156,77,8
+    CTEXT           "",IDC_HHMRDATA_TOTALS3,232,156,77,8
+    CTEXT           "",IDC_HHMRDATA_TOTALS4,312,156,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX1TOTALS1,71,166,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX1TOTALS2,151,166,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX1TOTALS3,232,166,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX1TOTALS4,312,166,77,8
+    CTEXT           "",IDC_HHMRDATA_REALACC1,71,186,77,8
+    CTEXT           "",IDC_HHMRDATA_REALACC2,151,186,77,8
+    CTEXT           "",IDC_HHMRDATA_REALACC3,232,186,77,8
+    CTEXT           "",IDC_HHMRDATA_REALACC4,312,186,77,8
+    CTEXT           "",IDC_HHMRDATA_ACCIDENT1,71,196,77,8
+    CTEXT           "",IDC_HHMRDATA_ACCIDENT2,151,196,77,8
+    CTEXT           "",IDC_HHMRDATA_ACCIDENT3,232,196,77,8
+    CTEXT           "",IDC_HHMRDATA_ACCIDENT4,312,196,77,8
+    CTEXT           "",IDC_HHMRDATA_ETIME1,71,206,77,8
+    CTEXT           "",IDC_HHMRDATA_ETIME2,151,206,77,8
+    CTEXT           "",IDC_HHMRDATA_ETIME3,232,206,77,8
+    CTEXT           "",IDC_HHMRDATA_ETIME4,312,206,77,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,195,380,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,205,380,10,WS_EX_TRANSPARENT
+    LTEXT           "",IDC_HHMRDATA_STATUSTIME,102,10,134,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,185,380,30
+    RTEXT           "Date && Time (Y.M.D H:M:S):",IDC_STATIC,8,10,92,8
+    RTEXT           "Date (Y.M.D)",IDC_STATIC,13,125,54,8
+    RTEXT           "Time (H:M:S)",IDC_STATIC,13,135,54,8
+    RTEXT           "Totals",IDC_STATIC,13,155,54,8
+    RTEXT           "Aux 1 Totals",IDC_STATIC,13,166,54,8
+    RTEXT           "Reals + Acc.",IDC_STATIC,13,186,54,8
+    RTEXT           "Reals",IDC_STATIC,13,196,54,8
+    RTEXT           "Elapsed Time",IDC_STATIC,13,205,54,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,175,380,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,165,380,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,154,380,61
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,144,380,71
+    GROUPBOX        "Most Recent Data Records Received",IDC_STATIC,5,91,390,130
+    GROUPBOX        "Most Recent Response to Read Status ",IDC_STATIC,5,0,390,39
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,310,122,80,93
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,230,122,80,93
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,150,122,80,93
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,70,122,80,93
+    RTEXT           "Stopped/Started:",IDC_STATIC,27,20,56,8
+    LTEXT           "",IDC_HHMRDATA_STATUSA,87,20,46,10
+    GROUPBOX        "Most Recent Response to Read Setup",IDC_STATIC,5,41,251,46
+    RTEXT           "Date && Time (Y.M.D H:M:S):",IDC_STATIC,8,53,92,8
+    LTEXT           "",IDC_HHMRDATA_SETUPTIME,102,53,134,10
+    RTEXT           "Pre-delay:",IDC_STATIC,34,63,37,8
+    RTEXT           "Count Time:",IDC_STATIC,126,73,46,8
+    RTEXT           "Gate Width:",IDC_STATIC,21,73,50,8
+    RTEXT           "HV Set At:",IDC_STATIC,135,63,37,8
+    LTEXT           "",IDC_HHMRDATA_SETUP_PRE,74,63,27,10
+    LTEXT           "",IDC_HHMRDATA_SETUP_COUNT,179,73,61,10
+    LTEXT           "",IDC_HHMRDATA_SETUP_GATE,74,73,27,10
+    LTEXT           "",IDC_HHMRDATA_SETUP_HV,179,63,27,10
+    GROUPBOX        "Most Recent Response to Read HV",IDC_STATIC,263,41,132,46
+    RTEXT           "High Voltage:",IDC_STATIC,271,74,44,8
+    LTEXT           "",IDC_HHMRDATA_HV,319,74,37,10
+    RTEXT           "Date && Time (Y.M.D H:M:S):",IDC_STATIC,269,53,92,8
+    LTEXT           "",IDC_HHMRDATA_HVTIME,272,63,119,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,122,380,93
+    RTEXT           "Filter Factor",IDC_STATIC,13,145,54,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,133,380,82
+    RTEXT           "Aux 2 Totals",IDC_STATIC,13,176,54,8
+    CTEXT           "",IDC_HHMRDATA_AUX2TOTALS1,71,176,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX2TOTALS2,151,176,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX2TOTALS3,231,176,77,8
+    CTEXT           "",IDC_HHMRDATA_AUX2TOTALS4,311,176,77,8
+END
+
+IDD_DIALOG1 DIALOG 0, 0, 186, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "",IDC_STATIC_LASTDATA,53,18,81,75
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_HHMRMODPARAMS_PAGE DLGINIT
+BEGIN
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e30, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e31, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e31, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e32, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e32, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e33, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e33, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e34, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e34, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e35, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e35, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e36, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e36, 0x2035, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e37, 0x2030, 0x5375, 0x6365, "\000" 
+    IDC_HHMRMODPARAMS_PREDELAY, 0x403, 9, 0
+0x2e37, 0x2035, 0x5375, 0x6365, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_PROPPAGE_LEGEND, DIALOG
+    BEGIN
+    END
+
+    IDD_HHMRSUMMARY, DIALOG
+    BEGIN
+    END
+
+    IDD_HHMRMODPARAMS_PAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_HHMRDATASTATUS_PAGE, DIALOG
+    BEGIN
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON                    "res\\icon1.ico"
+
+IDI_CLOCK               ICON                    "res\\clock.ico"
+
+IDI_BELL                ICON                    "res\\ico00006.ico"
+
+IDI_FLOPPY              ICON                    "res\\ico00007.ico"
+
+IDI_FACE                ICON                    "res\\ico00008.ico"
+
+IDI_BOMB                ICON                    "res\\ico00009.ico"
+
+IDI_SKULL               ICON                    "res\\ico00010.ico"
+
+IDI_FLAG                ICON                    "res\\ico00011.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_ALL             BITMAP                  "res\\bmp_red.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "CoHHMRISO"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CoHHMRISO.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

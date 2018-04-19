@@ -1,0 +1,31 @@
+// CoWatchISO.idl : IDL source for CoWatchISO.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CoWatchISO.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+#include "../Interfaces/IISO.idl"
+
+[
+	uuid(E35BFFE4-BB7F-4D18-9D5F-3B2922AA8FCE),
+	version(1.0),
+	helpstring("CoWatchISO 1.0 Type Library")
+]
+library COWATCHISOLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(FA40B144-C1F8-4e4b-A729-F4261195C4C7),
+		helpstring("WatchISO Class")
+	]
+	coclass WatchISO
+	{
+		[default] interface IISO;
+	};
+
+};

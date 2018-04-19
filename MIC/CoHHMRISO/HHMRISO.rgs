@@ -1,0 +1,26 @@
+HKCR
+{
+	CoHHMRISO.HHMRISO.1 = s 'HHMRISO Class'
+	{
+		CLSID = s '{AF800B80-CBDC-4913-B02E-9BBD1328E68E}'
+	}
+	CoHHMRISO.HHMRISO = s 'HHMRISO Class'
+	{
+		CLSID = s '{AF800B80-CBDC-4913-B02E-9BBD1328E68E}'
+		CurVer = s 'CoHHMRISO.HHMRISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AF800B80-CBDC-4913-B02E-9BBD1328E68E} = s 'HHMRISO Class'
+		{
+			ProgID = s 'CoHHMRISO.HHMRISO.1'
+			VersionIndependentProgID = s 'CoHHMRISO.HHMRISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{4C22408C-F795-4666-8C61FA8E579634AD}'
+		}
+	}
+}

@@ -1,0 +1,26 @@
+HKCR
+{
+	CoJSRISO.JSRISO.1 = s 'JSRISO Class'
+	{
+		CLSID = s '{6F3174BA-050C-488A-93E6-8ACC8F8E65EC}'
+	}
+	CoJSRISO.JSRISO = s 'JSRISO Class'
+	{
+		CLSID = s '{6F3174BA-050C-488A-93E6-8ACC8F8E65EC}'
+		CurVer = s 'CoJSRISO.JSRISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6F3174BA-050C-488A-93E6-8ACC8F8E65EC} = s 'JSRISO Class'
+		{
+			ProgID = s 'CoJSRISO.JSRISO.1'
+			VersionIndependentProgID = s 'CoJSRISO.JSRISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{ACEDAC19-2189-48F9-B85C-6C7C8C8AA4A8}'
+		}
+	}
+}

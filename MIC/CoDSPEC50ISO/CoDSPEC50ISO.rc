@@ -1,0 +1,548 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CoDSPEC50ISO.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", ""
+            VALUE "CompanyName", "Los Alamos National Laboratory"
+            VALUE "FileDescription", "CoDSPEC50ISO Module April 19, 2018"
+            VALUE "FileVersion", "3, 0, 0, 0\0"
+            VALUE "InternalName", "CoDSPEC50ISO"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "OriginalFilename", "CoDSPEC50ISO.DLL"
+            VALUE "PrivateBuild", ""
+            VALUE "ProductName", "CoDSPEC50ISO Module April 19, 2018"
+            VALUE "ProductVersion", "3, 0, 0, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_DSPEC50ISO            REGISTRY DISCARDABLE    "DSPEC50ISO.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MESSAGE_DIALOG DIALOG DISCARDABLE  0, 0, 186, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,68,55,50,14
+    CTEXT           "",IDC_MESSAGE_STATIC,5,5,175,45
+    ICON            IDI_ICON1,IDC_STATIC,5,50,20,20
+    ICON            IDI_ICON1,IDC_STATIC,160,50,20,20
+END
+
+IDD_PROPPAGE_LEGEND DIALOG DISCARDABLE  0, 0, 397, 226
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Legend"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | ES_READONLY | 
+                    WS_BORDER | WS_VSCROLL,0,0,397,225
+END
+
+IDD_DSPEC50GENERALSTAT_PAGE DIALOGEX 0, 0, 397, 226
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "DSPEC50 Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_GAINCOARSE,75,17,60,70,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP,
+                    WS_EX_LEFTSCROLLBAR
+    RTEXT           "Gain Coarse:",IDC_STATIC,18,20,55,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_GAINCONVERSION,75,93,60,70,
+                    CBS_DROPDOWNLIST | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    RTEXT           "Channels:",IDC_STATIC,17,95,55,8,SS_CENTERIMAGE
+    GROUPBOX        "HV",IDC_STATIC,5,119,140,104
+    RTEXT           "Gain Fine x1000:",IDC_STATIC,18,38,55,8,SS_CENTERIMAGE
+    GROUPBOX        "Gain",IDC_STATIC,5,8,138,106
+    RTEXT           "Effective Gain:",IDC_STATIC,18,56,55,8
+    LTEXT           "Static_eff_gain",IDC_DSPEC50GENERALSTAT_EFF_GAIN,75,55,60,
+                    12,0,WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_DSPEC50GENERALSTAT_HVVOLTS,75,132,60,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin4",IDC_DSPEC50GENERALSTAT_HVVOLTS_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,141,133,10,14
+    RTEXT           "Volts:",IDC_STATIC,31,135,37,8,SS_CENTERIMAGE
+    PUSHBUTTON      "&Reset to Last Applied",IDC_DSPEC50GENERALSTAT_RESET,287,
+                    195,50,25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    DEFPUSHBUTTON   "&Apply",IDC_DSPEC50GENERALSTAT_APPLY,341,192,53,31,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Load Default Values",IDC_DSPEC50GENERALSTAT_DEFAULT,225,
+                    195,55,25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    CTEXT           "IDC_DSPEC50GENERALSTAT_STATICTEXT",
+                    IDC_DSPEC50GENERALSTAT_STATICTEXT,220,182,175,10
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_SHUTDOWN_COMBO,75,177,60,70,
+                    CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP
+    RTEXT           "Shutdown:",IDC_STATIC,32,180,37,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_HVENABLE_COMBO,75,194,60,70,
+                    CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP
+    RTEXT           "HV Enable:",IDC_STATIC,32,196,37,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_HVPOLARITY_COMBO,75,161,60,70,
+                    CBS_DROPDOWNLIST | WS_GROUP | WS_TABSTOP
+    RTEXT           "HV Polarity",IDC_STATIC,32,164,37,8,SS_CENTERIMAGE
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_GAINPOLARITY_COMBO,75,74,60,70,
+                    CBS_DROPDOWNLIST | WS_GROUP
+    RTEXT           "Input Polarity:",IDC_STATIC,17,76,55,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50GENERALSTAT_GAINFINE,75,36,60,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin4",IDC_DSPEC50GENERALSTAT_GAINFINE_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,139,36,10,14
+    GROUPBOX        "Stabilizer",IDC_STATIC,160,11,211,80
+    GROUPBOX        "Shape",IDC_STATIC,235,100,144,76
+    LTEXT           "Rise Time (µsec x10):",IDC_STATIC,243,121,77,8
+    LTEXT           "Cusp factor (units x10):",IDC_STATIC,243,137,81,8
+    LTEXT           "Flattop Width (µsec x10):",IDC_STATIC,243,154,81,8
+    EDITTEXT        IDC_DSPEC50GENERALSTAT_RISETIME,326,119,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_DSPEC50GENERALSTAT_RISETIME_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,121,10,14
+    EDITTEXT        IDC_DSPEC50GENERALSTAT_CUSPFACTOR,326,137,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_DSPEC50GENERALSTAT_CUSPFACTOR_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,376,137,10,14
+    EDITTEXT        IDC_DSPEC50GENERALSTAT_FLATTOPWIDTH,326,153,40,14,
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_DSPEC50GENERALSTAT_FLATTOPWIDTH_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,153,10,14
+    LTEXT           "Mode:",IDC_STATIC,169,26,21,8,NOT WS_VISIBLE
+    COMBOBOX        IDC_DSPEC50GENERALSTAT_MODESTABILIZER_COMBO,195,24,60,70,
+                    CBS_DROPDOWNLIST | NOT WS_VISIBLE | WS_GROUP | 
+                    WS_TABSTOP
+END
+
+IDD_DSPEC50DATASTATUS_PAGE DIALOGEX 0, 0, 400, 226
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Data Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "RealTime Raw Data (nnnnn Points)",
+                    IDC_STATIC_REALTIME_RAW_DATA,0,0,398,164
+    CONTROL         "Custom_XY",IDC_CUSTOM_XYCTRL,"XY_CTRL",WS_TABSTOP,7,11,
+                    379,150
+    PUSHBUTTON      "Clear DSPEC50\nand\nRestart",
+                    IDC_DSPEC50BUTTON_CLEAR_AND_RESTART,289,168,51,28,
+                    BS_CENTER | BS_VCENTER | BS_MULTILINE
+    PUSHBUTTON      "Write\nCHN File",IDC_DSPEC50BUTTON_WRT_CHN_FILE,289,198,
+                    52,26,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    RTEXT           "Dwell Type",IDC_STATIC,8,175,95,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,174,97,11
+    RTEXT           "Seconds Until End of Dwell",IDC_STATIC,8,186,95,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,185,97,11
+    RTEXT           "Non-Zero Channels",IDC_STATIC,8,197,95,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,196,97,11
+    RTEXT           "Channels Above Threshold",IDC_STATIC,8,208,95,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,207,97,11
+    LTEXT           "dwell type",IDC_DSPEC50DATASTAT_DWELL_TYPE,105,175,47,9,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,104,174,49,11
+    LTEXT           "secs til end",IDC_DSPEC50DATASTAT_SECS_TIL_END,105,186,47,
+                    9,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,104,185,49,11
+    LTEXT           "non 0 chans",IDC_DSPEC50DATASTAT_NON_ZERO_CHANS,105,197,
+                    47,9,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,104,196,49,11
+    LTEXT           "abv thresh",IDC_DSPEC50DATASTAT_ABV_THRESHOLD,105,208,47,
+                    9,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,104,207,49,11
+    RTEXT           "Current HV",IDC_STATIC,154,175,75,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,153,174,77,11
+    RTEXT           "HV Overload",IDC_STATIC,154,186,75,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,153,185,77,11
+    RTEXT           "Shutdown",IDC_STATIC,154,197,75,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,153,196,77,11
+    RTEXT           "Maximum Peak Count",IDC_STATIC,154,208,75,9
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,153,207,77,11
+    LTEXT           "cur hv",IDC_DSPEC50DATASTAT_CURRENT_HV,231,175,47,9,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,230,174,49,11
+    LTEXT           "hv ovrld",IDC_DSPEC50DATASTAT_HV_OVERLOAD,231,186,47,9,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,230,185,49,11
+    LTEXT           "shutdown",IDC_DSPEC50DATASTAT_SHUTDOWN,231,197,47,9,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,230,196,49,11
+    LTEXT           "",IDC_DSPEC50DATASTAT_SPARE3,231,208,47,9,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,230,207,49,11
+    CONTROL         "Show / Hide Spectrum\nNeeds Supervisor access to change.",
+                    IDC_DSPEC50_CHECK_SHOW,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | BS_MULTILINE | WS_TABSTOP,343,168,52,56,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+END
+
+IDD_DSPEC50MODPARAMS_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Modify Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Reset to Last Applied",IDC_DSPEC50MODPARAMS_RESET,287,
+                    195,50,25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    DEFPUSHBUTTON   "&Apply",IDC_DSPEC50MODPARAMS_APPLY,341,192,53,31,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    COMBOBOX        IDC_DSPEC50MODPARAMS_PORT,30,10,75,70,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_DSPEC50MODPARAMS_NODE,130,10,64,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER | NOT WS_VISIBLE
+    CONTROL         "Spin1",IDC_DSPEC50MODPARAMS_NODE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | NOT WS_VISIBLE,196,9,11,14
+    EDITTEXT        IDC_DSPEC50MODPARAMS_SAVELOC,40,39,172,20,ES_MULTILINE | 
+                    WS_VSCROLL
+    PUSHBUTTON      "&Browse",IDC_DSPEC50MODPARAMS_BROWSE,7,48,33,12
+    EDITTEXT        IDC_DSPEC50MODPARAMS_FILEID,44,65,20,14,ES_CENTER | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_DSPEC50MODPARAMS_FILEID_SPIN,"msctls_updown32",
+                    UDS_WRAP | UDS_ARROWKEYS | UDS_NOTHOUSANDS,64,65,11,14
+    CONTROL         "Do Dump File",IDC_DSPEC50MODPARAMS_DODUMP,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,
+                    144,73,60,10
+    EDITTEXT        IDC_DSPEC50MODPARAMS_MAXPAUSE,317,10,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_DSPEC50MODPARAMS_MAXPAUSE_SPIN,"msctls_updown32",
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,372,10,10,14
+    PUSHBUTTON      "&Load Default Values",IDC_DSPEC50MODPARAMS_DEFAULT,225,
+                    195,55,25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    GROUPBOX        "Communications",IDC_STATIC,5,0,210,30
+    GROUPBOX        "Error Limits",IDC_STATIC,5,85,210,135
+    GROUPBOX        "File Output",IDC_STATIC,5,30,210,55
+    GROUPBOX        "General",IDC_STATIC,220,0,175,180
+    RTEXT           "Port:",IDC_STATIC,10,10,20,15,SS_CENTERIMAGE
+    RTEXT           "Node:",IDC_STATIC,105,9,25,15,SS_CENTERIMAGE | NOT 
+                    WS_VISIBLE
+    RTEXT           "Maximum Pause Time (Sec):",IDC_STATIC,226,10,90,14,
+                    SS_CENTERIMAGE
+    RTEXT           "Location:",IDC_STATIC,8,38,30,8
+    CTEXT           "",IDC_DSPEC50MODPARAMS_STATICTEXT,220,182,175,10
+    RTEXT           "Station ID:",IDC_STATIC,8,67,35,10
+    EDITTEXT        IDC_DSPEC50MODPARAMS_THRESHOLD,317,29,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_DSPEC50MODPARAMS_THRESHOLD_SPIN,
+                    "msctls_updown32",UDS_ARROWKEYS | UDS_NOTHOUSANDS,371,29,
+                    10,14
+    RTEXT           "Threshold (Counts):",IDC_STATIC,226,29,90,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_SHORTDWELL,317,48,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_DSPEC50MODPARAMS_SHORTDWELL_SPIN,
+                    "msctls_updown32",UDS_ARROWKEYS | UDS_NOTHOUSANDS,371,48,
+                    10,14
+    RTEXT           "Short Dwell (Sec);",IDC_STATIC,226,48,90,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_LONGDWELL,317,67,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_DSPEC50MODPARAMS_LONGDWELL_SPIN,
+                    "msctls_updown32",UDS_ARROWKEYS | UDS_NOTHOUSANDS,371,67,
+                    10,14
+    RTEXT           "Long Dwell (Sec):",IDC_STATIC,226,67,90,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_REALTIMEDWELL,317,86,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_DSPEC50MODPARAMS_REALTIMEDWELL_SPIN,
+                    "msctls_updown32",UDS_ARROWKEYS | UDS_NOTHOUSANDS,372,86,
+                    10,14
+    RTEXT           "Realtime Dwell (Sec):",IDC_STATIC,226,86,90,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_COMMFAIL,317,105,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DSPEC50MODPARAMS_COMMFAIL_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,372,105,
+                    10,14
+    RTEXT           "# of Timeouts Before Fail:",IDC_STATIC,226,105,90,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_MAXSTATUS,317,143,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin4",IDC_DSPEC50MODPARAMS_MAXSTATUS_SPIN,
+                    "msctls_updown32",UDS_SETBUDDYINT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,372,143,10,14
+    RTEXT           "Take Status Every (Min):",IDC_STATIC,225,143,90,14,
+                    SS_CENTERIMAGE
+    CONTROL         "Quiet RealTime Data Text Displays",
+                    IDC_DSPEC50MODPARAMS_QUIET_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT,82,62,122,10
+    EDITTEXT        IDC_DSPEC50MODPARAMS_TIMEOUT,317,124,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_DSPEC50MODPARAMS_TIMEOUT_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,371,124,
+                    10,14
+    RTEXT           "Timeout (Sec):",IDC_STATIC,226,124,90,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_HV_HIGH_ERRORLIMIT,90,115,35,14,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | 
+                    NOT WS_TABSTOP
+    CONTROL         "Spin9",IDC_DSPEC50MODPARAMS_HV_HIGH_ERRORLIMIT_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | WS_TABSTOP,125,115,11,14
+    EDITTEXT        IDC_DSPEC50MODPARAMS_HV_LOW_ERRORLIMIT,155,115,35,14,
+                    ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | 
+                    NOT WS_TABSTOP
+    CONTROL         "Spin10",IDC_DSPEC50MODPARAMS_HV_LOW_ERRORLIMIT_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | WS_TABSTOP,190,115,11,14
+    CTEXT           "High",IDC_STATIC,100,100,20,8
+    CTEXT           "Low",IDC_STATIC,160,100,30,8
+    RTEXT           "High Voltage\n(volts)",IDC_STATIC_EXTPOW,15,114,60,18
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,110,200,23
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,80,95,130,38
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,145,95,65,38
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,110,200,23
+    EDITTEXT        IDC_DSPEC50MODPARAMS_SLOW_RESET,168,200,34,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    CONTROL         "Spin8",IDC_DSPEC50MODPARAMS_SLOW_RESET_SPIN,
+                    "msctls_updown32",UDS_ALIGNRIGHT | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | WS_TABSTOP,201,200,11,14
+    RTEXT           "Slow Reset (Sec)",IDC_STATIC,111,200,55,14,
+                    SS_CENTERIMAGE
+    EDITTEXT        IDC_DSPEC50MODPARAMS_HV_FAIL,55,200,34,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    CONTROL         "Spin8",IDC_DSPEC50MODPARAMS_HV_FAIL_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,87,200,10,14
+    RTEXT           "HV Fail (Volts):",IDC_STATIC,9,200,46,14,SS_CENTERIMAGE
+END
+
+IDD_DSPEC50SUMMARY DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Summary"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "DSPEC50 Settings",IDC_STATIC,5,2,385,63
+    PUSHBUTTON      "Go To\nDSPEC50 &Settings Page",IDC_GOTO_DSPEC50_SETUP,311,
+                    15,75,40,BS_CENTER | BS_VCENTER | BS_MULTILINE,
+                    WS_EX_CLIENTEDGE | WS_EX_RIGHT
+    GROUPBOX        "Data Status",IDC_STATIC,5,65,385,67
+    PUSHBUTTON      "Go To \n&Data Status Page",IDC_GOTO_DSPEC50_DATASTAT,311,
+                    75,75,40,BS_MULTILINE,WS_EX_CLIENTEDGE
+    GROUPBOX        "Recent Commands and Responses",IDC_STATIC,5,135,385,85
+    LTEXT           "",IDC_DSPEC50SUMMARY_ABOVE_THRESHOLD,95,84,60,8
+    LTEXT           "",IDC_DSPEC50SUMMARY_DWELLTYPE,95,95,60,8
+    LTEXT           "",IDC_DSPEC50SUMMARY_SECS_TO_END_DWELL,95,105,60,8
+    RTEXT           "Dwell Type:",IDC_STATIC,8,95,81,8
+    RTEXT           "Secs until End of Dwell:",IDC_STATIC,8,106,81,8
+    RTEXT           "Chans Above Threshold:",IDC_STATIC,8,86,81,8
+    LTEXT           "",IDC_DSPEC50SUMMARY_NONZERO_CHANS,95,74,60,8
+    RTEXT           "Non-Zero Chans:",IDC_STATIC,8,75,81,8
+    RTEXT           "Latest CHN File:",IDC_STATIC,8,118,81,8
+    LTEXT           "",IDC_DSPEC50SUMMARY_LAST_CHN_FILE,95,118,288,10,
+                    SS_CENTERIMAGE
+    CONTROL         "",IDC_DSPEC50SUMMARY_COMMAND6,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,146,372,10
+    CONTROL         "",IDC_DSPEC50SUMMARY_COMMAND5,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,158,375,10
+    CONTROL         "",IDC_DSPEC50SUMMARY_COMMAND4,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,170,374,10
+    CONTROL         "",IDC_DSPEC50SUMMARY_COMMAND3,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,182,374,10
+    CONTROL         "",IDC_DSPEC50SUMMARY_COMMAND2,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,194,373,10
+    CONTROL         "",IDC_DSPEC50SUMMARY_COMMAND1,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,206,376,10
+    LTEXT           "TBD",IDC_DSPEC50SUMMARY_UNIT_ID,95,14,52,8
+    RTEXT           "Unit Identification:",IDC_STATIC,12,14,74,8
+    RTEXT           "Current HV (Volts):",IDC_STATIC,165,75,74,8
+    LTEXT           "TBD",IDC_DSPEC50SUMMARY_CURRENT_HV,249,75,52,8
+    RTEXT           "HV Overload:",IDC_STATIC,165,86,74,8
+    LTEXT           "TBD",IDC_DSPEC50SUMMARY_HV_OVERLOAD,249,86,52,8
+    RTEXT           "Shutdown:",IDC_STATIC,165,97,74,8
+    LTEXT           "TBD",IDC_DSPEC50SUMMARY_SHUT_ACTUAL,249,97,52,8
+    CTEXT           "Version x.xxx   ddd mmm yyyy",IDC_SUMMARY_STATIC_ADVERT,
+                    185,35,111,11
+    ICON            IDI_MAIN,IDC_STATIC,164,25,20,20
+    CTEXT           "DSPEC50",IDC_STATIC,185,15,111,11
+    CTEXT           "MIC Instrument Component",IDC_STATIC,185,25,111,11
+    CTEXT           "Debug or Release Build",IDC_SUMMARY_STATIC_DEBUG,184,45,
+                    111,11,NOT WS_GROUP
+    GROUPBOX        "",IDC_STATIC,160,7,144,53
+END
+
+IDD_DSPEC50_SETTINGS_DIALOG DIALOGEX 0, 0, 400, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "DSPEC50 Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List2",IDC_DSPEC50_SETTINGS_LIST_SET,"SysListView32",
+                    LVS_REPORT | LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,7,
+                    386,175
+    PUSHBUTTON      "Edit ""Desired"" of Selected Item",
+                    IDC_BUTTON_DSPEC50_SETTINGS_EDIT_SELECTION,86,198,72,24,
+                    BS_MULTILINE | NOT WS_VISIBLE | WS_DISABLED
+    CTEXT           "Supervisor access required to change configuration values.",
+                    IDC_STATIC_DSPEC50_SETTINGS,5,185,386,8
+    PUSHBUTTON      "Save All ""Reported"" to Config File",
+                    IDC_BUTTON_DSPEC50_SETTINGS_SAVE_ALL_REPORTED,7,192,72,33,
+                    BS_MULTILINE,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Reset ""Desired"" to Defaults",
+                    IDC_BUTTON_DSPEC50_SETTINGS_LOAD_DEFAULT,165,198,72,24,
+                    BS_MULTILINE | NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Refresh ""Reported""  Values",
+                    IDC_BUTTON_DSPEC50_SETTINGS_REFRESH_REPORTED,244,198,72,24,
+                    BS_MULTILINE
+    PUSHBUTTON      "Send All ""Desired"" to DSPEC50",
+                    IDC_BUTTON_DSPEC50_SETTINGS_SEND_DESIRED,321,198,72,24,
+                    BS_MULTILINE | NOT WS_VISIBLE | WS_DISABLED
+END
+
+IDD_DSPEC50_DIALOG_EDIT DIALOGEX 0, 0, 237, 123
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Desired and Save to INI file."
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,57,102,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,102,50,14
+    LTEXT           "Description:",IDC_STATIC,7,9,38,8
+    LTEXT           "description text",IDC_DSPEC50_STATIC_DESCRIPTION,50,9,180,
+                    8
+    RTEXT           "Reported:",IDC_STATIC,7,23,38,8
+    LTEXT           "reported text",IDC_DSPEC50_STATIC_REPORTED,50,23,180,8
+    RTEXT           "Desired:",IDC_STATIC,7,39,38,8
+    EDITTEXT        IDC_DSPEC50_EDIT,143,39,87,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_DSPEC50_BUDDYSPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,220,38,10,
+                    14
+    LTEXT           "ini name text",IDC_DSPEC50_STATIC_ININAME,50,55,180,8
+    RTEXT           "INI Name:",IDC_STATIC,7,55,38,8
+    LTEXT           "commands",IDC_DSPEC50_STATIC_COMMAND,50,69,180,8
+    RTEXT           "Inst. Cmd:",IDC_STATIC,7,69,38,8
+    LTEXT           "Desired text",IDC_DSPEC50_STATIC_DESIRED,51,39,84,8
+    RTEXT           "Allowed:",IDC_STATIC,7,84,38,8
+    LTEXT           "allowed values",IDC_DSPEC50_STATIC_ALLOWED_VALUES,50,84,
+                    180,8
+    COMBOBOX        IDC_DSPEC50_COMBOBOX,143,38,87,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP,WS_EX_LEFTSCROLLBAR
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_CLOCK               ICON    DISCARDABLE     "res\\clock.ico"
+IDI_BELL                ICON    DISCARDABLE     "res\\ico00006.ico"
+IDI_FLOPPY              ICON    DISCARDABLE     "res\\ico00007.ico"
+IDI_FACE                ICON    DISCARDABLE     "res\\ico00008.ico"
+IDI_BOMB                ICON    DISCARDABLE     "res\\ico00009.ico"
+IDI_SKULL               ICON    DISCARDABLE     "res\\ico00010.ico"
+IDI_FLAG                ICON    DISCARDABLE     "res\\ico00011.ico"
+IDI_MAIN                ICON    DISCARDABLE     "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_ALL             BITMAP  DISCARDABLE     "res\\bmp_red.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CoDSPEC50ISO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CoDSPEC50ISO.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

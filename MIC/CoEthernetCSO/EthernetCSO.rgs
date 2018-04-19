@@ -1,0 +1,26 @@
+HKCR
+{
+	CoEthernetCSO.EthernetCSO.1 = s 'EthernetCSO Class'
+	{
+		CLSID = s '{a2593e67-6f10-4a59-95b0-be9b9d49ad0f}'
+	}
+	CoEthernetCSO.EthernetCSO = s 'EthernetCSO Class'
+	{
+		CLSID = s '{a2593e67-6f10-4a59-95b0-be9b9d49ad0f}'
+		CurVer = s 'CoEthernetCSO.DirectSerialCSO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {a2593e67-6f10-4a59-95b0-be9b9d49ad0f} = s 'EthernetCSO Class'
+		{
+			ProgID = s 'CoEthernetCSO.EthernetCSO.1'
+			VersionIndependentProgID = s 'CoEthernetCSO.EthernetCSO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{ec684388-8e1a-4379-877c-58eb34ea1d38}'
+		}
+	}
+}

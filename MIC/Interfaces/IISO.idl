@@ -1,0 +1,121 @@
+/*
+This work was supported by the United States Member State Support Program to IAEA Safeguards;
+the U.S. Department of Energy, Office of Nonproliferation and National Security, International
+Safeguards Division; and the U.S. Department of Energy, Office of Safeguards and Security.
+
+LA-CC-14-089. This software was exported from the United States in accordance with the Export
+Administration Regulations. Diversion contrary to U.S. law prohibited.
+
+Copyright 2015, Los Alamos National Security, LLC. This software application and associated
+material ("The Software") was prepared by the Los Alamos National Security, LLC. (LANS), under
+Contract DE-AC52-06NA25396 with the U.S. Department of Energy (DOE). All rights in the software
+application and associated material are reserved by DOE on behalf of the Government and LANS
+pursuant to the contract.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted
+provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of
+conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice, this list of
+conditions and the following disclaimer in the documentation and/or other materials provided
+with the distribution.
+3. Neither the name of the "Los Alamos National Security, LLC." nor the names of its contributors
+may be used to endorse or promote products derived from this software without specific prior
+written permission.
+
+THIS SOFTWARE IS PROVIDED BY LOS ALAMOS NATIONAL SECURITY, LLC AND CONTRIBUTORS "AS IS" AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL LOS ALAMOS
+NATIONAL SECURITY, LLC OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRAT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGE.
+*/
+// IISO.idl : IDL source for the IISO interface
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Grand.tlb) and marshalling code.
+
+import "oaidl.idl";
+	[
+		object,
+		uuid(C1AD5FF6-B607-4454-9E7A-035235D49591),
+	]
+	interface IISO : IDispatch
+	{
+		[id(1), helpstring("method AllowWriteToDisk")] HRESULT AllowWriteToDisk([in] VARIANT_BOOL vb);
+		[id(2), helpstring("method AppendGUIValues")] HRESULT AppendGUIValues([in] BSTR bstrFilename);
+
+		[id(3), helpstring("method CollectParametersForNewISO")] 
+		HRESULT CollectParametersForNewISO(
+			[out] BSTR *pbstrNameOut, 
+			[out] VARIANT_BOOL *pvbHaveNewISO);
+
+		[id(4), helpstring("method CreateISO")] HRESULT CreateISO([out] VARIANT_BOOL *pvbSuccess);
+
+		[id(5), helpstring("method DriveBBMToZero")] 
+		HRESULT DriveBBMToZero([in] VARIANT_BOOL vbDriveToZero, [in] VARIANT_BOOL vbInPowerFail);
+
+		[id(6), helpstring("method EstablishButtonKeeperCommunicationsPath")] 
+		HRESULT EstablishButtonKeeperCommunicationsPath(
+			[in]ULONG ulButtonKeeperHandle, 
+			[in]ULONG ulCheckButtonRegisteredMessageValue);
+
+		[id(7), helpstring("method EstablishSpecialUPSCommunicationsPath")] 
+		HRESULT EstablishSpecialUPSCommunicationsPath(
+			[in]ULONG ulSendToHandle, 
+			[in]ULONG ulQueryAllPausedRegisteredMessageValue,
+			[in]ULONG ulDriveAllToZeroRegisteredMessageValue);
+
+		[id(8), helpstring("EstablishValidationCommunicationsPath")] 
+		HRESULT EstablishValidationCommunicationsPath(
+			[in]ULONG ulValidationHandle, 
+			[in]ULONG ulValidationRegisteredMessageValue);
+
+		[id(9), helpstring("method get_CurrentBBM")]HRESULT get_CurrentBBM([out] ULONG *pCurrentBBM);
+		[id(10), helpstring("method get_ID")] HRESULT get_ID([out] BSTR *pbstrID);
+		[id(11), helpstring("method get_InShutDown")] HRESULT get_InShutDown([out] VARIANT_BOOL *pvbInShutDown);
+		[id(12), helpstring("method get_InStartUp")] HRESULT get_InStartUp([out] VARIANT_BOOL *pvbInStartUp);
+		[id(13), helpstring("method get_ISOCategory")]HRESULT get_ISOCategory([out] ULONG *pCategory);
+		[id(14), helpstring("method get_ISOTypeString")]HRESULT get_ISOTypeString([out] BSTR *pbstrName);
+		[id(15), helpstring("method get_IsPaused")] HRESULT get_IsPaused([out] VARIANT_BOOL *pvbIsPaused);
+		[id(16), helpstring("method get_FullName")]HRESULT get_FullName([out] BSTR *pbstrFullName);
+		[id(17), helpstring("method get_LastError")]HRESULT get_LastError([out] BSTR *pbstrErrorString);
+
+		[id(18), helpstring("method get_LocationAndExtensionsForDataFiles")] 
+		HRESULT get_LocationAndExtensionsForDataFiles(
+			[out] BSTR *pbstrLocation, 
+			[out] BSTR *pbstrExtensions);
+
+		[id(19), helpstring("method get_Name")]HRESULT get_Name([out] BSTR *pbstrName);
+		[id(20), helpstring("method get_VersionString")] HRESULT get_VersionString([out] BSTR *pbstrVersion);
+		[id(21), helpstring("method PauseInstrument")] HRESULT PauseInstrument([in]VARIANT_BOOL vbPauseCommand);
+		[id(22), helpstring("method put_DialogAutoCloseTime")] HRESULT put_DialogAutoCloseTime([in] ULONG seconds);
+		[id(23), helpstring("method put_ICBPointer")] HRESULT put_ICBPointer([in] IUnknown* pICB);
+		[id(24), helpstring("method put_ICSOPointer")] HRESULT put_ICSOPointer([in] IUnknown* pICSO);
+		[id(25), helpstring("method put_INIPathname")] HRESULT put_INIPathname([in] BSTR bstrINIPathname);
+		[id(26), helpstring("method put_LongNameFormatString")] HRESULT put_LongNameFormatString([in] BSTR bstrFormatString);
+		[id(27), helpstring("method put_MaximumRetryRepetitions")] HRESULT put_MaximumRetryRepetitions([in] ULONG uNumberRepetitions);
+		[id(28), helpstring("method put_Name")]HRESULT put_Name([in] BSTR bstrName);
+		[id(29), helpstring("method put_NormalShutdown")] HRESULT put_NormalShutdown([in] VARIANT_BOOL vbNormalShutdown);
+		[id(30), helpstring("method put_UTILPathname")] HRESULT put_UTILPathname([in] BSTR bstrUTILPathname);
+
+		[id(31), helpstring("method put_WindowsRegisteredMessageStrings")]
+		HRESULT put_WindowsRegisteredMessageStrings(
+			[in] ULONG ulRECEIVE,
+			[in] ULONG ulRECEIVE_OOB,
+			[in] ULONG ulSTART,
+			[in] ULONG ulSTOP,
+			[in] ULONG ulRESET);
+
+		[id(32), helpstring("method ResetISO")] HRESULT ResetISO();
+		[id(33), helpstring("method ShowISOGUI")] HRESULT ShowISOGUI([in] VARIANT_BOOL vb);
+		[id(34), helpstring("method ShutdownISO")] HRESULT ShutdownISO();
+
+		[id(35), helpstring("method UPSGoDumb")] HRESULT UPSGoDumb();
+		[id(36), helpstring("method UseShortFilename")] HRESULT UseShortFilename([in] VARIANT_BOOL vb);
+	};

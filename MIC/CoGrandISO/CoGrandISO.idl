@@ -1,0 +1,30 @@
+// CoGrandISO.idl : IDL source for CoGrandISO.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CoGrandISO.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+#include "../Interfaces/IISO.idl"
+
+[
+	uuid(EC2EF2B4-CEF5-4C65-8A2F-7E81DBCE0083),
+	version(1.0),
+	helpstring("CoGrandISO 1.0 Type Library")
+]
+library COGRANDISOLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(480F3443-0896-4971-8E65-AC3754192FE9),
+		helpstring("GrandISO Class")
+	]
+	coclass GrandISO
+	{
+		[default] interface IISO;
+	};
+};

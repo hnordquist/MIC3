@@ -1,0 +1,26 @@
+HKCR
+{
+	CoColorButton.ColorButton.1 = s 'ColorButton Class'
+	{
+		CLSID = s '{2B1A162B-1FBC-49EC-A9C7-5DE13A2E1061}'
+	}
+	CoColorButton.ColorButton = s 'ColorButton Class'
+	{
+		CLSID = s '{2B1A162B-1FBC-49EC-A9C7-5DE13A2E1061}'
+		CurVer = s 'CoColorButton.ColorButton.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2B1A162B-1FBC-49EC-A9C7-5DE13A2E1061} = s 'ColorButton Class'
+		{
+			ProgID = s 'CoColorButton.ColorButton.1'
+			VersionIndependentProgID = s 'CoColorButton.ColorButton'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{440D14EB-7014-48D8-B9CC-F8A79AA2AF7D}'
+		}
+	}
+}

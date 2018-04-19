@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName>"$/MIC 2.000", GJSAAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{074CD9ED-91FD-690F-D55F-1AF895B067FB}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>c:\mic\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;BMPBACKGRND;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\MicMgr.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\MicMgr.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\MicMgr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\MicMgr.exe</OutputFile>
+      <AdditionalDependencies>ws2_32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\MicMgr.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\MicMgr.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\MicMgr.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>c:\mic\MicMgr.exe</OutputFile>
+      <AdditionalDependencies>version.lib;ws2_32.lib;COMMODE.OBJ;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <CustomBuildStep>
+      <Message />
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="Access.cpp" />
+    <ClCompile Include="..\CommonSource\ccbutton.cpp" />
+    <ClCompile Include="..\CommonSource\COM_Utilities.cpp" />
+    <ClCompile Include="Config.cpp" />
+    <ClCompile Include="CopyFiles.cpp" />
+    <ClCompile Include="DeleteCom.cpp" />
+    <ClCompile Include="DeleteIns.cpp" />
+    <ClCompile Include="..\CommonSource\DirDialog.cpp" />
+    <ClCompile Include="DoFileCopy.cpp" />
+    <ClCompile Include="FileMgr.cpp" />
+    <ClCompile Include="globals.cpp" />
+    <ClCompile Include="HideDlg.cpp" />
+    <ClCompile Include="MicMgr.cpp" />
+    <ClCompile Include="MicMgrDlg.cpp" />
+    <ClCompile Include="mtreectl.cpp" />
+    <ClCompile Include="NewComm.cpp" />
+    <ClCompile Include="NewInst.cpp" />
+    <ClCompile Include="Ports.cpp" />
+    <ClCompile Include="RenameISO.cpp" />
+    <ClCompile Include="ReOrganize.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="TimedDlg.cpp" />
+    <ClCompile Include="TimedIntegerDlg.cpp" />
+    <ClCompile Include="TimedMessageDialog.cpp" />
+    <ClCompile Include="UserInfo.cpp" />
+    <ClCompile Include="validate.cpp" />
+    <ClCompile Include="..\CommonSource\VERSION.CPP" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MicMgr.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="Access.h" />
+    <ClInclude Include="..\CommonSource\ALLOWTRIGGERHOLDOFF.h" />
+    <ClInclude Include="..\CommonSource\BMPBACKGRND.h" />
+    <ClInclude Include="..\CommonSource\ccbutton.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="CopyFiles.h" />
+    <ClInclude Include="DeleteCom.h" />
+    <ClInclude Include="DeleteIns.h" />
+    <ClInclude Include="..\CommonSource\DirDialog.h" />
+    <ClInclude Include="DoFileCopy.h" />
+    <ClInclude Include="FileMgr.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="HideDlg.h" />
+    <ClInclude Include="..\CommonSource\ini_definitions.h" />
+    <ClInclude Include="mic_definitions.h" />
+    <ClInclude Include="MicMgr.h" />
+    <ClInclude Include="MicMgrDlg.h" />
+    <ClInclude Include="mtreectl.h" />
+    <ClInclude Include="NewComm.h" />
+    <ClInclude Include="NewInst.h" />
+    <ClInclude Include="Ports.h" />
+    <ClInclude Include="RenameISO.h" />
+    <ClInclude Include="ReOrganize.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TimedDlg.h" />
+    <ClInclude Include="TimedIntegerDlg.h" />
+    <ClInclude Include="TimedMessageDialog.h" />
+    <ClInclude Include="UserInfo.h" />
+    <ClInclude Include="validate.h" />
+    <ClInclude Include="..\CommonSource\VERSION.H" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\bitmap1.bmp" />
+    <CustomBuild Include="res\bitmap2.bmp" />
+    <CustomBuild Include="res\bitmap3.bmp" />
+    <CustomBuild Include="res\bitmap4.bmp" />
+    <CustomBuild Include="res\bitmap5.bmp" />
+    <CustomBuild Include="res\bitmap6.bmp" />
+    <CustomBuild Include="res\bitmap7.bmp" />
+    <CustomBuild Include="res\bitmap8.bmp" />
+    <CustomBuild Include="res\bmp00001.bmp" />
+    <CustomBuild Include="res\bmp_gree.bmp" />
+    <CustomBuild Include="res\bmp_red.bmp" />
+    <CustomBuild Include="res\clock.ico" />
+    <CustomBuild Include="res\ico00001.ico" />
+    <CustomBuild Include="res\ico00002.ico" />
+    <CustomBuild Include="res\ico00003.ico" />
+    <CustomBuild Include="res\ico00004.ico" />
+    <CustomBuild Include="res\ico00005.ico" />
+    <CustomBuild Include="res\ico00006.ico" />
+    <CustomBuild Include="res\ico00007.ico" />
+    <CustomBuild Include="res\ico00008.ico" />
+    <CustomBuild Include="res\ico00009.ico" />
+    <CustomBuild Include="res\ico00010.ico" />
+    <CustomBuild Include="res\ico00011.ico" />
+    <CustomBuild Include="res\ico00012.ico" />
+    <CustomBuild Include="res\icon1.ico" />
+    <CustomBuild Include="res\icon10.ico" />
+    <CustomBuild Include="res\icon11.ico" />
+    <CustomBuild Include="res\icon12.ico" />
+    <CustomBuild Include="res\icon13.ico" />
+    <CustomBuild Include="res\icon1b.ico" />
+    <CustomBuild Include="res\icon2.ico" />
+    <CustomBuild Include="res\icon3.ico" />
+    <CustomBuild Include="res\icon4.ico" />
+    <CustomBuild Include="res\icon5.ico" />
+    <CustomBuild Include="res\icon6.ico" />
+    <CustomBuild Include="res\icon7.ico" />
+    <CustomBuild Include="res\icon8.ico" />
+    <CustomBuild Include="res\icon9.ico" />
+    <CustomBuild Include="res\icon_yel.ico" />
+    <CustomBuild Include="res\mainfram.ico" />
+    <CustomBuild Include="res\MIC.ico" />
+    <CustomBuild Include="res\MicMgr.ico" />
+    <CustomBuild Include="res\MicMgr.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoColorButton\CoColorButton.vcxproj">
+      <Project>{2543fbea-8406-4fb1-b54e-803631286efc}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoDirectSerialCSO\CoDirectSerialCSO.vcxproj">
+      <Project>{c626053e-9953-4a59-9f87-d5cd828cefb2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoDSPECISO\CoDSPECISO.vcxproj">
+      <Project>{bccabfba-f59b-4797-92da-6cbb8d598fc7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoGrandISO\CoGrandISO.vcxproj">
+      <Project>{f93cb363-f205-4c88-8505-cd9bbef7591f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoIPXCSO\CoIPXCSO.vcxproj">
+      <Project>{68401761-f485-4ce0-adff-de3ad2150e44}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoISRISO\CoISRISO.vcxproj">
+      <Project>{59cea2f4-4b94-4569-90bd-f3207bef8ae5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoWatchISO\CoWatchISO.vcxproj">
+      <Project>{c08513d7-1a2a-453f-8f2d-96be3be754db}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.vcxproj">
+      <Project>{85ec6438-5bf7-43d6-82a9-ae4c87c7c3a1}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

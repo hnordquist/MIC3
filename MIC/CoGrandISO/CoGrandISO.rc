@@ -1,0 +1,1179 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""CoGrandISO.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", ""
+            VALUE "CompanyName", "Los Alamos National Laboratory"
+            VALUE "FileDescription", "CoGrandISO Module April 19, 2018"
+            VALUE "FileVersion", "3, 0, 0, 0\0"
+            VALUE "InternalName", "CoGrandISO"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "OriginalFilename", "CoGrandISO.DLL"
+            VALUE "PrivateBuild", ""
+            VALUE "ProductName", "CoGrandISO Module April 19, 2018"
+            VALUE "ProductVersion", "3, 0, 0, 0\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_GRANDISO            REGISTRY DISCARDABLE    "GrandISO.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GENERALSTAT_PAGE DIALOGEX 0, 0, 397, 226
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "GRAND Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Operational Mode:",IDC_STATIC,10,30,68,8
+    RTEXT           "Pulse Counter HV Bias",IDC_STATIC,130,22,76,8
+    RTEXT           "-15/-12 Volt Supply",IDC_STATIC,130,62,76,8
+    RTEXT           "Ion Chamber HV Bias",IDC_STATIC,130,32,76,8
+    RTEXT           "+15/+12 Volt Supply",IDC_STATIC,130,52,76,8
+    RTEXT           "Battery Voltage",IDC_STATIC,143,42,63,8
+    RTEXT           "+5 Volt Supply",IDC_STATIC,130,72,76,8
+    RTEXT           "Pulse Input Configuration:",IDC_STATIC,10,87,87,8
+    RTEXT           "LLDA:",IDC_GENERAL_LLDA_STAT,21,98,27,8
+    RTEXT           "Analog Pulse Channel Gain:",IDC_GENERAL_ANALOG_STAT,225,
+                    97,94,10
+    RTEXT           "Ion Chamber Disconnect Mode:",IDC_STATIC,10,127,104,8
+    RTEXT           "Mode",IDC_STATIC,16,158,59,8
+    RTEXT           "Last Dual Ion (Date)",IDC_STATIC,13,178,64,8
+    RTEXT           "GRAND Program Version Number (1b):",IDC_STATIC,234,124,
+                    67,20
+    RTEXT           "Gen Status Record Date & Time:",IDC_STATIC,8,10,104,8,
+                    SS_NOPREFIX | SS_CENTERIMAGE
+    RTEXT           "ROM Checksum:",IDC_STATIC,234,146,67,8
+    RTEXT           "Last Dual Ion (Time)",IDC_STATIC,13,188,64,8
+    RTEXT           "Gain",IDC_STATIC,15,148,59,8
+    RTEXT           "LLDB:",IDC_GENERAL_LLDB_STAT,21,108,27,8
+    RTEXT           "Max Gain",IDC_STATIC,15,169,59,8
+    LTEXT           "",IDC_GENERAL_TIME,11,20,105,9,SS_CENTERIMAGE
+    LTEXT           "",IDC_GENERAL_MODE,24,40,88,10,SS_NOPREFIX
+    CTEXT           "",IDC_GENERAL_FCHIGHVMIN,218,21,46,8
+    CTEXT           "",IDC_GENERAL_ICHIGHVMIN,218,31,46,8
+    CTEXT           "",IDC_GENERAL_BATTERYMIN,218,41,46,8
+    CTEXT           "",IDC_GENERAL_P15VOLTMIN,218,51,46,8
+    CTEXT           "",IDC_GENERAL_M15VOLTMIN,218,61,46,8
+    CTEXT           "",IDC_GENERAL_P5VOLTMIN,218,71,46,8
+    LTEXT           "",IDC_GENERAL_GRANDP,306,132,80,8
+    LTEXT           "",IDC_GENERAL_ROM,306,146,80,8
+    LTEXT           "Window A:",IDC_GENERAL_WINDOWA_STAT,103,97,36,8
+    LTEXT           "Window B:",IDC_GENERAL_WINDOWB_STAT,103,108,36,8
+    LTEXT           "",IDC_GENERAL_PULSE,103,87,177,10,NOT WS_GROUP
+    LTEXT           "",IDC_GENERAL_LLDA,53,98,47,8
+    LTEXT           "",IDC_GENERAL_LLDB,53,108,47,8
+    LTEXT           "",IDC_GENERAL_ANALOG,320,97,65,8
+    LTEXT           "",IDC_GENERAL_DISCM,121,127,94,8
+    CTEXT           "",IDC_GENERAL_GAMMA1G,84,148,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_GAMMA2G,153,148,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_GAMMA1M,83,158,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_GAMMA2M,153,158,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_MAXG1,83,169,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_MAXG2,153,169,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    LTEXT           "",IDC_GENERAL_WINDOWA,139,97,81,8
+    LTEXT           "",IDC_GENERAL_WINDOWB,139,108,81,8
+    GROUPBOX        "",IDC_STATIC,5,119,220,81,BS_CENTER
+    GROUPBOX        "",IDC_STATIC,5,81,388,40
+    GROUPBOX        "Most Recent General Status Record, Triple Neutron Counter Status Record, Offset Record, && Battery Record",
+                    IDC_STATIC,5,0,388,83
+    GROUPBOX        "",IDC_STATIC,230,119,163,39
+    ICON            IDR_MAINFRAME,IDC_STATIC,241,169,20,20
+    GROUPBOX        "",IDC_STATIC,230,156,163,44
+    CTEXT           "GRAND (MG pre-4.10 or GRAND3)",IDC_STATIC,265,162,125,9
+    CTEXT           "Gamma 1",IDC_STATIC,87,138,55,8
+    CTEXT           "Gamma 2",IDC_STATIC,161,138,50,8
+    CTEXT           "",IDC_GENERAL_G1DATE,83,178,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_G1TIME,83,188,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_G2DATE,153,178,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL_G2TIME,153,188,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,147,210,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,157,210,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,167,210,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,177,210,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,187,210,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,80,137,70,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,150,137,70,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,147,70,50
+    LTEXT           "No",IDC_GENERAL_CHECKSUM,17,211,380,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    LTEXT           "Minimum",IDC_STATIC,226,13,28,7
+    LTEXT           "Current",IDC_STATIC,287,13,24,7
+    LTEXT           "Maximum",IDC_STATIC,342,13,30,7
+    CTEXT           "",IDC_GENERAL_FCHIGHVCUR,276,21,49,8
+    CTEXT           "",IDC_GENERAL_ICHIGHVCUR,276,31,49,8
+    CTEXT           "",IDC_GENERAL_BATTERYCUR,276,41,49,8
+    CTEXT           "",IDC_GENERAL_P15VOLTCUR,276,51,49,8
+    CTEXT           "",IDC_GENERAL_M15VOLTCUR,276,61,49,8
+    CTEXT           "",IDC_GENERAL_P5VOLTCUR,276,71,49,8
+    CTEXT           "",IDC_GENERAL_FCHIGHVMAX,334,21,46,8
+    CTEXT           "",IDC_GENERAL_ICHIGHVMAX,334,31,46,8
+    CTEXT           "",IDC_GENERAL_BATTERYMAX,334,41,46,8
+    CTEXT           "",IDC_GENERAL_P15VOLTMAX,334,51,46,8
+    CTEXT           "",IDC_GENERAL_M15VOLTMAX,334,61,46,8
+    CTEXT           "",IDC_GENERAL_P5VOLTMAX,334,71,46,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,328,12,59,69
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,70,267,11
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,60,267,21
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,50,267,31
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,40,267,41
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,20,267,61
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,30,267,51
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,272,12,115,69
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,212,12,175,69
+    GROUPBOX        "Checksum, Length, or Authentication Error in Message and Communications Status",
+                    IDC_STATIC,5,201,388,22
+    LTEXT           "Offset Record Date && Time:",IDC_STATIC,10,63,88,8
+    LTEXT           "",IDC_GENERAL_OFFSET,11,70,105,8
+    LTEXT           "",IDC_GENERAL_MODE2,24,50,88,10,SS_NOPREFIX
+    LTEXT           "12:",IDC_STATIC,9,40,10,9
+    LTEXT           "1b:",IDC_STATIC,9,50,10,9
+    CTEXT           "MIC Instrument Component",IDC_STATIC,265,171,126,9
+    CTEXT           "Version x.x.x.x MMM dd yyyy",IDC_GENERAL_STATIC_ADVERT,
+                    265,180,126,9
+    CTEXT           "Debug or Release",IDC_STATIC_DEBUG_GRAND,265,189,126,9
+    LTEXT           "",IDC_GENERAL_BATTERYINST,122,42,16,8,NOT WS_GROUP
+END
+
+IDD_USERPROGSTAT_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Monitor Params"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "Y.M.D H:M:S:",IDC_STATIC,91,9,55,8
+    LTEXT           "",IDC_USERPROG_TIME,150,9,235,8
+    RTEXT           "User Selected Data Acquire Time (secs):",IDC_STATIC,10,
+                    19,136,8
+    LTEXT           "",IDC_USERPROG_USER,150,19,235,8
+    RTEXT           "Immediate Buffer Size / Save Size:",IDC_STATIC,11,36,
+                    110,8
+    LTEXT           "",IDC_USERPROG_IMMEDIATE,122,36,265,10
+    RTEXT           "Local Background Definition:",IDC_STATIC,11,46,110,8
+    LTEXT           "",IDC_USERPROG_LOCALBACK,122,46,265,10
+    RTEXT           "No Filter and Enter MII Condition:",IDC_STATIC,16,56,
+                    105,8
+    LTEXT           "",IDC_USERPROG_NOFILTER,122,56,265,10
+    RTEXT           "Filter Method:",IDC_STATIC,46,66,75,8
+    LTEXT           "",IDC_USERPROG_FILTERMETH,122,66,265,10
+    RTEXT           "MII Enter Condition:",IDC_STATIC,56,76,65,8
+    LTEXT           "",IDC_USERPROG_MIIENTER,121,76,265,10
+    RTEXT           "MII Exit Condition:",IDC_STATIC,61,86,60,8
+    LTEXT           "",IDC_USERPROG_MIIEXIT,122,86,265,10
+    RTEXT           "Filtering Enabled:",IDC_STATIC,61,96,60,8
+    LTEXT           "",IDC_USERPROG_FILTERENAB,122,96,50,10
+    RTEXT           "Trigger Mode:",IDC_STATIC,176,96,45,8
+    LTEXT           "",IDC_USERPROG_TRIGGERMODE,221,96,170,10
+    CTEXT           "",IDC_USERPROG_PULSEAF,102,121,45,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSEBF,155,121,45,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSECF,209,121,45,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_GAMMA1F,265,121,55,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_GAMMA2F,330,121,55,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSEAT,100,131,45,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSEBT,155,131,45,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSECT,210,131,45,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_GAMMA1T,266,131,55,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_GAMMA2T,331,131,55,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSEAL,100,141,45,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSEBL,156,141,45,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_PULSECL,211,141,45,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_GAMMA1L,265,141,55,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_USERPROG_GAMMA2L,330,141,55,8,0,WS_EX_TRANSPARENT
+    RTEXT           "Enabled:",IDC_STATIC,11,165,80,8,SS_CENTERIMAGE
+    LTEXT           "",IDC_USERPROG_SYNCE,96,165,113,10
+    RTEXT           "Time (hh:mm:ss):",IDC_STATIC,11,175,80,8,SS_CENTERIMAGE
+    LTEXT           "",IDC_USERPROG_SYNCT,96,175,65,8
+    RTEXT           "Lower Limit (seconds):",IDC_STATIC,11,185,80,8,
+                    SS_CENTERIMAGE
+    LTEXT           "",IDC_USERPROG_SYNCL,96,185,65,8
+    RTEXT           "Upper Limit (minutes):",IDC_STATIC,11,195,80,8,
+                    SS_CENTERIMAGE
+    LTEXT           "",IDC_USERPROG_SYNCU,96,195,24,8
+    RTEXT           "Take Offsets Every (hours):",IDC_STATIC,225,165,110,8
+    LTEXT           "",IDC_USERPROG_TAKEOFF,335,165,55,10
+    RTEXT           "Log Battery Info Every (minutes):",IDC_STATIC,225,195,
+                    110,8
+    LTEXT           "",IDC_USERPROG_LOGBATT,335,195,55,10
+    RTEXT           "GRAND User Program Version Number (1c):",IDC_STATIC,11,
+                    212,143,8
+    LTEXT           "",IDC_USERPROG_GRANDUV,155,212,70,8
+    RTEXT           "ROM Checksum:",IDC_STATIC,271,212,65,8
+    LTEXT           "",IDC_USERPROG_ROMCHECK,336,212,55,8
+    RTEXT           "Filtering and MII Active",IDC_STATIC,21,121,72,8,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    RTEXT           "Threshold",IDC_STATIC,16,131,77,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Pulse A",IDC_STATIC,103,111,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Pulse B",IDC_STATIC,157,111,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Pulse C",IDC_STATIC,210,111,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Gamma 1",IDC_STATIC,275,111,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Gamma 2",IDC_STATIC,340,111,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,5,30,390,125
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,120,380,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,130,380,20
+    GROUPBOX        "Synchronization",IDC_STATIC,5,156,210,50
+    GROUPBOX        "",IDC_STATIC,5,205,390,18
+    RTEXT           "Filtering Threshold",IDC_STATIC,16,141,77,8,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "",IDC_STATIC,220,156,175,50
+    GROUPBOX        "Most Recent USER PROGRAM STATUS Record",IDC_STATIC,6,0,
+                    390,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,95,110,295,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,150,110,240,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,260,110,130,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,205,110,185,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,325,110,65,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,140,380,10
+    LTEXT           "Maximum Between Offsets (hours):",IDC_STATIC,225,175,
+                    110,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_USERPROG_TAKEOFFMAX,335,175,55,8
+END
+
+IDD_DATASTATUS_PAGE DIALOG DISCARDABLE  0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Data Status"
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "Y.M.D H:M:S:",IDC_STATIC,64,20,53,8
+    LTEXT           "",IDC_DATA_INQUIRETIME,121,19,267,10
+    RTEXT           "Main Unit:",IDC_STATIC,10,10,107,8
+    LTEXT           "",IDC_DATA_UNITID,121,10,20,8
+    RTEXT           "Bytes of Data in GRAND Memory:",IDC_STATIC,9,50,108,8
+    LTEXT           "",IDC_DATA_BYTESMEM,121,49,54,8
+    RTEXT           "Ext. Power Present:",IDC_STATIC,10,30,107,8
+    LTEXT           "",IDC_DATA_ACPOWER,121,29,267,8
+    RTEXT           "Measurement Interval of Interest:",IDC_STATIC,9,70,108,
+                    8
+    LTEXT           "",IDC_DATA_OOMII,121,69,65,8
+    RTEXT           "Battery:",IDC_STATIC,84,90,33,8
+    LTEXT           "",IDC_DATA_BATTERYOK,121,89,264,8
+    RTEXT           "Battery Backed Up Memory:",IDC_STATIC,24,80,93,8
+    LTEXT           "",IDC_DATA_BBMOK,121,79,267,8
+    RTEXT           "Current Data Filter Status:",IDC_STATIC,13,60,104,8
+    LTEXT           "",IDC_DATA_DATAFILTER,121,59,267,10
+    RTEXT           "Operation:",IDC_STATIC,74,40,43,8
+    LTEXT           "",IDC_DATA_OPERATION,121,39,267,8
+    RTEXT           "Date of Data Record (Y/M/D)",IDC_STATIC,13,116,96,8
+    CTEXT           "",IDC_DATA_DATADATE1,115,116,60,8
+    CTEXT           "",IDC_DATA_DATADATE2,185,116,60,8
+    CTEXT           "",IDC_DATA_DATADATE3,255,116,60,8
+    CTEXT           "",IDC_DATA_DATADATE4,325,116,60,8
+    RTEXT           "Time of Data Record (H:M:S)",IDC_STATIC,16,126,93,8
+    CTEXT           "",IDC_DATA_DATATIME1,115,126,60,8
+    CTEXT           "",IDC_DATA_DATATIME2,185,126,60,8
+    CTEXT           "",IDC_DATA_DATATIME3,255,126,60,8
+    CTEXT           "",IDC_DATA_DATATIME4,325,126,60,8
+    RTEXT           "Pulse A Count Rate",IDC_STATIC,16,136,93,8
+    CTEXT           "",IDC_DATA_PULSEACNT1,115,136,60,8
+    CTEXT           "",IDC_DATA_PULSEACNT2,185,136,60,8
+    CTEXT           "",IDC_DATA_PULSEACNT3,255,136,60,8
+    CTEXT           "",IDC_DATA_PULSEACNT4,325,136,60,8
+    RTEXT           "Pulse B Count Rate",IDC_STATIC,16,146,93,8
+    CTEXT           "",IDC_DATA_PULSEBCNT1,115,146,60,8
+    CTEXT           "",IDC_DATA_PULSEBCNT2,185,146,60,8
+    CTEXT           "",IDC_DATA_PULSEBCNT3,255,146,60,8
+    CTEXT           "",IDC_DATA_PULSEBCNT4,325,146,60,8
+    RTEXT           "Pulse C Count Rate",IDC_STATIC,16,156,93,8
+    CTEXT           "",IDC_DATA_PULSECCNT1,115,156,60,8
+    CTEXT           "",IDC_DATA_PULSECCNT2,185,156,60,8
+    CTEXT           "",IDC_DATA_PULSECCNT3,255,156,60,8
+    CTEXT           "",IDC_DATA_PULSECCNT4,325,156,60,8
+    RTEXT           "Gamma 1 Gross Gammas",IDC_STATIC,16,166,93,8
+    CTEXT           "",IDC_DATA_GAMMA1GR1,115,166,60,8
+    CTEXT           "",IDC_DATA_GAMMA1GR2,185,166,60,8
+    CTEXT           "",IDC_DATA_GAMMA1GR3,255,166,60,8
+    CTEXT           "",IDC_DATA_GAMMA1GR4,325,166,60,8
+    RTEXT           "Gamma 1 Sigma/Int. Temp F°",IDC_STATIC,15,176,94,8
+    CTEXT           "",IDC_DATA_GAMMA1S1,115,176,60,8
+    CTEXT           "",IDC_DATA_GAMMA1S2,185,176,60,8
+    CTEXT           "",IDC_DATA_GAMMA1S3,255,176,60,8
+    CTEXT           "",IDC_DATA_GAMMA1S4,325,176,60,8
+    RTEXT           "Gamma 2 Gross Gammas",IDC_STATIC,16,186,93,8
+    CTEXT           "",IDC_DATA_GAMMA2GR1,115,186,60,8
+    CTEXT           "",IDC_DATA_GAMMA2GR2,185,186,60,8
+    CTEXT           "",IDC_DATA_GAMMA2GR3,255,186,60,8
+    CTEXT           "",IDC_DATA_GAMMA2GR4,325,186,60,8
+    RTEXT           "Gamma 2 Sigma/Ext. Temp F°",IDC_STATIC,14,196,96,8
+    CTEXT           "",IDC_DATA_GAMMA2S1,115,196,60,8
+    CTEXT           "",IDC_DATA_GAMMA2S2,185,196,60,8
+    CTEXT           "",IDC_DATA_GAMMA2S3,255,196,60,8
+    CTEXT           "",IDC_DATA_GAMMA2S4,325,196,60,8
+    RTEXT           "Duration Data Acquired (sec)",IDC_STATIC,13,206,96,8
+    CTEXT           "",IDC_DATA_LENGTHT1,115,206,60,8
+    CTEXT           "",IDC_DATA_LENGTHT2,185,206,60,8
+    CTEXT           "",IDC_DATA_LENGTHT3,255,206,60,8
+    CTEXT           "",IDC_DATA_LENGTHT4,325,206,60,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,115,380,100
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,205,380,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,195,380,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,185,380,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,175,380,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,165,380,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,155,380,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,145,380,70
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,135,380,80
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,250,115,70,100
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,110,115,70,100
+    GROUPBOX        "Most Recent ACQUIRE Records",IDC_STATIC,5,105,390,115
+    GROUPBOX        "Most Recent INQUIRE, INQUIRE2, or INQUIRE3 Status",
+                    IDC_STATIC,5,0,390,101
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,125,380,90
+    RTEXT           "User ID:",IDC_STATIC,314,10,27,8
+    LTEXT           "",IDC_DATA_USERID,344,10,47,8
+    LTEXT           "",IDC_DATA_UNITID2,209,10,20,8
+    LTEXT           "",IDC_DATA_UNITID3,281,10,20,8
+    RTEXT           "Board 2 ID:",IDC_STATIC,234,10,46,8
+    RTEXT           "Board 1 ID:",IDC_STATIC,164,10,42,8
+END
+
+IDD_MODPARAMS_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Modify Params"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_MODPARAMS_PORT,30,10,75,70,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MODPARAMS_NODE,130,10,64,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_MODPARAMS_NODE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,196,9,11,14
+    PUSHBUTTON      "&Browse",IDC_MODPARAMS_BROWSE,7,48,33,12
+    EDITTEXT        IDC_MODPARAMS_SAVELOC,40,39,172,20,ES_MULTILINE | 
+                    WS_VSCROLL
+    EDITTEXT        IDC_MODPARAMS_FILEID,44,65,20,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin1",IDC_MODPARAMS_FILEID_SPIN,"msctls_updown32",
+                    UDS_WRAP | UDS_ARROWKEYS | UDS_NOTHOUSANDS,64,65,11,14
+    CONTROL         "Do Dump File",IDC_MODPARAMS_DODUMP,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,91,
+                    72,60,10
+    CONTROL         "Log Data Filtering Msgs",IDC_MODPARAMS_LOGFILTER,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,
+                    123,61,88,10
+    CONTROL         "Log MII Msgs",IDC_MODPARAMS_LOGMII,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_RIGHT | WS_TABSTOP,
+                    151,72,60,10
+    PUSHBUTTON      "Instrument Setup",IDC_BUTTON_SETUP,9,94,66,14
+    EDITTEXT        IDC_MODPARAMS_ICHVERR,103,90,24,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_MODPARAMS_ICHVERR_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | WS_TABSTOP,127,91,10,14
+    RTEXT           "PC/FC HV\nError %",IDC_STATIC,140,89,35,15
+    EDITTEXT        IDC_MODPARAMS_FCHVERR,177,90,24,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_MODPARAMS_FCHVERR_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | WS_TABSTOP,202,91,10,14
+    PUSHBUTTON      "&Reset to Last Applied",IDC_MODPARAMS_RESET,287,195,50,
+                    25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    DEFPUSHBUTTON   "&Apply",IDC_MODPARAMS_APPLY,341,192,53,31,0,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_MODPARAMS_BATVOLTH,90,120,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    CONTROL         "Spin9",IDC_MODPARAMS_BATVOLTH_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,120,11,14
+    EDITTEXT        IDC_MODPARAMS_BATVOLTL,155,120,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    CONTROL         "Spin10",IDC_MODPARAMS_BATVOLTL_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,120,11,14
+    EDITTEXT        IDC_MODPARAMS_SUP_P15H,90,139,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin11",IDC_MODPARAMS_SUP_P15H_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,139,11,14
+    EDITTEXT        IDC_MODPARAMS_SUP_P15L,155,139,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin12",IDC_MODPARAMS_SUP_P15L_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,139,11,14
+    EDITTEXT        IDC_MODPARAMS_SUP_M15H,90,158,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin13",IDC_MODPARAMS_SUP_M15H_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,158,11,14
+    EDITTEXT        IDC_MODPARAMS_SUP_M15L,155,158,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin14",IDC_MODPARAMS_SUP_M15L_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,158,11,14
+    EDITTEXT        IDC_MODPARAMS_SUP_P05H,90,178,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin15",IDC_MODPARAMS_SUP_P05H_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,125,178,11,14
+    EDITTEXT        IDC_MODPARAMS_SUP_P05L,155,178,35,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT 
+                    WS_TABSTOP
+    CONTROL         "Spin16",IDC_MODPARAMS_SUP_P05L_SPIN,"msctls_updown32",
+                    UDS_ALIGNRIGHT | UDS_ARROWKEYS | UDS_NOTHOUSANDS | 
+                    WS_TABSTOP,190,178,11,14
+    EDITTEXT        IDC_MODPARAMS_TIME_ERR,67,200,38,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin8",IDC_MODPARAMS_TIME_ERR_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,95,200,11,14
+    EDITTEXT        IDC_MODPARAMS_SLOW_RESET,168,200,40,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin8",IDC_MODPARAMS_SLOW_RESET_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,201,200,11,14
+    EDITTEXT        IDC_MODPARAMS_MAXCYCLE,320,8,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_MODPARAMS_MAXCYCLE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,375,8,11,14
+    EDITTEXT        IDC_MODPARAMS_MAXPAUSE,320,26,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_MODPARAMS_MAXPAUSE_SPIN,"msctls_updown32",
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,26,11,14
+    CONTROL         "Binary\nBBM",IDC_CHECK_BINARY,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,225,42,33,17
+    EDITTEXT        IDC_MODPARAMS_MAXBBM,320,44,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin7",IDC_MODPARAMS_MAXBBM_SPIN,"msctls_updown32",
+                    UDS_WRAP | UDS_ARROWKEYS | UDS_NOTHOUSANDS,375,44,11,14
+    EDITTEXT        IDC_MODPARAMS_COMMFAIL,320,62,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MODPARAMS_COMMFAIL_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,376,62,
+                    11,14
+    PUSHBUTTON      "Force Instrument Date && Time to Computer's",
+                    IDC_MODPARAMS_DATETIME,225,81,164,12
+    CONTROL         "Set Date\\Time\nif < 1980",IDC_CHECK_ALLOWAUTODATE,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,225,
+                    95,69,16,WS_EX_TRANSPARENT
+    CONTROL         "Wait 60 seconds after long break reset",
+                    IDC_CHECK_LBREXTEND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,225,113,167,10
+    EDITTEXT        IDC_MODPARAMS_MAXINQUIRE,320,124,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin5",IDC_MODPARAMS_MAXINQUIRE_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,375,124,11,14
+    EDITTEXT        IDC_MODPARAMS_TIMEOUT,320,144,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_MODPARAMS_TIMEOUT_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS,376,144,
+                    11,14
+    EDITTEXT        IDC_MODPARAMS_MAXSTATUS,320,164,55,14,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin4",IDC_MODPARAMS_MAXSTATUS_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,375,164,11,14
+    PUSHBUTTON      "&Load Default Values",IDC_MODPARAMS_DEFAULT,225,195,55,
+                    25,BS_CENTER | BS_VCENTER | BS_MULTILINE
+    GROUPBOX        "Communications",IDC_STATIC,5,0,210,30
+    GROUPBOX        "Error Limits",IDC_STATIC,5,85,210,135
+    GROUPBOX        "File Output",IDC_STATIC,5,30,210,55
+    GROUPBOX        "General",IDC_STATIC,220,0,175,182
+    RTEXT           "Port:",IDC_STATIC,10,10,20,15,SS_CENTERIMAGE
+    RTEXT           "Node:",IDC_STATIC,105,9,25,15,SS_CENTERIMAGE
+    RTEXT           "Message Cycle Time (mSec):",IDC_STATIC,225,11,94,8
+    LTEXT           "Maximum Pause Time (Sec):",IDC_STATIC,229,29,90,8
+    RTEXT           "Max BBM (Bytes):",IDC_STATIC,261,47,58,8
+    CTEXT           "High",IDC_STATIC,100,108,20,8
+    CTEXT           "Low",IDC_STATIC,160,108,30,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,117,200,78
+    RTEXT           "Battery",IDC_STATIC_EXTPOW,20,121,55,11
+    RTEXT           "+15 / +12 Volt\nSupply",IDC_STATIC,15,137,60,17
+    RTEXT           "-15 / -12 Volt\nSupply",IDC_STATIC,15,157,60,16
+    RTEXT           "5 Volt Supply",IDC_STATIC,15,181,60,8
+    RTEXT           "Time Delta (Sec.):",IDC_STATIC,10,203,57,8
+    CTEXT           "These items are multiples of ""Message Cycle Time"".",
+                    IDC_STATIC,223,125,39,49
+    RTEXT           "Take Status\nEvery (units):",IDC_STATIC,275,162,43,18
+    RTEXT           "Inquire\nEvery (units):",IDC_STATIC,275,122,43,18
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,80,107,130,88
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,145,107,65,88
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,136,200,59
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,155,200,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,175,200,20
+    RTEXT           "Location:",IDC_STATIC,8,38,30,8
+    CTEXT           "",IDC_MODPARAMS_STATICTEXT,220,184,175,10
+    RTEXT           "Station ID:",IDC_STATIC,8,67,35,10
+    RTEXT           "Response\nTime-Out (units):",IDC_STATIC,264,141,54,18
+    RTEXT           "# of Retransmits Before Fail:",IDC_STATIC,229,64,90,8
+    RTEXT           "Slow Reset (Sec)",IDC_STATIC,111,203,55,8
+    RTEXT           "IC HV\nError %",IDC_STATIC,78,89,22,15
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | DTS_UPDOWN | DTS_SHOWNONE | WS_TABSTOP | 
+                    0x8,320,98,68,15
+    RTEXT           "Auto\nSet at:",IDC_STATIC,293,96,24,16,0,
+                    WS_EX_TRANSPARENT
+END
+
+IDD_SUMMARY DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Summary"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CTEXT           "",IDC_SUMMARY_BATTERY1,133,21,52,8
+    CTEXT           "",IDC_SUMMARY_P15VOLT1,133,31,52,8
+    CTEXT           "",IDC_SUMMARY_M15VOLT1,133,41,52,8
+    CTEXT           "",IDC_SUMMARY_P5VOLT1,133,51,52,8
+    CTEXT           "",IDC_SUMMARY_BATTERY2,187,21,52,8
+    CTEXT           "",IDC_SUMMARY_P15VOLT2,187,31,52,8
+    CTEXT           "",IDC_SUMMARY_M15VOLT2,187,41,52,8
+    CTEXT           "",IDC_SUMMARY_P5VOLT2,187,51,52,8
+    CTEXT           "",IDC_SUMMARY_BATTERY3,241,21,52,8
+    CTEXT           "",IDC_SUMMARY_P15VOLT3,241,31,52,8
+    CTEXT           "",IDC_SUMMARY_M15VOLT3,241,41,52,8
+    CTEXT           "",IDC_SUMMARY_P5VOLT3,241,51,52,8
+    LTEXT           "",IDC_SUMMARY_OOMII,129,75,179,8
+    LTEXT           "",IDC_SUMMARY_ACPOWER,129,85,179,8
+    LTEXT           "",IDC_SUMMARY_BATTERYOK,129,95,179,8
+    LTEXT           "",IDC_SUMMARY_BBMOK,129,106,179,8
+    LTEXT           "",IDC_SUMMARY_INQUIRETIME,129,117,256,9
+    CONTROL         "",IDC_SUMMARY_COMMAND6,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,146,285,10
+    CONTROL         "",IDC_SUMMARY_COMMAND5,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,158,285,10
+    CONTROL         "",IDC_SUMMARY_COMMAND4,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,170,285,10
+    CONTROL         "",IDC_SUMMARY_COMMAND3,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,182,285,10
+    CONTROL         "",IDC_SUMMARY_COMMAND2,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,194,285,10
+    CONTROL         "",IDC_SUMMARY_COMMAND1,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,10,206,285,10
+    GROUPBOX        "GRAND Setup",IDC_STATIC,5,2,385,63
+    GROUPBOX        "Data Status",IDC_STATIC,5,65,385,65
+    PUSHBUTTON      "Go To\nGRAND Setup Page",IDC_GOTO_GRAND,310,15,75,40,
+                    BS_CENTER | BS_VCENTER | BS_MULTILINE,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Go To \nData Status Page",IDC_GOTO_DATASTAT,310,75,75,
+                    40,BS_MULTILINE,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Go To\nMonitor Parameters Page",IDC_GOTO_USERSTAT,310,
+                    138,75,40,BS_MULTILINE,WS_EX_CLIENTEDGE
+    RTEXT           "-15/-12 Volt Supply",IDC_STATIC,55,41,71,8
+    RTEXT           "+15/+12 Volt Supply",IDC_STATIC,55,31,71,8
+    RTEXT           "Battery Voltage",IDC_STATIC_EXTPOW,77,21,49,8
+    RTEXT           "+5 Volt Supply",IDC_STATIC,70,51,56,8
+    RTEXT           "Measurement Interval of Interest:",IDC_STATIC,20,75,108,
+                    8
+    RTEXT           "Battery:",IDC_STATIC,20,95,108,8
+    RTEXT           "Battery Backed Up Memory:",IDC_STATIC,15,106,113,8
+    RTEXT           "Ext. Power:",IDC_STATIC,20,85,108,8
+    RTEXT           "Last INQUIRE Status (Y.M.D H:M:S):",IDC_STATIC,9,117,
+                    119,8
+    LTEXT           "Minimum",IDC_STATIC,144,11,28,8
+    LTEXT           "Current",IDC_STATIC,203,11,24,8
+    LTEXT           "Maximum",IDC_STATIC,253,11,30,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,50,20,245,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,240,10,55,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,185,10,110,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,130,10,165,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,50,30,245,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,50,40,245,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,50,50,245,10
+    GROUPBOX        "Recent Commands and Responses",IDC_STATIC,5,135,295,85
+    PUSHBUTTON      "Recent Data",IDC_BUTTON_TODAYDATA,310,179,75,20,0,
+                    WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Watch Window",IDC_BUTTON_WATCH,310,201,75,20,
+                    WS_DISABLED,WS_EX_CLIENTEDGE
+    LTEXT           "",IDC_STATIC_EXTPOWINST,51,21,13,8
+END
+
+IDD_PROPPAGE_LEGEND DIALOG DISCARDABLE  0, 0, 400, 225
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Legend"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RICHEDIT1,"RICHEDIT",ES_MULTILINE | ES_READONLY | 
+                    WS_BORDER | WS_VSCROLL,0,0,399,225
+END
+
+IDD_GRANDSETUP_DIALOG DIALOG DISCARDABLE  0, 0, 400, 225
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Inst. Settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List2",IDC_LIST_SET,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | WS_BORDER | WS_TABSTOP,7,7,386,171
+    PUSHBUTTON      "Edit ""Desired"" of Selected Item",
+                    IDC_BUTTON_EDITSELECTION,86,194,72,24,BS_MULTILINE
+    CTEXT           "All data items are compared as text.  For example ""  0.34"" is NOT the same as ""0.34"".",
+                    IDC_STATIC,7,182,386,8
+    PUSHBUTTON      "Save All ""Reported"" As New ""Desired""",
+                    IDC_BUTTON_SAVEALL,7,194,72,24,BS_MULTILINE
+    PUSHBUTTON      "Set ""Desired"" to Default Values",
+                    IDC_BUTTON_LOADDEFAULT,165,194,72,24,BS_MULTILINE
+END
+
+IDD_DIALOG_EDIT DIALOG DISCARDABLE  0, 0, 237, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Desired and Save to INI file."
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,57,90,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,90,50,14
+    LTEXT           "Description:",IDC_STATIC,7,9,38,8
+    LTEXT           "",IDC_STATIC_DESCRIPTION,50,9,180,8
+    RTEXT           "Reported:",IDC_STATIC,7,23,38,8
+    LTEXT           "",IDC_STATIC_REPORTED,50,23,180,8
+    RTEXT           "Desired:",IDC_STATIC,7,39,38,8
+    EDITTEXT        IDC_EDIT1,50,36,180,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC_ININAME,50,55,180,8
+    RTEXT           "INI Name:",IDC_STATIC,7,55,38,8
+    LTEXT           "",IDC_STATIC_COMMAND,50,69,180,8
+    RTEXT           "Inst. Cmd:",IDC_STATIC,7,69,38,8
+END
+
+IDD_GENERAL4STAT_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "MG Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Most Recent General Status Record, Instrument Status Record, and Battery Record",
+                    IDC_STATIC,5,0,389,123
+    GROUPBOX        "Most Recent Instrument Status and Dual Current Mode Records",
+                    IDC_STATIC,5,119,220,81,BS_LEFT
+    GROUPBOX        "",IDC_STATIC,224,119,171,42
+    RTEXT           "Count Time:",IDC_STATIC,12,42,61,8
+    RTEXT           "Pulse Counter HV Bias",IDC_STATIC,130,22,76,8
+    RTEXT           "-12 Volt Supply",IDC_STATIC,130,62,76,8
+    RTEXT           "Ion Chamber HV Bias",IDC_STATIC,130,32,76,8
+    RTEXT           "+12 Volt Supply",IDC_STATIC,130,52,76,8
+    RTEXT           "Battery Voltage",IDC_STATIC,130,42,76,8
+    RTEXT           "+5 Volt Supply",IDC_STATIC,130,72,76,8
+    RTEXT           "Offset Mode:",IDC_STATIC,17,178,59,9
+    RTEXT           "Max or Fixed Index",IDC_STATIC,17,158,59,8
+    RTEXT           "Last Dual Ion Date && Time:",IDC_STATIC,9,128,86,8
+    RTEXT           "GRAND Program Version Number:",IDC_STATIC,234,124,67,20
+    RTEXT           "Gen SR Date & Time:",IDC_STATIC,7,100,68,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    RTEXT           "ROM Checksum:",IDC_STATIC,234,146,67,8
+    RTEXT           "Nominal Interval",IDC_STATIC,17,188,59,8
+    RTEXT           "Gain Mode",IDC_STATIC,17,148,59,8
+    RTEXT           "Present Gain Index",IDC_STATIC,12,168,64,8
+    LTEXT           "",IDC_GENERAL4_TIME,79,100,106,9,SS_CENTERIMAGE
+    LTEXT           "",IDC_GENERAL4_MODE,79,52,37,8,SS_NOPREFIX
+    CTEXT           "",IDC_GENERAL4_FCHIGHVMIN,218,21,46,8
+    CTEXT           "",IDC_GENERAL4_ICHIGHVMIN,218,31,46,8
+    CTEXT           "",IDC_GENERAL4_BATTERYMIN,218,41,46,8
+    CTEXT           "",IDC_GENERAL4_P15VOLTMIN,218,51,46,8
+    CTEXT           "",IDC_GENERAL4_M15VOLTMIN,218,61,46,8
+    CTEXT           "",IDC_GENERAL4_P5VOLTMIN,218,71,46,8
+    LTEXT           "",IDC_GENERAL4_GRANDP,306,129,80,8
+    LTEXT           "",IDC_GENERAL4_ROM,306,146,80,8
+    CTEXT           "",IDC_GENERAL4_DISCM,83,178,32,8
+    CTEXT           "",IDC_GENERAL4_GAMMA1G,84,148,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_GAMMA2G,153,148,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_GAMMA1M,83,158,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_GAMMA2M,153,158,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_MAXG1,83,168,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_MAXG2,153,168,64,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    ICON            IDR_MAINFRAME,IDC_STATIC,237,169,20,20
+    GROUPBOX        "",IDC_STATIC,224,156,171,44
+    CTEXT           "Gamma 1",IDC_STATIC,87,138,55,8
+    CTEXT           "Gamma 2",IDC_STATIC,161,138,50,8
+    CTEXT           "",IDC_GENERAL4_G1DATE,96,128,59,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_G1TIME,83,188,32,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_G2DATE,161,128,59,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "",IDC_GENERAL4_G2TIME,185,188,32,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,147,210,31
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,157,210,21
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,10,167,210,11
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,80,137,70,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,149,137,70,40
+    LTEXT           "No",IDC_GENERAL4_CHECKSUM,7,211,380,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    LTEXT           "Minimum",IDC_STATIC,226,12,28,8
+    LTEXT           "Current",IDC_STATIC,287,12,24,8
+    LTEXT           "Maximum",IDC_STATIC,342,12,30,8
+    CTEXT           "",IDC_GENERAL4_FCHIGHVCUR,276,21,49,8
+    CTEXT           "",IDC_GENERAL4_ICHIGHVCUR,276,31,49,8
+    CTEXT           "",IDC_GENERAL4_BATTERYCUR,276,41,49,8
+    CTEXT           "",IDC_GENERAL4_P15VOLTCUR,276,51,49,8
+    CTEXT           "",IDC_GENERAL4_M15VOLTCUR,276,61,49,8
+    CTEXT           "",IDC_GENERAL4_P5VOLTCUR,276,71,49,8
+    CTEXT           "",IDC_GENERAL4_FCHIGHVMAX,334,21,46,8
+    CTEXT           "",IDC_GENERAL4_ICHIGHVMAX,334,31,46,8
+    CTEXT           "",IDC_GENERAL4_BATTERYMAX,334,41,46,8
+    CTEXT           "",IDC_GENERAL4_P15VOLTMAX,334,51,46,8
+    CTEXT           "",IDC_GENERAL4_M15VOLTMAX,334,61,46,8
+    CTEXT           "",IDC_GENERAL4_P5VOLTMAX,334,71,46,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,325,10,62,71
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,70,267,11
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,60,267,21
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,50,267,31
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,40,267,41
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,20,267,61
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,120,30,267,51
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,272,10,115,71
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,212,10,175,71
+    GROUPBOX        "Checksum, Length, or Authentication Error in Message and Communications Status",
+                    IDC_STATIC,5,201,389,22
+    RTEXT           "Battery Date && Time:",IDC_STATIC,9,109,66,8
+    LTEXT           "",IDC_GENERAL4_OFFSET,79,81,106,8
+    LTEXT           "",IDC_GENERAL4_MODE2,79,62,37,8,SS_NOPREFIX
+    RTEXT           "Mode Flag 1:",IDC_STATIC,12,52,61,9
+    RTEXT           "Mode Flag 2:",IDC_STATIC,12,62,61,9
+    LTEXT           "",IDC_GENERAL4_COUNTTIME,79,43,37,8,SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,75,20,45,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,75,30,45,10
+    RTEXT           "PC/FC HV Set Point:",IDC_STATIC,7,21,66,8
+    RTEXT           "IC HV Set Point:",IDC_STATIC,12,31,61,8
+    CTEXT           "",IDC_GENERAL4_FCHVSETPOINT,80,21,37,8
+    CTEXT           "",IDC_GENERAL4_ICHVSETPOINT,79,31,37,8
+    RTEXT           "Inst SR Date & Time:",IDC_STATIC,9,91,66,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    LTEXT           "",IDC_GENERAL4_ISRTIME,79,91,106,9,SS_CENTERIMAGE
+    RTEXT           "HV Config:",IDC_STATIC,120,178,64,8
+    LTEXT           "",IDC_GENERAL4_HVCONFIG,185,178,32,8
+    RTEXT           "Maximum Interval",IDC_STATIC,120,188,64,8
+    RTEXT           "Time Sync State:",IDC_STATIC,190,85,55,8
+    RTEXT           "Hourly Time:",IDC_STATIC,190,95,55,8
+    RTEXT           "Daily Time:",IDC_STATIC,190,105,55,8
+    RTEXT           "Upper Tolerance:",IDC_STATIC,295,85,56,8
+    RTEXT           "Lower Tolerance:",IDC_STATIC,295,95,56,8
+    LTEXT           "",IDC_GENERAL4_TSSTATE,250,85,40,8
+    LTEXT           "",IDC_GENERAL4_TSHOURLY,250,95,40,8
+    LTEXT           "",IDC_GENERAL4_TSDAILY,250,105,40,8
+    LTEXT           "",IDC_GENERAL4_TSUPPER,355,85,30,8
+    LTEXT           "",IDC_GENERAL4_TSLOWER,355,95,30,8
+    RTEXT           "Battery Interval:",IDC_STATIC,15,10,56,8
+    LTEXT           "",IDC_GENERAL4_BATTINT,82,10,30,8
+    RTEXT           "Status Interval:",IDC_STATIC,125,10,51,8
+    LTEXT           "",IDC_GENERAL4_STATINT,181,10,30,8
+    RTEXT           "Unc. Mult:",IDC_STATIC,8,138,34,8
+    RTEXT           "",IDC_GENERAL4_GAMMAUNMULT,42,138,37,8
+    CTEXT           "GRAND (MG firmware 4.10 or later)",IDC_STATIC,259,162,
+                    132,9
+    CTEXT           "MIC Instrument Component",IDC_STATIC,259,171,126,8
+    CTEXT           "Version x.x.x.x MMM dd yyyy",IDC_GENERAL_STATIC_ADVERT,
+                    259,180,126,9
+    CTEXT           "Debug or Release",IDC_STATIC_DEBUG,259,189,126,9
+    RTEXT           "Offset Date & Time:",IDC_STATIC,13,82,62,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    LTEXT           "",IDC_GENERAL4_BATTERYTIME,79,110,106,8
+END
+
+IDD_USER4PROGSTAT_PAGE DIALOGEX 0, 0, 400, 225
+STYLE WS_CHILD | WS_VISIBLE | WS_DISABLED | WS_CAPTION
+CAPTION "Trigger && Ch. Params"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,239,24,120,53
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,89,24,120,53
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,119,24,150,53
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,149,24,150,53
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,179,24,152,53
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,79,96,53,121
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,131,96,53,121
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,183,96,53,121
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,235,96,53,121
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,287,96,53,121
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,339,96,53,121
+    LTEXT           "",IDC_USER4PROG_TIME,70,10,320,10
+    CTEXT           "",IDC_USER4PROG_LOGIC1,94,37,22,8
+    CTEXT           "",IDC_USER4PROG_LOGIC2,94,47,22,8
+    CTEXT           "",IDC_USER4PROG_LOGIC3,94,57,22,8
+    CTEXT           "",IDC_USER4PROG_LOGIC4,94,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE1,124,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE1,123,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE1,124,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE1,124,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE2,154,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE2,154,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE2,154,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE2,154,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE3,184,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE3,184,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE3,184,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE3,184,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE4,213,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE4,213,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE4,213,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE4,213,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE5,243,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE5,243,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE5,243,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE5,243,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE6,273,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE6,273,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE6,273,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE6,273,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE7,303,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE7,303,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE7,303,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE7,303,67,22,8
+    CTEXT           "",IDC_USER4PROG_1CHTYPE8,335,37,22,8
+    CTEXT           "",IDC_USER4PROG_2CHTYPE8,335,47,22,8
+    CTEXT           "",IDC_USER4PROG_3CHTYPE8,335,57,22,8
+    CTEXT           "",IDC_USER4PROG_4CHTYPE8,335,67,22,8
+    CTEXT           "",IDC_USER4PROG_C00,81,118,50,8
+    CTEXT           "",IDC_USER4PROG_C10,133,118,50,8
+    CTEXT           "",IDC_USER4PROG_C20,185,118,50,8
+    CTEXT           "",IDC_USER4PROG_C30,237,118,50,8
+    CTEXT           "",IDC_USER4PROG_C40,289,118,50,8
+    CTEXT           "",IDC_USER4PROG_C50,341,118,50,8
+    CTEXT           "",IDC_USER4PROG_C01,81,128,50,8
+    CTEXT           "",IDC_USER4PROG_C11,133,128,50,8
+    CTEXT           "",IDC_USER4PROG_C21,185,128,50,8
+    CTEXT           "",IDC_USER4PROG_C31,237,128,50,8
+    CTEXT           "",IDC_USER4PROG_C41,289,128,50,8
+    CTEXT           "",IDC_USER4PROG_C51,341,128,50,8
+    CTEXT           "",IDC_USER4PROG_C02,81,138,50,8
+    CTEXT           "",IDC_USER4PROG_C12,133,138,50,8
+    CTEXT           "",IDC_USER4PROG_C22,185,138,50,8
+    CTEXT           "",IDC_USER4PROG_C32,237,138,50,8
+    CTEXT           "",IDC_USER4PROG_C42,289,138,50,8
+    CTEXT           "",IDC_USER4PROG_C52,341,138,50,8
+    CTEXT           "",IDC_USER4PROG_C03,81,148,50,8
+    CTEXT           "",IDC_USER4PROG_C13,133,148,50,8
+    CTEXT           "",IDC_USER4PROG_C23,185,148,50,8
+    CTEXT           "",IDC_USER4PROG_C33,237,148,50,8
+    CTEXT           "",IDC_USER4PROG_C43,289,148,50,8
+    CTEXT           "",IDC_USER4PROG_C53,341,148,50,8
+    CTEXT           "",IDC_USER4PROG_C04,81,158,50,8
+    CTEXT           "",IDC_USER4PROG_C14,133,158,50,8
+    CTEXT           "",IDC_USER4PROG_C24,185,158,50,8
+    CTEXT           "",IDC_USER4PROG_C34,237,158,50,8
+    CTEXT           "",IDC_USER4PROG_C44,289,158,50,8
+    CTEXT           "",IDC_USER4PROG_C54,341,158,50,8
+    CTEXT           "",IDC_USER4PROG_C05,81,168,50,8
+    CTEXT           "",IDC_USER4PROG_C15,133,168,50,8
+    CTEXT           "",IDC_USER4PROG_C25,185,168,50,8
+    CTEXT           "",IDC_USER4PROG_C35,237,168,50,8
+    CTEXT           "",IDC_USER4PROG_C45,289,168,50,8
+    CTEXT           "",IDC_USER4PROG_C55,341,168,50,8
+    CTEXT           "",IDC_USER4PROG_C06,81,178,50,8
+    CTEXT           "",IDC_USER4PROG_C16,133,178,50,8
+    CTEXT           "",IDC_USER4PROG_C26,185,178,50,8
+    CTEXT           "",IDC_USER4PROG_C36,237,178,50,8
+    CTEXT           "",IDC_USER4PROG_C46,289,178,50,8
+    CTEXT           "",IDC_USER4PROG_C56,341,178,50,8
+    CTEXT           "",IDC_USER4PROG_C07,81,188,50,8
+    CTEXT           "",IDC_USER4PROG_C17,133,188,50,8
+    CTEXT           "",IDC_USER4PROG_C27,185,188,50,8
+    CTEXT           "",IDC_USER4PROG_C37,237,188,50,8
+    CTEXT           "",IDC_USER4PROG_C47,289,188,50,8
+    CTEXT           "",IDC_USER4PROG_C57,341,188,50,8
+    CTEXT           "",IDC_USER4PROG_C08,81,198,50,8
+    CTEXT           "",IDC_USER4PROG_C18,133,198,50,8
+    CTEXT           "",IDC_USER4PROG_C28,185,198,50,8
+    CTEXT           "",IDC_USER4PROG_C38,237,198,50,8
+    CTEXT           "",IDC_USER4PROG_C48,289,198,50,8
+    CTEXT           "",IDC_USER4PROG_C58,341,198,50,8
+    CTEXT           "",IDC_USER4PROG_C09,81,208,50,8
+    CTEXT           "",IDC_USER4PROG_C19,133,208,50,8
+    CTEXT           "",IDC_USER4PROG_C29,185,208,50,8
+    CTEXT           "",IDC_USER4PROG_C39,237,208,50,8
+    CTEXT           "",IDC_USER4PROG_C49,289,208,50,8
+    CTEXT           "",IDC_USER4PROG_C59,341,208,50,8
+    RTEXT           "Y.M.D H:M:S:",IDC_STATIC,10,10,55,8
+    CTEXT           "Logic",IDC_STATIC,91,26,25,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Trigger Pin 4",IDC_STATIC,44,37,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Trigger Pin 5",IDC_STATIC,44,47,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Trigger Pin 6",IDC_STATIC,44,57,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CTEXT           "Trigger Pin 7",IDC_STATIC,44,67,40,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,90,24,270,53
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,34,46,325,31
+    GROUPBOX        "Most Recent Trigger Configuration Record",IDC_STATIC,5,
+                    0,391,85
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,34,56,325,21
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,34,66,325,11
+    GROUPBOX        "Most Recent Channel Config. Records",IDC_STATIC,5,85,
+                    391,137
+    RTEXT           "Thresh 1 Value",IDC_STATIC,10,128,62,8,SS_CENTERIMAGE,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Thresh 1 Entry/Exit",IDC_STATIC,10,138,62,8,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    RTEXT           "Thresh 2 Type/Dir",IDC_STATIC,10,148,62,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Thresh 2 Value",IDC_STATIC,10,158,62,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Thresh 2 Entry/Exit",IDC_STATIC,10,168,62,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Chng. Sig. Multiplier",IDC_STATIC,10,178,62,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Chng. Sig Entry Pt.",IDC_STATIC,10,188,62,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Filter Limit",IDC_STATIC,10,198,62,8,0,
+                    WS_EX_TRANSPARENT
+    RTEXT           "Hysteresis",IDC_STATIC,10,208,62,8,0,WS_EX_TRANSPARENT
+    RTEXT           "Thresh 1 Type/Dir",IDC_STATIC,10,118,62,8,
+                    SS_CENTERIMAGE,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,117,385,100
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,127,385,90
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,137,385,80
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,147,385,70
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,157,385,60
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,167,385,50
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,177,385,40
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,187,385,30
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,197,385,20
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,7,207,385,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,34,34,326,43
+    CTEXT           "Channel / Type",IDC_STATIC,130,25,215,8
+    CTEXT           "Chan. 0",IDC_USER4PROG_CH0USED,81,107,50,8
+    CTEXT           "Chan. 1",IDC_USER4PROG_CH1USED,133,107,50,8
+    CTEXT           "Chan. 2",IDC_USER4PROG_CH2USED,185,107,50,8
+    CTEXT           "Chan. 3",IDC_USER4PROG_CH3USED,237,107,50,8
+    CTEXT           "Chan. 4",IDC_USER4PROG_CH4USED,289,107,50,8
+    CTEXT           "Chan. 5",IDC_USER4PROG_CH5USED,341,107,50,8,WS_DISABLED
+    CTEXT           "Neutron  A",IDC_STATIC,81,97,50,8
+    CTEXT           "Neutron B",IDC_STATIC,133,97,50,8
+    CTEXT           "Neutron C",IDC_STATIC,185,97,50,8
+    CTEXT           "Gamma 1",IDC_STATIC,237,97,50,8
+    CTEXT           "Gamma 2",IDC_STATIC,289,97,50,8
+    CTEXT           "Future",IDC_STATIC,341,97,50,8,WS_DISABLED
+END
+
+IDD_DATAWATCH_DIALOG DIALOGEX 0, 0, 508, 330
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+CAPTION "Data Watch"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "",IDC_CHART1V_MAX,35,18,30,8
+    RTEXT           "",IDC_CHART1V_MIN,35,31,30,8
+    RTEXT           "",IDC_CHART2V_MAX,35,64,30,8
+    RTEXT           "",IDC_CHART2V_MIN,36,78,30,8
+    RTEXT           "",IDC_CHART3V_MAX,35,125,30,8
+    RTEXT           "",IDC_CHART3V_MIN,35,138,30,8
+    RTEXT           "",IDC_CHART1H_MAX,93,50,82,8
+    LTEXT           "",IDC_CHART1H_MIN,211,47,82,8
+    RTEXT           "",IDC_CHART2H_MAX,93,63,82,8
+    LTEXT           "",IDC_CHART2H_MIN,211,63,82,8
+    RTEXT           "",IDC_CHART3H_MAX,95,78,82,8
+    LTEXT           "",IDC_CHART3H_MIN,212,78,82,8
+    CTEXT           "",IDC_STATIC_CHART1,320,103,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART2,330,111,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART3,339,120,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART4,348,129,8,8,0,WS_EX_TRANSPARENT
+    CONTROL         "Lock Scrolling Together (1 hour displayed)",
+                    IDC_CHECK_LOCKED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    167,265,201,10
+    CTEXT           "",IDC_STATIC_CHART1B,426,147,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART2B,436,155,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART3B,445,164,8,8,0,WS_EX_TRANSPARENT
+    RTEXT           "",IDC_CHART4V_MAX,30,161,30,8
+    RTEXT           "",IDC_CHART4V_MIN,30,174,30,8
+    RTEXT           "",IDC_CHART5V_MAX,28,192,30,8
+    RTEXT           "",IDC_CHART5V_MIN,28,205,30,8
+    RTEXT           "",IDC_CHART4H_MAX,95,102,82,8
+    RTEXT           "",IDC_CHART5H_MAX,100,125,82,8
+    LTEXT           "",IDC_CHART4H_MIN,211,103,82,8
+    LTEXT           "",IDC_CHART5H_MIN,209,126,82,8
+    CTEXT           "",IDC_STATIC_CHART5,357,138,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART4B,454,173,8,8,0,WS_EX_TRANSPARENT
+    CTEXT           "",IDC_STATIC_CHART5B,463,182,8,8,0,WS_EX_TRANSPARENT
+    PUSHBUTTON      "Zoom In",IDC_BUTTON_EXPAND,1,315,50,14
+    PUSHBUTTON      "Zoom Out",IDC_BUTTON_CONTRACT,458,315,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\mic.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_ICON_RED            ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_ICON_GREEN          ICON    DISCARDABLE     "res\\ico00001.ico"
+IDI_ICON_GREENT         ICON    DISCARDABLE     "res\\ico00002.ico"
+IDI_ICON_YELLOWR        ICON    DISCARDABLE     "res\\icon_yel.ico"
+IDI_ICON_YELLOWR2       ICON    DISCARDABLE     "res\\ico00003.ico"
+IDI_ICON_GRAY           ICON    DISCARDABLE     "res\\ico00004.ico"
+IDI_ICON_GRAYT          ICON    DISCARDABLE     "res\\ico00005.ico"
+IDI_BELL                ICON    DISCARDABLE     "res\\ico00006.ico"
+IDI_FLOPPY              ICON    DISCARDABLE     "res\\ico00007.ico"
+IDI_FACE                ICON    DISCARDABLE     "res\\ico00008.ico"
+IDI_BOMB                ICON    DISCARDABLE     "res\\ico00009.ico"
+IDI_SKULL               ICON    DISCARDABLE     "res\\ico00010.ico"
+IDI_FLAG                ICON    DISCARDABLE     "res\\ico00011.ico"
+IDI_CLOCK               ICON    DISCARDABLE     "res\\clock.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\ico00012.ico"
+IDI_ICON3               ICON    DISCARDABLE     "res\\icon3.ico"
+IDI_ICON4               ICON    DISCARDABLE     "res\\icon4.ico"
+IDI_ICON5               ICON    DISCARDABLE     "res\\icon5.ico"
+IDI_ICON6               ICON    DISCARDABLE     "res\\icon6.ico"
+IDI_ICON7               ICON    DISCARDABLE     "res\\icon7.ico"
+IDI_ICON8               ICON    DISCARDABLE     "res\\icon8.ico"
+IDI_MAINFRAMEB          ICON    DISCARDABLE     "res\\mainfram.ico"
+IDI_ICON1B              ICON    DISCARDABLE     "res\\icon1b.ico"
+IDI_ICON13              ICON    DISCARDABLE     "res\\icon13.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_GREEN           BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BMP_ALL             BITMAP  DISCARDABLE     "res\\bmp_red.bmp"
+IDB_BMP_GREENT          BITMAP  DISCARDABLE     "res\\bmp_gree.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+IDB_BITMAP4             BITMAP  DISCARDABLE     "res\\bitmap4.bmp"
+IDB_BITMAP5             BITMAP  DISCARDABLE     "res\\bitmap5.bmp"
+IDB_BITMAP6             BITMAP  DISCARDABLE     "res\\bitmap6.bmp"
+IDB_BITMAP7             BITMAP  DISCARDABLE     "res\\bitmap7.bmp"
+IDB_BITMAP8             BITMAP  DISCARDABLE     "res\\bitmap8.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_HAND         CURSOR  DISCARDABLE     "res\\cursor.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "CoGrandISO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "CoGrandISO.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

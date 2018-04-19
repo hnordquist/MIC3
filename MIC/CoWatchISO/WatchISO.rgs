@@ -1,0 +1,26 @@
+HKCR
+{
+	CoWatchISO.WatchISO.1 = s 'WatchISO Class'
+	{
+		CLSID = s '{FA40B144-C1F8-4e4b-A729-F4261195C4C7}'
+	}
+	CoWatchISO.WatchISO = s 'WatchISO Class'
+	{
+		CLSID = s '{FA40B144-C1F8-4e4b-A729-F4261195C4C7}'
+		CurVer = s 'CoWatchISO.WatchISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {FA40B144-C1F8-4e4b-A729-F4261195C4C7} = s 'WatchISO Class'
+		{
+			ProgID = s 'CoWatchISO.WatchISO.1'
+			VersionIndependentProgID = s 'CoWatchISO.WatchISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{E35BFFE4-BB7F-4D18-9D5F-3B2922AA8FCE}'
+		}
+	}
+}

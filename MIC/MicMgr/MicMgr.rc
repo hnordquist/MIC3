@@ -1,0 +1,629 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MicMgr.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1 DIALOG  0, 0, 207, 76
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MIC: File Copy"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Cancel",IDCANCEL,60,55,50,14
+    CTEXT           "Waiting for new media.\n\nThis Dialog Box will automatically close when new media has been detected in the destination drive.",IDC_STATIC,25,5,160,35
+    PUSHBUTTON      "&Ok",IDOK,5,55,50,14
+    PUSHBUTTON      "&Ext. Auto Close: 00:00",ID_HIDDEN_EXTEND,115,55,85,14
+END
+
+IDD_COPYFILES4_DIALOG DIALOGEX 0, 0, 400, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Copy Files (continued)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Exit && Archive",IDOK,259,195,59,14
+    PUSHBUTTON      "Exit && NO &Archive",IDCANCEL,321,195,64,14
+    ICON            IDI_ICON_GRAYT,IDC_ICON_1,5,19,20,20
+    ICON            IDI_ICON_GRAYT,IDC_ICON_2,5,44,20,20
+    ICON            IDI_ICON_GRAYT,IDC_ICON_3,5,69,20,20
+    ICON            IDI_ICON_GRAYT,IDC_ICON_4,5,94,20,20
+    ICON            125,IDC_ICON_5,5,119,20,20
+    ICON            IDI_ICON_RED,IDC_ICON_6,5,169,20,20
+    ICON            IDI_ICON_RED,IDC_ICON_7,5,144,20,20
+    ICON            IDI_ICON_RED,IDC_ICON_8,5,194,20,20
+    LTEXT           "Enter Inspector Data",IDC_STATIC,30,19,65,20,SS_CENTERIMAGE
+    LTEXT           "Dumping Data from Instrument's BBM to Hard Drive",IDC_STATIC,30,42,70,25
+    LTEXT           "Select Destination to Copy Files To",IDC_STATIC,30,69,65,19
+    LTEXT           "Select File Sets to Exclude & click on ""Begin Copy""",IDC_STATIC,30,117,65,25,SS_NOPREFIX
+    LTEXT           "Insert Next\nMedia",IDC_NEXT_STATIC,30,169,65,20
+    LTEXT           "Insert Destination Media",IDC_STATIC,30,94,65,18
+    LTEXT           "Remove Media",IDC_STATIC,30,144,65,21,SS_CENTERIMAGE
+    LTEXT           "Select ""Exit & Archive"" or ""Begin Another Copy""",IDC_STATIC,30,191,65,27,SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,100,5,295,215,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    RTEXT           "Destination Drive:",IDC_STATIC,105,10,60,10
+    CONTROL         "List1",IDC_FILE_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,185,30,200,140,WS_EX_CLIENTEDGE
+    CTEXT           "Number of file sets containing uncopied data:",IDC_STATIC,120,25,50,25
+    CTEXT           "  ",IDC_TOTAL_STATIC,120,55,50,10,SS_CENTERIMAGE
+    CTEXT           "Number of file sets currently selected to be copied:",IDC_STATIC,120,75,50,35
+    CTEXT           "  ",IDC_SELECTED_STATIC,120,110,50,8,SS_CENTERIMAGE
+    PUSHBUTTON      "&Undo Selections",IDC_UNDO_BUTTON,185,175,85,14,WS_GROUP
+    PUSHBUTTON      "&Begin Copy",IDC_BEGINCOPY_BUTTON,185,195,71,14
+    PUSHBUTTON      "Ext. Auto Close in %d sec.",IDC_TOCLOSE_BUTTON,275,175,110,14
+    CTEXT           "All file sets currently selected for copy.",IDC_CAUTION_STATIC,110,165,70,48
+    GROUPBOX        "",IDC_STATIC,112,20,65,50
+    GROUPBOX        "",IDC_STATIC,112,70,65,55
+    CTEXT           "Approximately %d empty media needed.",IDC_TOTALMEDIA_STATIC,106,130,75,30
+    LTEXT           " ",IDC_DESTINATION_STATIC,170,10,20,8
+    LTEXT           "Select to exclude from copy...",IDC_STATIC,185,20,95,8
+    RTEXT           "Previous Inspection Date:",IDC_STATIC,190,10,85,8
+    LTEXT           "",IDC_PREVIOUS_STATIC,280,10,105,8
+    CTEXT           "",IDC_IAEA_STATIC,5,5,90,8
+END
+
+IDD_COPYFILES1_DIALOG DIALOGEX 0, 0, 400, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Copy Files"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Next",IDOK,205,200,85,14
+    PUSHBUTTON      "&Close",IDCANCEL,110,200,85,14
+    ICON            IDI_ICON9,IDC_ICON_1,5,19,20,20
+    ICON            IDI_ICON_RED,IDC_ICON_2,5,44,20,20
+    ICON            IDI_ICON_GREENT,IDC_ICON_3,5,69,20,20
+    ICON            IDI_ICON10,IDC_ICON_4,5,94,20,20
+    ICON            IDI_ICON_GRAY,IDC_ICON_5,5,119,20,20
+    ICON            IDI_ICON_GRAY,IDC_ICON_6,5,144,20,20
+    ICON            IDI_ICON_GRAY,IDC_ICON_7,5,169,20,20
+    ICON            IDI_ICON_GRAY,IDC_ICON_8,5,194,20,20
+    LTEXT           "Enter Inspector Data",IDC_STATIC,30,19,65,20,SS_CENTERIMAGE
+    LTEXT           "Dumping Data from Instrument's BBM to Hard Drive",IDC_STATIC,30,42,70,25
+    LTEXT           "Select Destination to Copy Files To",IDC_STATIC,30,69,65,20
+    LTEXT           "Select File Sets to Exclude & click on ""Begin Copy""",IDC_STATIC,30,117,65,25,SS_NOPREFIX
+    LTEXT           "Remove Media",IDC_STATIC,30,144,65,20,SS_CENTERIMAGE
+    LTEXT           "Insert Destination Media",IDC_STATIC,30,94,65,20
+    LTEXT           "Insert Next\nMedia",IDC_STATIC,30,169,65,20
+    LTEXT           "Select ""Archive & Exit"" or ""Begin Another Copy""",IDC_STATIC,30,191,65,25,SS_NOPREFIX
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,100,5,295,217,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    EDITTEXT        IDC_INSPECTORNAME_EDIT,190,21,180,14,ES_AUTOHSCROLL
+    RTEXT           "Inspector Name:",IDC_STATIC,115,21,69,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_INSPECTORID_EDIT,190,40,180,14,ES_AUTOHSCROLL
+    RTEXT           "Inspector ID#:\nor Facility MBA:",IDC_STATIC,115,39,69,18
+    EDITTEXT        IDC_INSPECTION_EDIT,190,61,180,14,ES_AUTOHSCROLL
+    RTEXT           "Inspection Number:",IDC_STATIC,115,61,70,15,SS_CENTERIMAGE
+    RTEXT           "Facility Name:",IDC_STATIC,110,187,45,10
+    RTEXT           "Today's Date:",IDC_STATIC,175,94,45,10
+    LTEXT           "    ",IDC_FACILITYNAME_STATIC,160,187,220,10
+    LTEXT           " ",IDC_TODAYSDATE_STATIC,225,94,155,8
+    CTEXT           "Dumping Data From BBM -- MIC will pause each instrument as BBM reaches zero.",IDC_DUMP_MESSAGE,110,160,270,8
+    CONTROL         "Progress1",IDC_DUMP_PROGRESS,"msctls_progress32",WS_BORDER,110,170,275,14
+    CONTROL         "",IDC_DRIVE1_RADIO,"Button",BS_AUTORADIOBUTTON,120,132,60,8
+    CONTROL         "",IDC_DRIVE2_RADIO,"Button",BS_AUTORADIOBUTTON,120,144,60,8
+    CONTROL         "",IDC_DRIVE3_RADIO,"Button",BS_AUTORADIOBUTTON,185,132,60,8
+    CONTROL         "",IDC_DRIVE4_RADIO,"Button",BS_AUTORADIOBUTTON,185,144,60,8
+    CONTROL         "",IDC_DRIVE5_RADIO,"Button",BS_AUTORADIOBUTTON,250,132,60,8
+    CONTROL         "",IDC_DRIVE6_RADIO,"Button",BS_AUTORADIOBUTTON,250,144,60,8
+    CONTROL         "",IDC_DRIVE7_RADIO,"Button",BS_AUTORADIOBUTTON,315,132,60,8
+    CONTROL         "",IDC_DRIVE8_RADIO,"Button",BS_AUTORADIOBUTTON,315,144,60,8
+    GROUPBOX        "Destination Drive (New media will be automatically identified and selected)",IDC_STATIC,110,110,275,45
+    GROUPBOX        "Inspector Name, ID#, and Inspection Number, MUST be entered.",IDC_STATIC,110,11,275,95
+    CONTROL         "",IDC_DRIVEDEF_RADIO,"Button",BS_AUTORADIOBUTTON,145,120,192,8
+    RTEXT           "Default:",IDC_STATIC,115,120,26,8
+    LTEXT           " ",IDC_PREVIOUS_STATIC,225,81,155,10,SS_CENTERIMAGE
+    LTEXT           "Previous Inspection Date && Time:",IDC_STATIC,115,81,105,10
+    CTEXT           "",IDC_IAEA_STATIC,5,5,90,8
+    PUSHBUTTON      "Ext.Auto Close:        ",IDC_TILLCLOSE_BUTTON,300,200,85,14
+    PUSHBUTTON      "Browse",IDC_BUTTON_CF_BROWSE,348,117,34,14
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 238, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Multi-Instrument Collect: About"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,9,3,20,20
+    LTEXT           "Multi-Instrument Collect Manager: Version ",IDC_STATIC_VERSION,36,3,195,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "&Close",IDOK,180,42,50,25,WS_GROUP
+    LTEXT           "Los Alamos National Laboratory, DSA-3",IDC_STATIC,11,23,192,8
+    LTEXT           "LA-CC 13-009 D. Pelowitz (Ret.), J. Longo",IDC_STATIC,11,33,175,8
+    LTEXT           "longo@lanl.gov",IDC_STATIC,11,44,64,8
+    LTEXT           "Debug or Release",IDC_STATIC_DEBUG,11,55,58,8
+    EDITTEXT        IDC_EDIT1,9,71,220,120,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_MIC_DIALOG DIALOGEX 0, 0, 122, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MIC Manager"
+CLASS "MICClass"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Copy Data Files...",IDC_COPYDATA_BUTTON,14,10,96,14
+    PUSHBUTTON      "&Start All",IDC_STARTDATA_BUTTON,14,30,96,14
+    GROUPBOX        "All Instruments",IDC_ALL_STATIC,5,0,112,50,BS_CENTER
+END
+
+IDD_VALIDATE_DIALOG DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MIC: Password Controlled Function"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "&OK",IDOK,41,74,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,113,74,50,14
+    EDITTEXT        IDC_USERNAME_EDIT,60,7,108,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD_EDIT,60,25,108,14,ES_PASSWORD | ES_AUTOHSCROLL
+    RTEXT           "User Name:",IDC_STATIC,7,7,50,14,SS_CENTERIMAGE
+    RTEXT           "Password:",IDC_STATIC,7,25,50,14,SS_CENTERIMAGE
+    CTEXT           "You have selected a password controlled function.  Enter your name and password and select ""OK"" or select ""Cancel"" to abort.",IDC_STATIC,13,43,160,27,SS_SUNKEN
+END
+
+IDD_MESSAGE_DIALOG DIALOG  0, 0, 186, 199
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,68,174,50,14
+    CTEXT           "",IDC_MESSAGE_STATIC,5,5,175,155
+    ICON            IDI_ICON1,IDC_STATIC,5,173,21,20
+    ICON            IDI_ICON1,IDC_STATIC,160,173,21,20
+END
+
+IDD_ACCESS_DIALOG DIALOGEX 0, 0, 152, 119
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MIC:  Access Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Close",IDOK,95,89,50,19
+    PUSHBUTTON      "&Edit...",IDC_EDIT_BUTTON,95,47,50,19,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&New...",IDC_NEW_BUTTON,95,26,50,19,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Delete",IDC_DELETE_BUTTON,95,5,50,19,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    LISTBOX         IDC_USER_LIST,5,5,80,105,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+IDD_USERINFO_DIALOG DIALOG  0, 0, 186, 86
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Multi-Instrument Collect: %s User Info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,30,65,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,100,65,50,14
+    RTEXT           "User Name:",IDC_STATIC,25,5,40,14,SS_CENTERIMAGE
+    RTEXT           "Password:",IDC_STATIC,25,25,40,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_USERNAME_EDIT,65,5,115,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD1_EDIT,65,25,115,14,ES_PASSWORD | ES_AUTOHSCROLL
+    RTEXT           "Confirm Password:",IDC_STATIC,5,45,60,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_PASSWORD2_EDIT,65,45,115,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_CONFIGURE_DIALOG DIALOGEX 0, 0, 330, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Multi-Instrument Collect: Configure"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FACILITYNAME_EDIT,58,3,264,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DESTINATIONNAME_EDIT,100,21,178,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Browse...",IDC_BROWSEDEST_BUTTON,282,20,40,14
+    PUSHBUTTON      "Add Co&mm...",IDC_ADDCOMM_BUTTON,13,105,65,18
+    PUSHBUTTON      "Delete C&omm...",IDC_DELCOMM_BUTTON,83,105,65,18
+    PUSHBUTTON      "Add &Instrument...",IDC_ADDINST_BUTTON,13,125,65,18
+    PUSHBUTTON      "&Delete Instrument...",IDC_DELINST_BUTTON,83,125,65,18
+    CTEXT           "",IDC_DAYSTOKEEPDATA_STATIC,13,205,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin2",IDC_DAYSTOKEEPDATA_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,12,203,11,19
+    CTEXT           "",IDC_DAYSBEFOREDELFILES_STATIC,13,225,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin2",IDC_DAYSBEFOREDELFILES_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,12,223,11,19
+    CTEXT           "",IDC_MAXREPETITION_STATIC,13,247,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin2",IDC_MAXREPETITION_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,12,245,11,19
+    CONTROL         "Minimize displayed windows.",IDC_HIDEWINDOWS_CHECK,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,183,104,110,15
+    CTEXT           "",IDC_DIALOG_STATIC,183,119,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin1",IDC_DIALOG_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,117,11,19
+    CTEXT           "",IDC_INSTCOLUMNS_STATIC,183,143,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin2",IDC_COLUMN_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,143,11,19
+    CTEXT           "",IDC_WIDTH,183,167,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin1",IDC_WIDTH_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,167,11,19
+    CTEXT           "",IDC_HEIGHT,183,191,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin1",IDC_HEIGHT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,191,11,19
+    CTEXT           "",IDC_FLAG,183,215,35,16,SS_CENTERIMAGE | SS_SUNKEN,WS_EX_CLIENTEDGE
+    CONTROL         "Spin1",IDC_FLAG_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,178,214,11,19
+    PUSHBUTTON      "Close",IDCANCEL,180,255,65,18
+    PUSHBUTTON      "&Apply",IDC_APPLY_BUTTON,250,253,65,22,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    LTEXT           "Maximum message repetitions",IDC_STATIC,54,247,93,17
+    RTEXT           "&Facility Name:",IDC_STATIC,8,3,46,14,SS_CENTERIMAGE
+    LTEXT           "Quantity of instrument columns in main window.",IDC_STATIC,223,143,90,16
+    LTEXT           "Seconds to display dialogs before automatically closing.",IDC_STATIC,223,119,90,18
+    LTEXT           "Maximum percent usage of hard disk.",IDC_STATIC,52,185,96,16
+    LTEXT           "Check archive for size && age (minutes).",IDC_STATIC,52,205,96,20
+    LTEXT           "Delete from archive at age (days).",IDC_STATIC,52,225,96,18
+    RTEXT           "Default Destination for Copy:",IDC_STATIC,5,24,94,8
+    GROUPBOX        "File Maintenance",IDC_STATIC,8,160,145,113
+    GROUPBOX        "Display",IDC_STATIC,171,95,152,143
+    GROUPBOX        "Instrument && Communications",IDC_STATIC,8,95,145,65
+    LTEXT           "Width of instrument buttons.",IDC_STATIC,223,167,90,18,SS_CENTERIMAGE
+    LTEXT           "Height of instrument buttons.",IDC_STATIC,223,191,90,18,SS_CENTERIMAGE
+    LTEXT           "Size of instrument button flags.",IDC_STATIC,223,215,90,18
+    CONTROL         "Log Archive Actions",IDC_LOGARCHIVEACT_CHECK,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,13,170,85,10
+    CONTROL         "No pause on restart",IDC_NOPAUSERESTART_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,145,78,10
+    EDITTEXT        IDC_MAXPERCENTDISKUSE_STATIC,13,184,34,16,ES_AUTOHSCROLL
+    RTEXT           "",IDC_STATIC_BBMTOTAL,178,240,67,8
+    LTEXT           "= Total bytes of BBM",IDC_STATIC,251,240,67,8
+    EDITTEXT        IDC_EDIT_LONGNAME,10,75,132,12,ES_AUTOHSCROLL
+    GROUPBOX        "File Naming Convention",IDC_STATIC,7,36,315,56
+    CONTROL         "Use Short Form",IDC_CHECK_USESHORT,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,10,49,33,21
+    LTEXT           "%y = YYYY",IDC_STATIC,56,56,36,8
+    LTEXT           "%m = MM",IDC_STATIC,102,56,32,8
+    LTEXT           "%d = DD",IDC_STATIC,141,56,29,8
+    LTEXT           "%I = NNN (inst ID)",IDC_STATIC,109,47,58,8
+    LTEXT           "Example: AA%T%I_%y%m%d_%H%M%S => AAMG028_20030527_135756",IDC_STATIC,63,65,245,8
+    LTEXT           "%T = AA (inst type)",IDC_STATIC,44,47,60,8
+    LTEXT           "%H = HH",IDC_STATIC,206,56,30,8
+    LTEXT           "%M = MM",IDC_STATIC,245,56,32,8
+    LTEXT           "%S = SS",IDC_STATIC,283,56,28,8
+    CTEXT           "",IDC_STATIC_EXAMPLE,154,75,149,12,SS_SUNKEN
+    LTEXT           "DON'T USE: \\ / ? * : ; > < """,IDC_STATIC,225,47,92,8
+    LTEXT           "=>",IDC_STATIC,144,77,9,8
+    LTEXT           "%i = NN (inst ID)",IDC_STATIC,170,47,52,8
+END
+
+IDD_NEWINST_DIALOG DIALOGEX 0, 0, 187, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MIC: New Instrument (ISO)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Close",IDOK,106,116,50,14
+    CTEXT           "Enter an "" Instrument Name"" and select the ""Instrument Type"" you want to add.\n\nClick on ""Create"" to create and configure it.",IDC_STATIC,85,40,95,55
+    LISTBOX         IDC_INSTTYPE_LIST,10,50,70,80,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    LTEXT           "Instrument Type:",IDC_STATIC,10,40,70,8
+    LTEXT           "Instrument Name:",IDC_STATIC,10,5,56,8
+    EDITTEXT        IDC_INSTNAME_EDIT,10,15,170,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Create...",IDC_CREATE_NEWINST_BUTTON,103,94,56,17
+END
+
+IDD_DELETEINS_DIALOG DIALOGEX 0, 0, 272, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete Instrument Object (ISO)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK/Delete",IDOK,209,50,54,20,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Cancel",IDCANCEL,211,74,50,14
+    LISTBOX         IDC_DELETE_LIST,5,5,195,85,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CTEXT           "Select an instrument to delete and click on ""Delete"" or select ""Close"".  ",IDC_STATIC,208,5,55,40
+END
+
+IDD_NEWCOMM_DIALOG DIALOGEX 0, 0, 186, 134
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "MIC: New Communications (CSO)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_COMMNAME_EDIT,10,15,170,14,ES_AUTOHSCROLL
+    LTEXT           "Comm Name:",IDC_STATIC,10,5,43,8
+    CTEXT           "Enter a "" Comm Name"" and select the ""Comm Type"" you want to add.\n\nClick on ""Create"" to create and configure it.",IDC_STATIC,85,40,95,55
+    DEFPUSHBUTTON   "Create...",IDC_CREATE_NEWCOMM_BUTTON,105,95,56,18
+    PUSHBUTTON      "Close",IDOK,108,116,50,14
+    LISTBOX         IDC_COMMTYPE_LIST,10,50,70,80,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+    LTEXT           "Comm Type:",IDC_STATIC,10,40,70,8
+END
+
+IDD_DELETECOMM_DIALOG DIALOGEX 0, 0, 242, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Delete Communications Object (CSO)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK/Delete",IDOK,180,50,54,20,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Cancel",IDCANCEL,182,74,50,14
+    LISTBOX         IDC_DELETE_LIST,5,5,165,85,LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    CTEXT           "Select a communications object to delete and click on ""Delete"" or select ""Close"".  ",IDC_STATIC,175,5,65,40
+END
+
+IDD_REORG_DLG DIALOGEX 0, 0, 388, 244
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Re-Organize Instrument Buttons"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Apply Now (Stop && Restart)",IDOK,136,217,115,20,0,WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Cancel",IDCANCEL,267,219,115,14
+    PUSHBUTTON      "Move Selected Down",IDC_MOVE_DOWN,10,167,101,25
+    PUSHBUTTON      "Move Selected Up",IDC_MOVE_UP,10,138,101,25
+    LISTBOX         IDC_LIST1,117,17,112,178,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Warning: ""Apply Now"" requires\nMIC to terminate and restart.",IDC_STATIC,168,199,102,18
+    CONTROL         "Hide All Watch Windows",IDC_CHECK_HIDEWATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,206,101,10
+    PUSHBUTTON      "Edit Selected\nName/Node",IDC_RENAME_SELECTED,10,17,101,25,BS_MULTILINE
+    PUSHBUTTON      "Revert to Original\nNames/Nodess",IDC_RENAME_REVERT,10,45,101,25,BS_MULTILINE
+    CONTROL         "Tree1",IDC_TREE_VIEW,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | WS_TABSTOP,251,17,122,178,WS_EX_CLIENTEDGE
+    GROUPBOX        "Button Display Order",IDC_STATIC,7,7,231,192
+    GROUPBOX        "Comm::Instrument Connectivity",IDC_STATIC,243,7,138,192
+    LTEXT           "Note: ""Cancel"" will throw away all changes made.",IDC_STATIC,281,199,92,17
+    PUSHBUTTON      "Register New DLL ( CSO or ISO )",IDC_BUTTON_REGISTER,5,220,115,14
+END
+
+IDD_DIALOG_RENAME DIALOG  0, 0, 246, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Rename Instrument Support Object"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,58,97,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,97,50,14
+    LTEXT           "Existing Name:",IDC_STATIC,7,36,165,8
+    LTEXT           "",IDC_STATIC_CURRENTNAME,7,46,165,14,SS_SUNKEN
+    LTEXT           "New Name:",IDC_STATIC,7,63,165,8
+    EDITTEXT        IDC_EDIT_NEWNAME,7,72,165,14
+    LTEXT           "Original Name:",IDC_STATIC,7,7,165,8
+    LTEXT           "",IDC_STATIC_ORIGINALNAME,7,17,165,14,SS_SUNKEN
+    LTEXT           "Original Node:",IDC_STATIC,176,7,46,8
+    LTEXT           "",IDC_STATIC_ORIGINALNODE,176,17,63,14,SS_SUNKEN
+    LTEXT           "Existing Node:",IDC_STATIC,176,37,46,8
+    LTEXT           "",IDC_STATIC_EXISTINGNODE,175,46,63,14,SS_SUNKEN
+    LTEXT           "New Node:",IDC_STATIC,176,63,37,8
+    EDITTEXT        IDC_EDIT_NEWNODE,175,72,63,14,ES_AUTOHSCROLL
+END
+
+IDD_TIMED_INTEGER_DIALOG DIALOG  0, 0, 237, 174
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,49,155,66,14
+    PUSHBUTTON      "Cancel",IDCANCEL,121,155,66,14
+    LTEXT           "",IDC_STATIC_TIMED_INTEGER_MSG_1,7,7,223,39
+    RTEXT           "Generate extended SOH files every (hours):",IDC_STATIC_TIMED_INTEGER_MSG_2,5,52,164,11
+    EDITTEXT        IDC_EDIT_TIMED_INTEGER_1,170,50,62,14,ES_CENTER | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_TIMED_INTEGER,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,225,50,11,14
+    EDITTEXT        IDC_EDIT_TIMED_INTEGER_2,7,127,169,23,ES_MULTILINE | WS_VSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON_BROWSE,179,127,49,22
+    LTEXT           "",IDC_STATIC_TIMED_INTEGER_MSG_3,7,108,223,17
+    CONTROL         "Include Disk Space and Limited Instrument Information ONLY",IDC_CHECK_LIMITED,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,82,222,10
+    CONTROL         "Append to existing file of same name otherwise overwrite it.",IDC_CHECK_APPEND,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,92,201,10
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER1,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,170,66,62,15
+    CONTROL         "Do once per day at:",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,93,68,75,10
+END
+
+IDD_DIALOG2 DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+END
+
+IDD_DIALOG3 DIALOG  0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,69,69,50,14
+    LTEXT           "Static",IDC_STATIC_MESSAGE,7,7,172,55
+END
+
+IDD_COMPORTLIST DIALOGEX 0, 0, 81, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "COM Ports"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,161,50,14
+    CONTROL         "",IDC_PORTLIST,"SysListView32",LVS_LIST | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,66,152
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\mic.ico"
+IDI_ICON1               ICON                    "res\\icon1.ico"
+IDI_ICON_RED            ICON                    "res\\icon2.ico"
+IDI_ICON_GREENT         ICON                    "res\\ico00002.ico"
+IDI_ICON_GRAY           ICON                    "res\\ico00004.ico"
+IDI_ICON_GRAYT          ICON                    "res\\ico00005.ico"
+IDI_ICON9               ICON                    "res\\icon9.ico"
+IDI_ICON10              ICON                    "res\\icon10.ico"
+IDI_ICON11              ICON                    "res\\icon11.ico"
+IDI_ICON12              ICON                    "res\\icon12.ico"
+IDI_ICON13              ICON                    "res\\icon13.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3,0,0,0
+ FILEFLAGSMASK 0x37L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "LA-CC 13-009 DSA-3"
+            VALUE "CompanyName", "Los Alamos National Laboratory"
+            VALUE "FileDescription", "MicMgr Application April 19, 2018"
+            VALUE "FileVersion", "3.0.0.0"
+            VALUE "InternalName", "MicMgr"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "OriginalFilename", "MicMgr.EXE"
+            VALUE "ProductName", "MicMgr Application April 19, 2018"
+            VALUE "ProductVersion", "3.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_GREEN           BITMAP                  "res\\bitmap1.bmp"
+IDB_BMP_ALL             BITMAP                  "res\\bmp_red.bmp"
+IDB_BMP_GREENT          BITMAP                  "res\\bmp_gree.bmp"
+IDB_BITMAP1             BITMAP                  "res\\bmp00001.bmp"
+IDB_BITMAP2             BITMAP                  "res\\bitmap2.bmp"
+IDB_BITMAP3             BITMAP                  "res\\bitmap3.bmp"
+IDB_BITMAP4             BITMAP                  "res\\bitmap4.bmp"
+IDB_BITMAP5             BITMAP                  "res\\bitmap5.bmp"
+IDB_BITMAP6             BITMAP                  "res\\bitmap6.bmp"
+IDB_BITMAP7             BITMAP                  "res\\bitmap7.bmp"
+IDB_BITMAP8             BITMAP                  "res\\bitmap8.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 198
+    END
+
+    IDD_MESSAGE_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_TIMED_INTEGER_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_COMPORTLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 73
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About MIC..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\MicMgr.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

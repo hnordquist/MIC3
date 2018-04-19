@@ -1,0 +1,26 @@
+HKCR
+{
+	CoDSPECISO.DSPECISO.1 = s 'DSPECISO Class'
+	{
+		CLSID = s '{6AC4B463-A2F3-408A-B77D-725E67AF18B8}'
+	}
+	CoDSPECISO.DSPECISO = s 'DSPECISO Class'
+	{
+		CLSID = s '{6AC4B463-A2F3-408A-B77D-725E67AF18B8}'
+		CurVer = s 'CoDSPECISO.DSPECISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6AC4B463-A2F3-408A-B77D-725E67AF18B8} = s 'DSPECISO Class'
+		{
+			ProgID = s 'CoDSPECISO.DSPECISO.1'
+			VersionIndependentProgID = s 'CoDSPECISO.DSPECISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{B5D835F6-7ADF-4BB7-88D5-73E27CA89580}'
+		}
+	}
+}

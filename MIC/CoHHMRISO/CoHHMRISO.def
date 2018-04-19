@@ -1,0 +1,9 @@
+; CoHHMRISO.def : Declares the module parameters.
+
+LIBRARY      "CoHHMRISO.DLL"
+
+EXPORTS
+	DllCanUnloadNow      PRIVATE
+	DllGetClassObject    PRIVATE
+	DllRegisterServer    PRIVATE
+	DllUnregisterServer	 PRIVATE

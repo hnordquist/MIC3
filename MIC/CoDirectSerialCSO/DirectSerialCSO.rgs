@@ -1,0 +1,26 @@
+HKCR
+{
+	CoDirectSerialCSO.DirectSerialCSO.1 = s 'DirectSerialCSO Class'
+	{
+		CLSID = s '{7F36351B-8AAD-4799-AC44-1F23FD8505C2}'
+	}
+	CoDirectSerialCSO.DirectSerialCSO = s 'DirectSerialCSO Class'
+	{
+		CLSID = s '{7F36351B-8AAD-4799-AC44-1F23FD8505C2}'
+		CurVer = s 'CoDirectSerialCSO.DirectSerialCSO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7F36351B-8AAD-4799-AC44-1F23FD8505C2} = s 'DirectSerialCSO Class'
+		{
+			ProgID = s 'CoDirectSerialCSO.DirectSerialCSO.1'
+			VersionIndependentProgID = s 'CoDirectSerialCSO.DirectSerialCSO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{4B610499-FD0B-4434-8C77-F9AD0B0810F8}'
+		}
+	}
+}

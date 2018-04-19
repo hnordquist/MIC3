@@ -1,0 +1,26 @@
+HKCR
+{
+	CoDSPEC50ISO.DSPEC50ISO.1 = s 'DSPEC50ISO Class'
+	{
+		CLSID = s '{1596ed4c-fd82-4502-9c49-3968a64ed780}'
+	}
+	CoDSPEC50ISO.DSPEC50ISO = s 'DSPEC50ISO Class'
+	{
+		CLSID = s '{1596ed4c-fd82-4502-9c49-3968a64ed780}'
+		CurVer = s 'CoDSPEC50ISO.DSPEC50ISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1596ed4c-fd82-4502-9c49-3968a64ed780} = s 'DSPEC50ISO Class'
+		{
+			ProgID = s 'CoDSPEC50ISO.DSPEC50ISO.1'
+			VersionIndependentProgID = s 'CoDSPEC50ISO.DSPEC50ISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{71fdc73e-c345-4095-b6b8-282b47f1d408)}'
+		}
+	}
+}

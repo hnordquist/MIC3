@@ -1,0 +1,26 @@
+HKCR
+{
+	CoISRISO.ISRISO.1 = s 'ISRISO Class'
+	{
+		CLSID = s '{86D16BA1-E8DD-41EC-854B-1B032281BDA0}'
+	}
+	CoISRISO.ISRISO = s 'ISRISO Class'
+	{
+		CLSID = s '{86D16BA1-E8DD-41EC-854B-1B032281BDA0}'
+		CurVer = s 'CoISRISO.ISRISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {86D16BA1-E8DD-41EC-854B-1B032281BDA0} = s 'ISRISO Class'
+		{
+			ProgID = s 'CoISRISO.ISRISO.1'
+			VersionIndependentProgID = s 'CoISRISO.ISRISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{504E57F4-7754-4804-BB40-347F423E668A}'
+		}
+	}
+}

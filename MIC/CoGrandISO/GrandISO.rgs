@@ -1,0 +1,26 @@
+HKCR
+{
+	CoGrandISO.GrandISO.1 = s 'GrandISO Class'
+	{
+		CLSID = s '{480F3443-0896-4971-8E65-AC3754192FE9}'
+	}
+	CoGrandISO.GrandISO = s 'GrandISO Class'
+	{
+		CLSID = s '{480F3443-0896-4971-8E65-AC3754192FE9}'
+		CurVer = s 'CoGrandISO.GrandISO.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {480F3443-0896-4971-8E65-AC3754192FE9} = s 'GrandISO Class'
+		{
+			ProgID = s 'CoGrandISO.GrandISO.1'
+			VersionIndependentProgID = s 'CoGrandISO.GrandISO'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EC2EF2B4-CEF5-4C65-8A2F-7E81DBCE0083}'
+		}
+	}
+}
