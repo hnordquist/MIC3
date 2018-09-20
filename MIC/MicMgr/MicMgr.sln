@@ -25,8 +25,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoHHMRISO", "..\CoHHMRISO\C
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoJSRISO", "..\CoJSRISO\CoJSRISO.vcxproj", "{D58ECA99-A001-4B8F-A688-CE8658292A59}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoEthernetCSO", "..\CoEthernetCSO\CoEthernetCSO.vcxproj", "{8680E106-B194-482E-AA11-AD29A7EB3080}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoDSPEC50ISO", "..\CoDSPEC50ISO\CoDSPEC50ISO.vcxproj", "{014ED579-196D-49F0-9B6D-0A15BFB58B43}"
 EndProject
 Global
@@ -125,14 +123,6 @@ Global
 		{D58ECA99-A001-4B8F-A688-CE8658292A59}.Release|Win32.Build.0 = Release MinDependency|Win32
 		{D58ECA99-A001-4B8F-A688-CE8658292A59}.Template|Win32.ActiveCfg = Release MinDependency|Win32
 		{D58ECA99-A001-4B8F-A688-CE8658292A59}.Template|Win32.Build.0 = Release MinDependency|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Debug|Win32.ActiveCfg = Debug|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Debug|Win32.Build.0 = Debug|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Release MinDependency|Win32.ActiveCfg = Release MinDependency|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Release MinDependency|Win32.Build.0 = Release MinDependency|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Release|Win32.ActiveCfg = Release MinDependency|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Release|Win32.Build.0 = Release MinDependency|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Template|Win32.ActiveCfg = Template|Win32
-		{8680E106-B194-482E-AA11-AD29A7EB3080}.Template|Win32.Build.0 = Template|Win32
 		{014ED579-196D-49F0-9B6D-0A15BFB58B43}.Debug|Win32.ActiveCfg = Debug|Win32
 		{014ED579-196D-49F0-9B6D-0A15BFB58B43}.Debug|Win32.Build.0 = Debug|Win32
 		{014ED579-196D-49F0-9B6D-0A15BFB58B43}.Release MinDependency|Win32.ActiveCfg = Release MinDependency|Win32

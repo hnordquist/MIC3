@@ -122,7 +122,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CODE\MIC_2017\MIC\CoDSPEC50ISO;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\CoDSPECISO.pch</PrecompiledHeaderOutputFile>
@@ -172,6 +172,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClCompile Include="..\CommonSource\ListCtrlStyled.cpp" />
     <ClCompile Include="..\CommonSource\ORTECSpectrum.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
+    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\TPropertySheet.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
     <ClCompile Include="CoDSPECISO.cpp" />
@@ -191,7 +192,6 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="TimedMessageDialog.cpp" />
     <ClCompile Include="XYCtrl.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -227,6 +227,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClInclude Include="..\CommonSource\JulianT.h" />
     <ClInclude Include="..\CommonSource\ListCtrlStyled.h" />
     <ClInclude Include="..\CommonSource\ORTECSpectrum.h" />
+    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\TPropertySheet.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
     <ClInclude Include="DSPECDataStat.h" />
@@ -243,7 +244,6 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClInclude Include="DSPECSummary.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="TimedMessageDialog.h" />
     <ClInclude Include="XYCtrl.h" />
   </ItemGroup>
   <ItemGroup>

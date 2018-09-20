@@ -145,6 +145,7 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="AboutDlg.cpp" />
     <ClCompile Include="Access.cpp" />
     <ClCompile Include="..\CommonSource\ccbutton.cpp" />
@@ -174,7 +175,6 @@
     </ClCompile>
     <ClCompile Include="TimedDlg.cpp" />
     <ClCompile Include="TimedIntegerDlg.cpp" />
-    <ClCompile Include="TimedMessageDialog.cpp" />
     <ClCompile Include="UserInfo.cpp" />
     <ClCompile Include="validate.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
@@ -183,6 +183,7 @@
     <ResourceCompile Include="MicMgr.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="AboutDlg.h" />
     <ClInclude Include="Access.h" />
     <ClInclude Include="..\CommonSource\ALLOWTRIGGERHOLDOFF.h" />
@@ -271,17 +272,26 @@
     <ProjectReference Include="..\CoDirectSerialCSO\CoDirectSerialCSO.vcxproj">
       <Project>{c626053e-9953-4a59-9f87-d5cd828cefb2}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\CoDSPEC50ISO\CoDSPEC50ISO.vcxproj">
+      <Project>{014ed579-196d-49f0-9b6d-0a15bfb58b43}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\CoDSPECISO\CoDSPECISO.vcxproj">
       <Project>{bccabfba-f59b-4797-92da-6cbb8d598fc7}</Project>
     </ProjectReference>
     <ProjectReference Include="..\CoGrandISO\CoGrandISO.vcxproj">
       <Project>{f93cb363-f205-4c88-8505-cd9bbef7591f}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\CoHHMRISO\CoHHMRISO.vcxproj">
+      <Project>{52b4c2b9-7353-4eb6-a20d-d3403835a935}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\CoIPXCSO\CoIPXCSO.vcxproj">
       <Project>{68401761-f485-4ce0-adff-de3ad2150e44}</Project>
     </ProjectReference>
     <ProjectReference Include="..\CoISRISO\CoISRISO.vcxproj">
       <Project>{59cea2f4-4b94-4569-90bd-f3207bef8ae5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\CoJSRISO\CoJSRISO.vcxproj">
+      <Project>{d58eca99-a001-4b8f-a688-ce8658292a59}</Project>
     </ProjectReference>
     <ProjectReference Include="..\CoWatchISO\CoWatchISO.vcxproj">
       <Project>{c08513d7-1a2a-453f-8f2d-96be3be754db}</Project>

@@ -21,9 +21,6 @@
     <ClCompile Include="..\CommonSource\COM_Utilities.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\CommonSource\DirDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\CommonSource\GamNew.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -43,9 +40,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="StdAfx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TimedMessageDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\CommonSource\TPropertySheet.cpp">
@@ -90,6 +84,12 @@
     <ClCompile Include="DSPEC50StaticSetupData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\COMMONSOURCE\DirDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="CoDSPEC50ISO.idl">
@@ -106,9 +106,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\CommonSource\COM_Utilities.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CommonSource\DirDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\CommonSource\GamNew.h">
@@ -136,9 +133,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TimedMessageDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\CommonSource\TPropertySheet.h">
@@ -184,6 +178,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DSPEC50ProppageSetupData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMONSOURCE\DirDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

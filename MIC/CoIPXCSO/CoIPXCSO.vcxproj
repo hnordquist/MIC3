@@ -63,6 +63,7 @@
     <OutDir>c:\mic\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>C:\CODE\MIC_2017\MIC\COMMONSOURCE\mcbcio32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release MinDependency|Win32'">
     <ClCompile>
@@ -125,7 +126,7 @@
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CODE\MIC_2017\MIC\CoIPXCSO;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\CoIPXCSO.pch</PrecompiledHeaderOutputFile>
@@ -154,7 +155,7 @@
       <OutputFile>c:\mic\CoIPXCSO.dll</OutputFile>
       <ImportLibrary>.\Debug\CoIPXCSO.lib</ImportLibrary>
       <DelayLoadDLLs>McbCIO32.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
-      <AdditionalDependencies>version.lib;mcbcio32/Mcbcio32.lib;DelayImp.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>version.lib;Mcbcio32.lib;DelayImp.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\CoIPXCSO.def</ModuleDefinitionFile>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
@@ -174,6 +175,7 @@
     <ClCompile Include="..\CommonSource\GamNew.cpp" />
     <ClCompile Include="..\CommonSource\ORTECSpectrum.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
+    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
     <ClCompile Include="cmca.cpp" />
     <ClCompile Include="cmcb.cpp" />
@@ -190,7 +192,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="TimedMessageDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="CoIPXCSO.def" />
@@ -221,6 +222,7 @@
     <ClInclude Include="..\CommonSource\GamNew.h" />
     <ClInclude Include="..\CommonSource\ORTECSpectrum.h" />
     <ClInclude Include="..\CommonSource\RegisterByCategory.h" />
+    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
     <ClInclude Include="cmca.h" />
     <ClInclude Include="cmcb.h" />
@@ -230,7 +232,6 @@
     <ClInclude Include="ORTECMcb.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="TimedMessageDialog.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\icon1.ico" />

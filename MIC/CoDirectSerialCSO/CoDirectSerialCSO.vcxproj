@@ -118,7 +118,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\CODE\MIC_2017\MIC\CoDirectSerialCSO;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -145,15 +145,16 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\Debug\CoDirectSerialCSO.dll</OutputFile>
+      <OutputFile>c:\mic\CoDirectSerialCSO.dll</OutputFile>
       <ImportLibrary>.\Debug\CoDirectSerialCSO.lib</ImportLibrary>
       <AdditionalDependencies>version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\CoDirectSerialCSO.def</ModuleDefinitionFile>
     </Link>
     <CustomBuildStep>
-      <Command>regsvr32 /s /c "$(TargetPath)" 
-echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
-      <Message>Performing registration</Message>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
       <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
@@ -162,6 +163,7 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClCompile Include="..\CommonSource\COM_Utilities.cpp" />
     <ClCompile Include="..\CommonSource\CSO.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
+    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
     <ClCompile Include="CoDirectSerialCSO.cpp" />
     <ClCompile Include="ComGrand.cpp" />
@@ -173,7 +175,6 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="TimedMessageDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="CoDirectSerialCSO.def" />
@@ -204,13 +205,13 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClInclude Include="..\CommonSource\CSO.h" />
     <ClInclude Include="..\CommonSource\CSO_definitions.h" />
     <ClInclude Include="..\CommonSource\RegisterByCategory.h" />
+    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
     <ClInclude Include="ComGrand.h" />
     <ClInclude Include="DirectSerialCSO.h" />
     <ClInclude Include="NewSerialComm.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="TimedMessageDialog.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\icon1.ico" />

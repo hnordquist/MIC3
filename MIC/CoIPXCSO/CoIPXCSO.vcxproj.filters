@@ -42,9 +42,6 @@
     <ClCompile Include="IPXCSO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NewIPXDialog.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ORTECMcb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -57,10 +54,13 @@
     <ClCompile Include="StdAfx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TimedMessageDialog.cpp">
+    <ClCompile Include="..\CommonSource\VERSION.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\CommonSource\VERSION.CPP">
+    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NewIPXDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -99,9 +99,6 @@
     <ClInclude Include="IPXCSO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NewIPXDialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ORTECMcb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -117,10 +114,13 @@
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TimedMessageDialog.h">
+    <ClInclude Include="..\CommonSource\VERSION.H">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\CommonSource\VERSION.H">
+    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NewIPXDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

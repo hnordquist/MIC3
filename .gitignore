@@ -39,3 +39,13 @@
 
 # Log Files
 *log*
+/MIC/CoIPXCSO/Debug
+/MIC/CoISRISO/Debug
+/MIC/CoColorButton/Debug
+/MIC/CoDSPECISO/Debug
+/MIC/CoDirectSerialCSO/Debug
+/MIC/CoEthernetCSO/Debug
+/MIC/CoGrandISO/Debug
+/MIC/CoHHMRISO/Debug
+/MIC/CoJSRISO/Debug
+/MIC/CoWatchISO/Debug
