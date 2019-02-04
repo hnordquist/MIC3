@@ -9,3 +9,11 @@ To install MIC3:
 3. run Register_MIC_Components.bat
 
 5. Run MicMgr !!
+
+MIC3 has been modified in the following ways:
+
+1. It will build on Microsoft Visual Studio 2017.
+
+2. It fixes a problem with CoHHMRISO.dll at high count rates
+
+3. It contains a new DLL called CoDSPEC50ISO.dll to communicate with Ortec's DSPEC50
