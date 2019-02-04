@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -55,12 +55,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MinDependency|Win32'">
-    <OutDir>.\ReleaseMinDependency\</OutDir>
+    <OutDir>c:/mic/</OutDir>
     <IntDir>.\ReleaseMinDependency\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>c:\mic</OutDir>
+    <OutDir>c:\mic\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
@@ -72,7 +72,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../CommonSource;../MicMgr;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\ReleaseMinDependency\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\ReleaseMinDependency\CoDSPECISO.pch</PrecompiledHeaderOutputFile>
@@ -96,16 +96,20 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\ReleaseMinDependency\CoDSPECISO.dll</OutputFile>
+      <OutputFile>c:\mic\CoDSPECISO.dll</OutputFile>
       <ImportLibrary>.\ReleaseMinDependency\CoDSPECISO.lib</ImportLibrary>
       <AdditionalDependencies>version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\CoDSPECISO.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile />
     </Link>
     <CustomBuildStep>
-      <Command>regsvr32 /s /c "$(TargetPath)" 
-echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
-      <Message>Performing registration</Message>
-      <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
     <PostBuildEvent>
       <Command>
@@ -122,8 +126,8 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\CODE\MIC_2017\MIC\CoDSPEC50ISO;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../CoDSPEC50ISO;../CommonSource;../MicMgr%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_WINSOCK_DEPRECATED_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\CoDSPECISO.pch</PrecompiledHeaderOutputFile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -172,9 +176,9 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClCompile Include="..\CommonSource\ListCtrlStyled.cpp" />
     <ClCompile Include="..\CommonSource\ORTECSpectrum.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\TPropertySheet.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp" />
     <ClCompile Include="CoDSPECISO.cpp" />
     <ClCompile Include="DSPECDataStat.cpp" />
     <ClCompile Include="DSPECInst.cpp" />
@@ -227,9 +231,9 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClInclude Include="..\CommonSource\JulianT.h" />
     <ClInclude Include="..\CommonSource\ListCtrlStyled.h" />
     <ClInclude Include="..\CommonSource\ORTECSpectrum.h" />
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\TPropertySheet.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h" />
     <ClInclude Include="DSPECDataStat.h" />
     <ClInclude Include="DSPECInst.h" />
     <ClInclude Include="DSPECISO.h" />

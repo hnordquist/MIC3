@@ -81,7 +81,7 @@ public:
 // Implementation
 public:
 	virtual ~CTPropertySheet();
-//protected:
+protected:
 	bool	m_bSameNextFinish;
 
 	// Generated message map functions

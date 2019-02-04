@@ -53,9 +53,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Notes.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="CoColorButton.def">
       <Filter>Source Files</Filter>
     </CustomBuild>

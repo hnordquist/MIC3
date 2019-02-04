@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -55,7 +55,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MinDependency|Win32'">
-    <OutDir>.\ReleaseMinDependency\</OutDir>
+    <OutDir>c:/mic/</OutDir>
     <IntDir>.\ReleaseMinDependency\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -63,7 +63,7 @@
     <OutDir>c:\mic\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\CODE\MIC_2017\MIC\COMMONSOURCE\mcbcio32;$(LibraryPath)</LibraryPath>
+    <LibraryPath>c:/code/MIC3/MIC/CoIPXCSO/mcbcio32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release MinDependency|Win32'">
     <ClCompile>
@@ -73,7 +73,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../CommonSource;../MicMgr;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\ReleaseMinDependency\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\ReleaseMinDependency\CoIPXCSO.pch</PrecompiledHeaderOutputFile>
@@ -97,11 +97,13 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\ReleaseMinDependency\CoIPXCSO.dll</OutputFile>
+      <OutputFile>c:\mic\CoIPXCSO.dll</OutputFile>
       <ImportLibrary>.\ReleaseMinDependency\CoIPXCSO.lib</ImportLibrary>
       <DelayLoadDLLs>McbCIO32.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
       <AdditionalDependencies>version.lib;mcbcio32/Mcbcio32.lib;DelayImp.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\CoIPXCSO.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile />
     </Link>
     <CustomBuildStep>
       <Command>
@@ -124,10 +126,11 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>
+      </MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\CODE\MIC_2017\MIC\CoIPXCSO;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../CoIPXCSO;../MicMgr;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\Debug\CoIPXCSO.pch</PrecompiledHeaderOutputFile>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -175,8 +178,8 @@
     <ClCompile Include="..\CommonSource\GamNew.cpp" />
     <ClCompile Include="..\CommonSource\ORTECSpectrum.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp" />
     <ClCompile Include="cmca.cpp" />
     <ClCompile Include="cmcb.cpp" />
     <ClCompile Include="CoIPXCSO.cpp">
@@ -222,8 +225,8 @@
     <ClInclude Include="..\CommonSource\GamNew.h" />
     <ClInclude Include="..\CommonSource\ORTECSpectrum.h" />
     <ClInclude Include="..\CommonSource\RegisterByCategory.h" />
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h" />
     <ClInclude Include="cmca.h" />
     <ClInclude Include="cmcb.h" />
     <ClInclude Include="ComORTEC.h" />

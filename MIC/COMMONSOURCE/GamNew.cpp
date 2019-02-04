@@ -53,7 +53,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
-
+using namespace std;
 static long  lError;
 
 /*++ constructor */
@@ -1579,7 +1579,7 @@ CChnSpc::~CChnSpc()
 
 /*++ read */
 bool CChnSpc::Read(char *file, char *extra, int bytes) {
-	ifstream  InputFile(file, ios::_Nocreate|ios::binary);
+	ifstream  InputFile(file, ios::in|ios::binary);//nocreate didn't exist using ios::in instead
     
     // clear the error flag
     SetError();

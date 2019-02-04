@@ -35,7 +35,7 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVE
 THE POSSIBILITY OF SUCH DAMAGE.
 */
 // C Julian 
-#include <stdafx.h> // changed from "" to <> gjk
+#include "stdafx.h"
 #include "JulianT.h"
 #include <afxdisp.h>
 

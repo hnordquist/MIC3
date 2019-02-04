@@ -54,8 +54,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 2,0,0,5
- PRODUCTVERSION 2,0,0,5
+ FILEVERSION 3,0,0,0
+ PRODUCTVERSION 3, 0, 0, 0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -70,19 +70,19 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "Comments", "\0"
-            VALUE "CompanyName", "Los Alamos National Laboratory\0"
-            VALUE "FileDescription", "CoDirectSerialCSO Module\0"
-            VALUE "FileVersion", "2,0,0,5\0"
-            VALUE "InternalName", "CoDirectSerialCSO\0"
-            VALUE "LegalCopyright", "\0"
-            VALUE "LegalTrademarks", "\0"
-            VALUE "OLESelfRegister", "\0"
-            VALUE "OriginalFilename", "CoDirectSerialCSO.DLL\0"
-            VALUE "PrivateBuild", "\0"
-            VALUE "ProductName", "CoDirectSerialCSO Module\0"
-            VALUE "ProductVersion", "2,0,0,5\0"
-            VALUE "SpecialBuild", "\0"
+			VALUE "Comments", "Open sourced at www.github.com/hnordquist/MIC3\0"
+			VALUE "CompanyName", "Los Alamos National Laboratory\0"
+			VALUE "FileDescription", "CoDirectSerialCSO Module\0"
+			VALUE "FileVersion", "3, 0, 0, 0\0"
+			VALUE "InternalName", "CoColorButton\0"
+			VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2019\0"
+			VALUE "LegalTrademarks", "\0"
+			VALUE "OLESelfRegister", "\0"
+			VALUE "OriginalFilename", "CoDirectSerialCSO.DLL\0"
+			VALUE "PrivateBuild", "\0"
+			VALUE "ProductName", "CoDirectSerialCSO Module\0"
+			VALUE "ProductVersion", "3, 0, 0, 0\0"
+			VALUE "SpecialBuild", "\0"
         END
     END
     BLOCK "VarFileInfo"

@@ -45,9 +45,9 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "stdafx.h"
 #include "CSO_definitions.h"
 #include "INI_definitions.h"
+#include "NewIPXDialog.h"
 #include "ComORTEC.h"
 #include "resource.h"
-#include "NewIPXDialog.h"
 #include <process.h>
 
 #ifdef _DEBUG

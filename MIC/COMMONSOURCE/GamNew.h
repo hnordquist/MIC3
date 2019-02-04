@@ -41,6 +41,20 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 #include  <fstream>
 using namespace std;
+// be sure to pack data structures on byte boundaries
+#pragma pack(1)
+
+#define  GAM_VERSION     "MIC 2.0"
+
+// useful time constants
+#define GAM_SECONDS_PER_DAY           86400.
+#define GAM_DAYS_PER_YEAR             365.2422
+#define GAM_DOS_TIME_ZERO_DAYS        6575.
+#define GAM_SECONDS_1900_TO_1970      2208988800L
+
+//  Library status codes 
+#define GAM_SUCCESS  0
+#define GAM_DB_ERROR  1
 #define GAM_DB_NOT_OPEN  2
 #define GAM_NO_MEMORY  3
 #define GAM_DB_UNAVAILABLE  4
@@ -72,9 +86,7 @@ public:
 	bool         CheckVersion(char *);  // check consistency of version
 	long         Error();  // get error status	
 	const char * GamErrMsg();  // get error message
-	//void         SetError(long status = GAM_SUCCESS);  // set error void
-	void         SetError(long status = 0);  // set error void  
-
+	void         SetError(long status=GAM_SUCCESS);  // set error status
 };
 
 // Symbolic definition of the storage formats

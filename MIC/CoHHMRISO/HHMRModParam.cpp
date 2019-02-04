@@ -1195,7 +1195,7 @@ BOOL CHHMRModParam::OnSetActive()
 				tcItem.mask = TCIF_TEXT;
 				tcItem.pszText = (LPTSTR)((LPCTSTR)sCaption);
 				m_pPS->GetTabControl()->SetItem(0, &tcItem );
-				m_pPS->m_bSameNextFinish = false;
+				//m_pPS->m_bSameNextFinish = false; -- Protected, try to remove.
 			}
 		}
 

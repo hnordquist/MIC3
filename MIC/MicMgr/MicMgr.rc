@@ -182,9 +182,9 @@ BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,9,3,20,20
     LTEXT           "Multi-Instrument Collect Manager: Version ",IDC_STATIC_VERSION,36,3,195,8,SS_NOPREFIX
     DEFPUSHBUTTON   "&Close",IDOK,180,42,50,25,WS_GROUP
-    LTEXT           "Los Alamos National Laboratory, DSA-3",IDC_STATIC,11,23,192,8
-    LTEXT           "LA-CC 13-009 D. Pelowitz (Ret.), J. Longo",IDC_STATIC,11,33,175,8
-    LTEXT           "longo@lanl.gov",IDC_STATIC,11,44,64,8
+    LTEXT           "Los Alamos National Laboratory, NEN-1",IDC_STATIC,11,23,192,8
+    LTEXT           "Open sourced at www.github.com/hnordquist/MIC3 D. Pelowitz (Ret.), J. Longo, H. Nordquist",IDC_STATIC,11,33,175,8
+    LTEXT           "heather@lanl.gov",IDC_STATIC,11,44,64,8
     LTEXT           "Debug or Release",IDC_STATIC_DEBUG,11,55,58,8
     EDITTEXT        IDC_EDIT1,9,71,220,120,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
 END
@@ -505,14 +505,14 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "Comments", "LA-CC 13-009 DSA-3"
+            VALUE "Comments", "Open Sourced at www.github.com/hnordquist/MIC3"
             VALUE "CompanyName", "Los Alamos National Laboratory"
-            VALUE "FileDescription", "MicMgr Application April 19, 2018"
+            VALUE "FileDescription", "MicMgr Application February 4, 2019"
             VALUE "FileVersion", "3.0.0.0"
             VALUE "InternalName", "MicMgr"
-            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2019"
             VALUE "OriginalFilename", "MicMgr.EXE"
-            VALUE "ProductName", "MicMgr Application April 19, 2018"
+            VALUE "ProductName", "MicMgr Application February 4, 2019"
             VALUE "ProductVersion", "3.0.0.0"
         END
     END

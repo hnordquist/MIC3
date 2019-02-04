@@ -43,7 +43,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\Release\</OutDir>
+    <OutDir>c:/mic/</OutDir>
     <IntDir>.\Release\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
@@ -60,7 +60,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../CommonSource;../MicMgr;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;BMPBACKGRND;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -88,13 +88,18 @@
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\Release\MicMgr.exe</OutputFile>
+      <OutputFile>c:\mic\MicMgr.exe</OutputFile>
       <AdditionalDependencies>ws2_32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile />
     </Link>
     <PostBuildEvent>
       <Command>
       </Command>
     </PostBuildEvent>
+    <CustomBuildStep>
+      <Message />
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -104,10 +109,11 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>
+      </MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNING</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
       <PrecompiledHeaderOutputFile>.\Debug\MicMgr.pch</PrecompiledHeaderOutputFile>
@@ -145,7 +151,6 @@
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="AboutDlg.cpp" />
     <ClCompile Include="Access.cpp" />
     <ClCompile Include="..\CommonSource\ccbutton.cpp" />
@@ -175,6 +180,7 @@
     </ClCompile>
     <ClCompile Include="TimedDlg.cpp" />
     <ClCompile Include="TimedIntegerDlg.cpp" />
+    <ClCompile Include="TimedMessageDialog.cpp" />
     <ClCompile Include="UserInfo.cpp" />
     <ClCompile Include="validate.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
@@ -183,7 +189,6 @@
     <ResourceCompile Include="MicMgr.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="AboutDlg.h" />
     <ClInclude Include="Access.h" />
     <ClInclude Include="..\CommonSource\ALLOWTRIGGERHOLDOFF.h" />
@@ -229,37 +234,18 @@
     <CustomBuild Include="res\bmp00001.bmp" />
     <CustomBuild Include="res\bmp_gree.bmp" />
     <CustomBuild Include="res\bmp_red.bmp" />
-    <CustomBuild Include="res\clock.ico" />
     <CustomBuild Include="res\ico00001.ico" />
     <CustomBuild Include="res\ico00002.ico" />
-    <CustomBuild Include="res\ico00003.ico" />
     <CustomBuild Include="res\ico00004.ico" />
     <CustomBuild Include="res\ico00005.ico" />
-    <CustomBuild Include="res\ico00006.ico" />
-    <CustomBuild Include="res\ico00007.ico" />
-    <CustomBuild Include="res\ico00008.ico" />
-    <CustomBuild Include="res\ico00009.ico" />
-    <CustomBuild Include="res\ico00010.ico" />
-    <CustomBuild Include="res\ico00011.ico" />
-    <CustomBuild Include="res\ico00012.ico" />
     <CustomBuild Include="res\icon1.ico" />
     <CustomBuild Include="res\icon10.ico" />
     <CustomBuild Include="res\icon11.ico" />
     <CustomBuild Include="res\icon12.ico" />
     <CustomBuild Include="res\icon13.ico" />
-    <CustomBuild Include="res\icon1b.ico" />
     <CustomBuild Include="res\icon2.ico" />
-    <CustomBuild Include="res\icon3.ico" />
-    <CustomBuild Include="res\icon4.ico" />
-    <CustomBuild Include="res\icon5.ico" />
-    <CustomBuild Include="res\icon6.ico" />
-    <CustomBuild Include="res\icon7.ico" />
-    <CustomBuild Include="res\icon8.ico" />
     <CustomBuild Include="res\icon9.ico" />
-    <CustomBuild Include="res\icon_yel.ico" />
-    <CustomBuild Include="res\mainfram.ico" />
     <CustomBuild Include="res\MIC.ico" />
-    <CustomBuild Include="res\MicMgr.ico" />
     <CustomBuild Include="res\MicMgr.rc2">
       <FileType>RC</FileType>
     </CustomBuild>

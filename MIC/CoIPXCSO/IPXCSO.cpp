@@ -40,7 +40,6 @@ THE POSSIBILITY OF SUCH DAMAGE.
 #include "stdafx.h"
 #include "CoIPXCSO.h"
 #include "IPXCSO.h"
-#include "NewIPXDialog.h"
 #include "ini_definitions.h"
 #include "version.h"
 

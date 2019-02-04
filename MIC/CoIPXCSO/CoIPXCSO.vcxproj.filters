@@ -57,7 +57,7 @@
     <ClCompile Include="..\CommonSource\VERSION.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp">
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="NewIPXDialog.cpp">
@@ -117,7 +117,7 @@
     <ClInclude Include="..\CommonSource\VERSION.H">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h">
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="NewIPXDialog.h">

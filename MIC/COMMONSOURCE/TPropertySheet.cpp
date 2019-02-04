@@ -59,7 +59,7 @@ CTPropertySheet::CTPropertySheet(UINT nIDCaption, int dlg_close, CWnd* pParentWn
 {
 //	TRACE("CTPropertySheet::CTR a\n");
 	m_dMyDlgClose = dlg_close;
-	m_bSameNextFinish = false;
+	m_bSameNextFinish = true;
 }
 
 CTPropertySheet::CTPropertySheet(LPCTSTR pszCaption, int dlg_close, CWnd* pParentWnd, UINT iSelectPage)
@@ -67,7 +67,7 @@ CTPropertySheet::CTPropertySheet(LPCTSTR pszCaption, int dlg_close, CWnd* pParen
 {
 //	TRACE("CTPropertySheet::CTOR b\n");
 	m_dMyDlgClose = dlg_close;
-	m_bSameNextFinish = false;
+	m_bSameNextFinish = true;
 }
 
 CTPropertySheet::~CTPropertySheet()
@@ -196,14 +196,12 @@ BOOL CTPropertySheet::OnInitDialog()
 	}
 	else
 	{
-		//GetDlgItem(ID_WIZNEXT)->GetWindowPlacement(&lpwndpl);
-		//lpwndpl.rcNormalPosition.bottom += 28;
-		//GetDlgItem(ID_WIZNEXT)->SetWindowPlacement(&lpwndpl);
-		GetDlgItem(ID_WIZBACK)->ShowWindow(SW_HIDE);
-		GetDlgItem(ID_WIZNEXT)->ShowWindow(SW_HIDE);
-		//lpwndpl.rcNormalPosition.bottom += 28;
-		//GetDlgItem(ID_WIZBACK)->SetWindowPlacement(&lpwndpl);
-		
+		GetDlgItem(ID_WIZNEXT)->GetWindowPlacement(&lpwndpl);
+		lpwndpl.rcNormalPosition.bottom += 28;
+		GetDlgItem(ID_WIZNEXT)->SetWindowPlacement(&lpwndpl);
+		GetDlgItem(ID_WIZBACK)->GetWindowPlacement(&lpwndpl);
+		lpwndpl.rcNormalPosition.bottom += 28;
+		GetDlgItem(ID_WIZBACK)->SetWindowPlacement(&lpwndpl);
 		GetDlgItem(ID_WIZFINISH)->GetWindowPlacement(&lpwndpl);
 		lpwndpl.rcNormalPosition.bottom += 28;
 		GetDlgItem(ID_WIZFINISH)->SetWindowPlacement(&lpwndpl);

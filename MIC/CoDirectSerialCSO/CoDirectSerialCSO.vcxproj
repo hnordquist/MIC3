@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -55,14 +55,17 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release MinDependency|Win32'">
-    <OutDir>.\ReleaseMinDependency\</OutDir>
+    <OutDir>c:\mic\</OutDir>
     <IntDir>.\ReleaseMinDependency\</IntDir>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\Debug\</OutDir>
+    <OutDir>c:\mic\</OutDir>
     <IntDir>.\Debug\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <OutDir>c:\mic\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release MinDependency|Win32'">
     <ClCompile>
@@ -72,7 +75,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../CommonSource;../MicMgr%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\ReleaseMinDependency\</AssemblerListingLocation>
       <PrecompiledHeaderOutputFile>.\ReleaseMinDependency\CoDirectSerialCSO.pch</PrecompiledHeaderOutputFile>
@@ -96,15 +99,18 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Windows</SubSystem>
-      <OutputFile>.\ReleaseMinDependency\CoDirectSerialCSO.dll</OutputFile>
+      <OutputFile>c:\mic\CoDirectSerialCSO.dll</OutputFile>
       <ImportLibrary>.\ReleaseMinDependency\CoDirectSerialCSO.lib</ImportLibrary>
       <AdditionalDependencies>version.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ModuleDefinitionFile>.\CoDirectSerialCSO.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <ProgramDatabaseFile />
     </Link>
     <CustomBuildStep>
-      <Command>regsvr32 /s /c "$(TargetPath)" 
-echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
-      <Message>Performing registration</Message>
+      <Command>
+      </Command>
+      <Message>
+      </Message>
       <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
@@ -116,10 +122,10 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <MinimalRebuild>true</MinimalRebuild>
+      <MinimalRebuild>false</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\CODE\MIC_2017\MIC\CoDirectSerialCSO;../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../CommonSource;../MicMgr%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS;_WINSOCK_DEPRECATED_NO_WARNINGS</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
       <PrecompiledHeaderOutputFile>.\Debug\CoDirectSerialCSO.pch</PrecompiledHeaderOutputFile>
@@ -155,16 +161,22 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
       </Command>
       <Message>
       </Message>
-      <Outputs>$(OutDir)\regsvr32.trg;%(Outputs)</Outputs>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../CommonSource;../MicMgr%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CommonSource\ccbutton.cpp" />
     <ClCompile Include="..\CommonSource\COM_Utilities.cpp" />
-    <ClCompile Include="..\CommonSource\CSO.cpp" />
+    <ClCompile Include="..\COMMONSOURCE\CSO.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp" />
     <ClCompile Include="CoDirectSerialCSO.cpp" />
     <ClCompile Include="ComGrand.cpp" />
     <ClCompile Include="DirectSerialCSO.cpp" />
@@ -202,11 +214,11 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
     <ClInclude Include="..\CommonSource\ccbutton.h" />
     <ClInclude Include="..\CommonSource\ccbutton_messages.h" />
     <ClInclude Include="..\CommonSource\COM_Utilities.h" />
-    <ClInclude Include="..\CommonSource\CSO.h" />
-    <ClInclude Include="..\CommonSource\CSO_definitions.h" />
+    <ClInclude Include="..\COMMONSOURCE\CSO.h" />
+    <ClInclude Include="..\COMMONSOURCE\CSO_definitions.h" />
     <ClInclude Include="..\CommonSource\RegisterByCategory.h" />
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h" />
     <ClInclude Include="ComGrand.h" />
     <ClInclude Include="DirectSerialCSO.h" />
     <ClInclude Include="NewSerialComm.h" />
@@ -215,9 +227,6 @@ echo regsvr32 exec. time &gt; "$(OutDir)regsvr32.trg" </Command>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\icon1.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\Notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

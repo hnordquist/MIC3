@@ -96,7 +96,7 @@
     <ClCompile Include="Ports.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp">
+    <ClCompile Include="TimedMessageDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -202,9 +202,6 @@
     <ClInclude Include="Ports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="res\bitmap1.bmp">
@@ -240,43 +237,16 @@
     <CustomBuild Include="res\bmp_red.bmp">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="res\clock.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="res\ico00001.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="res\ico00002.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="res\ico00003.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="res\ico00004.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="res\ico00005.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00006.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00007.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00008.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00009.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00010.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00011.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\ico00012.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="res\icon1.ico">
@@ -294,43 +264,13 @@
     <CustomBuild Include="res\icon13.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="res\icon1b.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="res\icon2.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\icon3.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\icon4.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\icon5.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\icon6.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\icon7.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\icon8.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="res\icon9.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="res\icon_yel.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\mainfram.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
     <CustomBuild Include="res\MIC.ico">
-      <Filter>Resource Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="res\MicMgr.ico">
       <Filter>Resource Files</Filter>
     </CustomBuild>
     <CustomBuild Include="res\MicMgr.rc2">

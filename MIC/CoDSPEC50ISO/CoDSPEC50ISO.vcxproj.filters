@@ -87,7 +87,7 @@
     <ClCompile Include="..\COMMONSOURCE\DirDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp">
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -183,7 +183,7 @@
     <ClInclude Include="..\COMMONSOURCE\DirDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h">
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

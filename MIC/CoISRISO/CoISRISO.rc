@@ -72,14 +72,14 @@ BEGIN
         BEGIN
             VALUE "Comments", ""
             VALUE "CompanyName", "Los Alamos National Laboratory"
-            VALUE "FileDescription", "CoISRISO Module April 18, 2018"
-            VALUE "FileVersion", "3.0.0.0"
+            VALUE "FileDescription", "CoISRISO Module February 4, 2019"
+            VALUE "FileVersion", "3, 0, 0, 0\0"
             VALUE "InternalName", "CoISRISO"
-            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2018"
+            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2019"
             VALUE "OriginalFilename", "CoISRISO.DLL"
             VALUE "PrivateBuild", ""
-            VALUE "ProductName", "CoISRISO Module April 18, 2018"
-            VALUE "ProductVersion", "3.0.0.0"
+            VALUE "ProductName", "CoISRISO Module February 4, 2019"
+            VALUE "ProductVersion",  "3, 0, 0, 0\0"
         END
     END
     BLOCK "VarFileInfo"
