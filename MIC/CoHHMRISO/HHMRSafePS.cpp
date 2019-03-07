@@ -6,11 +6,14 @@ Safeguards Division; and the U.S. Department of Energy, Office of Safeguards and
 LA-CC-14-089. This software was exported from the United States in accordance with the Export
 Administration Regulations. Diversion contrary to U.S. law prohibited.
 
-Copyright 2015, Los Alamos National Security, LLC. This software application and associated
-material ("The Software") was prepared by the Los Alamos National Security, LLC. (LANS), under
-Contract DE-AC52-06NA25396 with the U.S. Department of Energy (DOE). All rights in the software
-application and associated material are reserved by DOE on behalf of the Government and LANS
-pursuant to the contract.
+© 2019 Triad National Security, LLC. All rights reserved.
+
+This program was produced under U.S. Government contract 89233218CNA000001 for Los Alamos National Laboratory (LANL),
+which is operated by Triad National Security, LLC for the U.S. Department of Energy/National Nuclear Security Administration.
+
+All rights in the program are reserved by Triad National Security, LLC, and the U.S. Department of Energy/National Nuclear Security Administration.
+The Government is granted for itself and others acting on its behalf a nonexclusive, paid-up, irrevocable worldwide license in this material to reproduce,
+prepare derivative works, distribute copies to the public, perform publicly and display publicly, and to permit others to do so.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted
 provided that the following conditions are met:
@@ -729,9 +732,11 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 		//count time
-		HHMRAcquireRec.ElapsedTime = atoi(parseValue);
-		sprintf(temp, "%.1f", HHMRAcquireRec.ElapsedTime / 10.0);
+		HHMRAcquireRec.ElapsedTime = atoi(parseValue) / 10;
+		sprintf(temp, "%.1f", HHMRAcquireRec.ElapsedTime);
 		datapage->SetDlgItemText(IDC_HHMRDATA_ETIME1, temp);
 
 		//totals
@@ -747,7 +752,8 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
-
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 		//Store totals
 		HHMRAcquireRec.TotalsCount = atoi(parseValue);
 
@@ -763,7 +769,7 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 		
 		m_bZeroTransitionUp = false;
 		m_bZeroTransitionDown = false;
-		if ((HHMRAcquireRec.TotalsCount / (double)HHMRAcquireRec.ElapsedTime) < m_lTotalLThresh)
+		if ((HHMRAcquireRec.TotalsCount / (double)(HHMRAcquireRec.ElapsedTime)) < m_lTotalLThresh)
 		{
 			//set cstatic
 			summarypage->SetDlgItemText(IDC_HHMRSUMMARY_ZEROVALUE, show);
@@ -793,7 +799,7 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 		else
 		{
 			// Added * 10.0 to adjust for ElapsedTime in increments of 0.1 seconds
-			sprintf(show, "%11.4e", 10.0 * (HHMRAcquireRec.TotalsCount / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", (HHMRAcquireRec.TotalsCount / ((double)HHMRAcquireRec.ElapsedTime)));
 			datapage->SetDlgItemText(IDC_HHMRDATA_TOTALS1, show);
 		}
 
@@ -818,6 +824,8 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 
 		HHMRAcquireRec.RealAccCount = atoi(parseValue);
 		if (bDoingRaw)
@@ -825,7 +833,7 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 		else
 		{
 			// Added * 10.0 to adjust for ElapsedTime in increments of 0.1 seconds
-			sprintf(show, "%11.4e", 10.0 * (HHMRAcquireRec.RealAccCount));
+			sprintf(show, "%11.4e", (HHMRAcquireRec.RealAccCount / HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_REALACC1, show);
 		}
 		datapage->GetDlgItemText(IDC_HHMRDATA_ACCIDENT3, temp, sizeof(temp));
@@ -847,22 +855,24 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 		HHMRAcquireRec.AccidenCount = atoi(parseValue);
-		double Reals = HHMRAcquireRec.RealAccCount - HHMRAcquireRec.AccidenCount;
+		double Reals = (HHMRAcquireRec.RealAccCount) - (HHMRAcquireRec.AccidenCount);
 		if (bDoingRaw)
 			datapage->SetDlgItemInt(IDC_HHMRDATA_ACCIDENT1, (int)Reals);
 		else
 		{
-			sprintf(show, "%11.4e", 10.0*(Reals / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", (Reals / (double)HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_ACCIDENT1, show);
 		}
 
 		if (!bDoingRaw)
 		{
-			sprintf(show, "%11.4e", 10.0*((double)HHMRAcquireRec.Totals2Count / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", ((double)HHMRAcquireRec.Totals2Count / (double)HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_AUX1TOTALS1, show);
 
-			sprintf(show, "%11.4e", 10.0* ((double)HHMRAcquireRec.Totals3Count / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", ((double)HHMRAcquireRec.Totals3Count / (double)HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_AUX2TOTALS1, show);
 		}
 		//consume trailing white space

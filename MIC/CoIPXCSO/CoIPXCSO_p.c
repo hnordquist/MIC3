@@ -3,11 +3,11 @@
 /* this ALWAYS GENERATED file contains the proxy stub code */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
-/* at Mon Jan 18 20:14:07 2038
+ /* File created by MIDL compiler version 7.00.0555 */
+/* at Thu Mar 07 15:15:13 2019
  */
 /* Compiler settings for CoIPXCSO.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
@@ -16,9 +16,10 @@
 */
 /* @@MIDL_FILE_HEADING(  ) */
 
-#if !defined(_M_IA64) && !defined(_M_AMD64) && !defined(_ARM_)
+#if !defined(_M_IA64) && !defined(_M_AMD64)
 
 
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #endif
@@ -48,7 +49,7 @@
 
 #include "CoIPXCSO.h"
 
-#define TYPE_FORMAT_STRING_SIZE   117                               
+#define TYPE_FORMAT_STRING_SIZE   97                                
 #define PROC_FORMAT_STRING_SIZE   793                               
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
@@ -94,9 +95,10 @@ extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TA
 #if !defined(__RPC_WIN32__)
 #error  Invalid build platform for this stub.
 #endif
-#if !(TARGET_IS_NT60_OR_LATER)
-#error You need Windows Vista or later to run this stub because it uses these features:
-#error   forced complex structure or array, new range semantics, compiled for Windows Vista.
+
+#if !(TARGET_IS_NT50_OR_LATER)
+#error You need Windows 2000 or later to run this stub because it uses these features:
+#error   /robust command line switch.
 #error However, your C/C++ compilation flags indicate you intend to run this app on earlier systems.
 #error This app will fail with the RPC_X_WRONG_STUB_VERSION error.
 #endif
@@ -119,7 +121,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 14 */	0x45,		/* Oi2 Flags:  srv must size, has return, has ext, */
 			0x3,		/* 3 */
 /* 16 */	0x8,		/* 8 */
-			0x43,		/* Ext Flags:  new corr desc, clt corr check, has range on conformance */
+			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 18 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 20 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 22 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -128,7 +130,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 24 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 26 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 28 */	NdrFcShort( 0x2a ),	/* Type Offset=42 */
+/* 28 */	NdrFcShort( 0x20 ),	/* Type Offset=32 */
 
 	/* Parameter pvbHaveNewCSO */
 
@@ -156,7 +158,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 56 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 58 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 60 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 62 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 64 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -187,7 +189,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 92 */	0x45,		/* Oi2 Flags:  srv must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 94 */	0x8,		/* 8 */
-			0x43,		/* Ext Flags:  new corr desc, clt corr check, has range on conformance */
+			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 96 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 98 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 100 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -196,7 +198,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 102 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 104 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 106 */	NdrFcShort( 0x2a ),	/* Type Offset=42 */
+/* 106 */	NdrFcShort( 0x20 ),	/* Type Offset=32 */
 
 	/* Return value */
 
@@ -217,7 +219,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 128 */	0x45,		/* Oi2 Flags:  srv must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 130 */	0x8,		/* 8 */
-			0x43,		/* Ext Flags:  new corr desc, clt corr check, has range on conformance */
+			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 132 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 134 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 136 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -226,7 +228,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 138 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 140 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 142 */	NdrFcShort( 0x2a ),	/* Type Offset=42 */
+/* 142 */	NdrFcShort( 0x20 ),	/* Type Offset=32 */
 
 	/* Return value */
 
@@ -247,7 +249,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 164 */	0x45,		/* Oi2 Flags:  srv must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 166 */	0x8,		/* 8 */
-			0x43,		/* Ext Flags:  new corr desc, clt corr check, has range on conformance */
+			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 168 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 170 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 172 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -256,7 +258,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 174 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 176 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 178 */	NdrFcShort( 0x2a ),	/* Type Offset=42 */
+/* 178 */	NdrFcShort( 0x20 ),	/* Type Offset=32 */
 
 	/* Return value */
 
@@ -277,7 +279,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 200 */	0x45,		/* Oi2 Flags:  srv must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 202 */	0x8,		/* 8 */
-			0x43,		/* Ext Flags:  new corr desc, clt corr check, has range on conformance */
+			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 204 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 206 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 208 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -286,7 +288,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 210 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 212 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 214 */	NdrFcShort( 0x2a ),	/* Type Offset=42 */
+/* 214 */	NdrFcShort( 0x20 ),	/* Type Offset=32 */
 
 	/* Return value */
 
@@ -307,7 +309,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 236 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 238 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 240 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 242 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 244 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -338,7 +340,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 272 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 274 */	0x8,		/* 8 */
-			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
 /* 276 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 278 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 280 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -347,7 +349,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 282 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 284 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 286 */	NdrFcShort( 0x3c ),	/* Type Offset=60 */
+/* 286 */	NdrFcShort( 0x32 ),	/* Type Offset=50 */
 
 	/* Return value */
 
@@ -368,7 +370,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 308 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 310 */	0x8,		/* 8 */
-			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
 /* 312 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 314 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 316 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -377,7 +379,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 318 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 320 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 322 */	NdrFcShort( 0x3c ),	/* Type Offset=60 */
+/* 322 */	NdrFcShort( 0x32 ),	/* Type Offset=50 */
 
 	/* Return value */
 
@@ -398,7 +400,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 344 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x6,		/* 6 */
 /* 346 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 348 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 350 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 352 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -457,7 +459,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 404 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 406 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 408 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 410 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 412 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -488,7 +490,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 440 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x6,		/* 6 */
 /* 442 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 444 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 446 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 448 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -547,7 +549,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 500 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 502 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 504 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 506 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 508 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -571,7 +573,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 530 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 532 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 534 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 536 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 538 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -595,7 +597,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 560 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x3,		/* 3 */
 /* 562 */	0x8,		/* 8 */
-			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
 /* 564 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 566 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 568 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -604,7 +606,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 570 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 572 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 574 */	NdrFcShort( 0x3c ),	/* Type Offset=60 */
+/* 574 */	NdrFcShort( 0x32 ),	/* Type Offset=50 */
 
 	/* Parameter uNode */
 
@@ -632,7 +634,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 602 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x3,		/* 3 */
 /* 604 */	0x8,		/* 8 */
-			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
 /* 606 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 608 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 610 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -641,7 +643,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 612 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 614 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 616 */	NdrFcShort( 0x3c ),	/* Type Offset=60 */
+/* 616 */	NdrFcShort( 0x32 ),	/* Type Offset=50 */
 
 	/* Parameter pvbResult */
 
@@ -669,7 +671,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 644 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 646 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 648 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 650 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 652 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -693,7 +695,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 674 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 676 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 678 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 680 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 682 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -717,7 +719,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 704 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x6,		/* 6 */
 /* 706 */	0x8,		/* 8 */
-			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
 /* 708 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 710 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 712 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -733,7 +735,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 
 /* 720 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 722 */	NdrFcShort( 0x8 ),	/* x86 Stack size/offset = 8 */
-/* 724 */	NdrFcShort( 0x5c ),	/* Type Offset=92 */
+/* 724 */	NdrFcShort( 0x48 ),	/* Type Offset=72 */
 
 	/* Parameter uNode */
 
@@ -775,7 +777,7 @@ static const CoIPXCSO_MIDL_PROC_FORMAT_STRING CoIPXCSO__MIDL_ProcFormatString =
 /* 764 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x3,		/* 3 */
 /* 766 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 768 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 770 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 772 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -812,10 +814,10 @@ static const CoIPXCSO_MIDL_TYPE_FORMAT_STRING CoIPXCSO__MIDL_TypeFormatString =
 			NdrFcShort( 0x0 ),	/* 0 */
 /*  2 */	
 			0x11, 0x4,	/* FC_RP [alloced_on_stack] */
-/*  4 */	NdrFcShort( 0x26 ),	/* Offset= 38 (42) */
+/*  4 */	NdrFcShort( 0x1c ),	/* Offset= 28 (32) */
 /*  6 */	
 			0x13, 0x0,	/* FC_OP */
-/*  8 */	NdrFcShort( 0x18 ),	/* Offset= 24 (32) */
+/*  8 */	NdrFcShort( 0xe ),	/* Offset= 14 (22) */
 /* 10 */	
 			0x1b,		/* FC_CARRAY */
 			0x1,		/* 1 */
@@ -824,77 +826,69 @@ static const CoIPXCSO_MIDL_TYPE_FORMAT_STRING CoIPXCSO__MIDL_TypeFormatString =
 			0x0,		/*  */
 /* 16 */	NdrFcShort( 0xfffc ),	/* -4 */
 /* 18 */	NdrFcShort( 0x1 ),	/* Corr flags:  early, */
-/* 20 */	0x0 , 
-			0x0,		/* 0 */
-/* 22 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 26 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 30 */	0x6,		/* FC_SHORT */
+/* 20 */	0x6,		/* FC_SHORT */
 			0x5b,		/* FC_END */
-/* 32 */	
+/* 22 */	
 			0x17,		/* FC_CSTRUCT */
 			0x3,		/* 3 */
-/* 34 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 36 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (10) */
-/* 38 */	0x8,		/* FC_LONG */
+/* 24 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 26 */	NdrFcShort( 0xfff0 ),	/* Offset= -16 (10) */
+/* 28 */	0x8,		/* FC_LONG */
 			0x8,		/* FC_LONG */
-/* 40 */	0x5c,		/* FC_PAD */
+/* 30 */	0x5c,		/* FC_PAD */
 			0x5b,		/* FC_END */
-/* 42 */	0xb4,		/* FC_USER_MARSHAL */
+/* 32 */	0xb4,		/* FC_USER_MARSHAL */
 			0x83,		/* 131 */
-/* 44 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 46 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 48 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 50 */	NdrFcShort( 0xffd4 ),	/* Offset= -44 (6) */
-/* 52 */	
+/* 34 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 36 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 38 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 40 */	NdrFcShort( 0xffde ),	/* Offset= -34 (6) */
+/* 42 */	
 			0x11, 0xc,	/* FC_RP [alloced_on_stack] [simple_pointer] */
-/* 54 */	0x6,		/* FC_SHORT */
+/* 44 */	0x6,		/* FC_SHORT */
 			0x5c,		/* FC_PAD */
-/* 56 */	
+/* 46 */	
 			0x12, 0x0,	/* FC_UP */
-/* 58 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (32) */
-/* 60 */	0xb4,		/* FC_USER_MARSHAL */
+/* 48 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (22) */
+/* 50 */	0xb4,		/* FC_USER_MARSHAL */
 			0x83,		/* 131 */
-/* 62 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 64 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 66 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 68 */	NdrFcShort( 0xfff4 ),	/* Offset= -12 (56) */
-/* 70 */	
+/* 52 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 54 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 56 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 58 */	NdrFcShort( 0xfff4 ),	/* Offset= -12 (46) */
+/* 60 */	
 			0x1b,		/* FC_CARRAY */
 			0x0,		/* 0 */
-/* 72 */	NdrFcShort( 0x1 ),	/* 1 */
-/* 74 */	0x19,		/* Corr desc:  field pointer, FC_ULONG */
+/* 62 */	NdrFcShort( 0x1 ),	/* 1 */
+/* 64 */	0x19,		/* Corr desc:  field pointer, FC_ULONG */
 			0x0,		/*  */
-/* 76 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 78 */	NdrFcShort( 0x1 ),	/* Corr flags:  early, */
-/* 80 */	0x0 , 
-			0x0,		/* 0 */
-/* 82 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 86 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 90 */	0x1,		/* FC_BYTE */
+/* 66 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 68 */	NdrFcShort( 0x1 ),	/* Corr flags:  early, */
+/* 70 */	0x1,		/* FC_BYTE */
 			0x5b,		/* FC_END */
-/* 92 */	
+/* 72 */	
 			0x16,		/* FC_PSTRUCT */
 			0x3,		/* 3 */
-/* 94 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 96 */	
+/* 74 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 76 */	
 			0x4b,		/* FC_PP */
 			0x5c,		/* FC_PAD */
-/* 98 */	
+/* 78 */	
 			0x46,		/* FC_NO_REPEAT */
 			0x5c,		/* FC_PAD */
-/* 100 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 102 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 104 */	0x12, 0x20,	/* FC_UP [maybenull_sizeis] */
-/* 106 */	NdrFcShort( 0xffdc ),	/* Offset= -36 (70) */
-/* 108 */	
+/* 80 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 82 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 84 */	0x12, 0x0,	/* FC_UP */
+/* 86 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (60) */
+/* 88 */	
 			0x5b,		/* FC_END */
 
 			0x8,		/* FC_LONG */
-/* 110 */	0x8,		/* FC_LONG */
+/* 90 */	0x8,		/* FC_LONG */
 			0x5b,		/* FC_END */
-/* 112 */	
+/* 92 */	
 			0x11, 0xc,	/* FC_RP [alloced_on_stack] [simple_pointer] */
-/* 114 */	0x8,		/* FC_LONG */
+/* 94 */	0x8,		/* FC_LONG */
 			0x5c,		/* FC_PAD */
 
 			0x0
@@ -1059,9 +1053,9 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0,
     CoIPXCSO__MIDL_TypeFormatString.Format,
     1, /* -error bounds_check flag */
-    0x60001, /* Ndr library version */
+    0x50002, /* Ndr library version */
     0,
-    0x801026e, /* MIDL Version 8.1.622 */
+    0x700022b, /* MIDL Version 7.0.555 */
     0,
     UserMarshalRoutines,
     0,  /* notify & notify_flag routine table */
@@ -1130,5 +1124,5 @@ const ExtendedProxyFileInfo CoIPXCSO_ProxyFileInfo =
 #endif
 
 
-#endif /* !defined(_M_IA64) && !defined(_M_AMD64) && !defined(_ARM_) */
+#endif /* !defined(_M_IA64) && !defined(_M_AMD64)*/
 

@@ -3,11 +3,11 @@
 /* this ALWAYS GENERATED file contains the proxy stub code */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
-/* at Mon Jan 18 20:14:07 2038
+ /* File created by MIDL compiler version 7.00.0555 */
+/* at Thu Mar 07 15:14:46 2019
  */
 /* Compiler settings for CoColorButton.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
@@ -16,9 +16,10 @@
 */
 /* @@MIDL_FILE_HEADING(  ) */
 
-#if !defined(_M_IA64) && !defined(_M_AMD64) && !defined(_ARM_)
+#if !defined(_M_IA64) && !defined(_M_AMD64)
 
 
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #endif
@@ -48,7 +49,7 @@
 
 #include "CoColorButton.h"
 
-#define TYPE_FORMAT_STRING_SIZE   71                                
+#define TYPE_FORMAT_STRING_SIZE   61                                
 #define PROC_FORMAT_STRING_SIZE   697                               
 #define EXPR_FORMAT_STRING_SIZE   1                                 
 #define TRANSMIT_AS_TABLE_SIZE    0            
@@ -94,9 +95,10 @@ extern const USER_MARSHAL_ROUTINE_QUADRUPLE UserMarshalRoutines[ WIRE_MARSHAL_TA
 #if !defined(__RPC_WIN32__)
 #error  Invalid build platform for this stub.
 #endif
-#if !(TARGET_IS_NT60_OR_LATER)
-#error You need Windows Vista or later to run this stub because it uses these features:
-#error   forced complex structure or array, new range semantics, compiled for Windows Vista.
+
+#if !(TARGET_IS_NT50_OR_LATER)
+#error You need Windows 2000 or later to run this stub because it uses these features:
+#error   /robust command line switch.
 #error However, your C/C++ compilation flags indicate you intend to run this app on earlier systems.
 #error This app will fail with the RPC_X_WRONG_STUB_VERSION error.
 #endif
@@ -119,7 +121,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 14 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 16 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 18 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 20 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 22 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -150,7 +152,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 50 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 52 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 54 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 56 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 58 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -181,7 +183,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 86 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x3,		/* 3 */
 /* 88 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 90 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 92 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 94 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -219,7 +221,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 128 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 130 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 132 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 134 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 136 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -250,7 +252,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 164 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 166 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 168 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 170 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 172 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -281,7 +283,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 200 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 202 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 204 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 206 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 208 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -312,7 +314,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 236 */	0x46,		/* Oi2 Flags:  clt must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 238 */	0x8,		/* 8 */
-			0x45,		/* Ext Flags:  new corr desc, srv corr check, has range on conformance */
+			0x5,		/* Ext Flags:  new corr desc, srv corr check, */
 /* 240 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 242 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 244 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -321,7 +323,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 
 /* 246 */	NdrFcShort( 0x8b ),	/* Flags:  must size, must free, in, by val, */
 /* 248 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 250 */	NdrFcShort( 0x2a ),	/* Type Offset=42 */
+/* 250 */	NdrFcShort( 0x20 ),	/* Type Offset=32 */
 
 	/* Return value */
 
@@ -342,7 +344,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 272 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 274 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 276 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 278 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 280 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -366,7 +368,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 302 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 304 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 306 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 308 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 310 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -390,7 +392,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 332 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 334 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 336 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 338 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 340 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -414,7 +416,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 362 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 364 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 366 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 368 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 370 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -438,7 +440,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 392 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x1,		/* 1 */
 /* 394 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 396 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 398 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 400 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -462,7 +464,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 422 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 424 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 426 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 428 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 430 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -493,7 +495,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 458 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 460 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 462 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 464 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 466 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -524,7 +526,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 494 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 496 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 498 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 500 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 502 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -555,7 +557,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 530 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 532 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 534 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 536 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 538 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -586,7 +588,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 566 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 568 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 570 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 572 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 574 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -617,7 +619,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 602 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 604 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 606 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 608 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 610 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -648,7 +650,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 638 */	0x44,		/* Oi2 Flags:  has return, has ext, */
 			0x2,		/* 2 */
 /* 640 */	0x8,		/* 8 */
-			0x41,		/* Ext Flags:  new corr desc, has range on conformance */
+			0x1,		/* Ext Flags:  new corr desc, */
 /* 642 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 644 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 646 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -679,7 +681,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 /* 674 */	0x45,		/* Oi2 Flags:  srv must size, has return, has ext, */
 			0x2,		/* 2 */
 /* 676 */	0x8,		/* 8 */
-			0x43,		/* Ext Flags:  new corr desc, clt corr check, has range on conformance */
+			0x3,		/* Ext Flags:  new corr desc, clt corr check, */
 /* 678 */	NdrFcShort( 0x1 ),	/* 1 */
 /* 680 */	NdrFcShort( 0x0 ),	/* 0 */
 /* 682 */	NdrFcShort( 0x0 ),	/* 0 */
@@ -688,7 +690,7 @@ static const CoColorButton_MIDL_PROC_FORMAT_STRING CoColorButton__MIDL_ProcForma
 
 /* 684 */	NdrFcShort( 0x2113 ),	/* Flags:  must size, must free, out, simple ref, srv alloc size=8 */
 /* 686 */	NdrFcShort( 0x4 ),	/* x86 Stack size/offset = 4 */
-/* 688 */	NdrFcShort( 0x3c ),	/* Type Offset=60 */
+/* 688 */	NdrFcShort( 0x32 ),	/* Type Offset=50 */
 
 	/* Return value */
 
@@ -712,7 +714,7 @@ static const CoColorButton_MIDL_TYPE_FORMAT_STRING CoColorButton__MIDL_TypeForma
 			0x5c,		/* FC_PAD */
 /*  6 */	
 			0x12, 0x0,	/* FC_UP */
-/*  8 */	NdrFcShort( 0x18 ),	/* Offset= 24 (32) */
+/*  8 */	NdrFcShort( 0xe ),	/* Offset= 14 (22) */
 /* 10 */	
 			0x1b,		/* FC_CARRAY */
 			0x1,		/* 1 */
@@ -721,39 +723,35 @@ static const CoColorButton_MIDL_TYPE_FORMAT_STRING CoColorButton__MIDL_TypeForma
 			0x0,		/*  */
 /* 16 */	NdrFcShort( 0xfffc ),	/* -4 */
 /* 18 */	NdrFcShort( 0x1 ),	/* Corr flags:  early, */
-/* 20 */	0x0 , 
-			0x0,		/* 0 */
-/* 22 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 26 */	NdrFcLong( 0x0 ),	/* 0 */
-/* 30 */	0x6,		/* FC_SHORT */
+/* 20 */	0x6,		/* FC_SHORT */
 			0x5b,		/* FC_END */
-/* 32 */	
+/* 22 */	
 			0x17,		/* FC_CSTRUCT */
 			0x3,		/* 3 */
-/* 34 */	NdrFcShort( 0x8 ),	/* 8 */
-/* 36 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (10) */
-/* 38 */	0x8,		/* FC_LONG */
+/* 24 */	NdrFcShort( 0x8 ),	/* 8 */
+/* 26 */	NdrFcShort( 0xfff0 ),	/* Offset= -16 (10) */
+/* 28 */	0x8,		/* FC_LONG */
 			0x8,		/* FC_LONG */
-/* 40 */	0x5c,		/* FC_PAD */
+/* 30 */	0x5c,		/* FC_PAD */
 			0x5b,		/* FC_END */
-/* 42 */	0xb4,		/* FC_USER_MARSHAL */
+/* 32 */	0xb4,		/* FC_USER_MARSHAL */
 			0x83,		/* 131 */
-/* 44 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 46 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 48 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 50 */	NdrFcShort( 0xffd4 ),	/* Offset= -44 (6) */
-/* 52 */	
+/* 34 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 36 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 38 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 40 */	NdrFcShort( 0xffde ),	/* Offset= -34 (6) */
+/* 42 */	
 			0x11, 0x4,	/* FC_RP [alloced_on_stack] */
-/* 54 */	NdrFcShort( 0x6 ),	/* Offset= 6 (60) */
-/* 56 */	
+/* 44 */	NdrFcShort( 0x6 ),	/* Offset= 6 (50) */
+/* 46 */	
 			0x13, 0x0,	/* FC_OP */
-/* 58 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (32) */
-/* 60 */	0xb4,		/* FC_USER_MARSHAL */
+/* 48 */	NdrFcShort( 0xffe6 ),	/* Offset= -26 (22) */
+/* 50 */	0xb4,		/* FC_USER_MARSHAL */
 			0x83,		/* 131 */
-/* 62 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 64 */	NdrFcShort( 0x4 ),	/* 4 */
-/* 66 */	NdrFcShort( 0x0 ),	/* 0 */
-/* 68 */	NdrFcShort( 0xfff4 ),	/* Offset= -12 (56) */
+/* 52 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 54 */	NdrFcShort( 0x4 ),	/* 4 */
+/* 56 */	NdrFcShort( 0x0 ),	/* 0 */
+/* 58 */	NdrFcShort( 0xfff4 ),	/* Offset= -12 (46) */
 
 			0x0
         }
@@ -917,9 +915,9 @@ static const MIDL_STUB_DESC Object_StubDesc =
     0,
     CoColorButton__MIDL_TypeFormatString.Format,
     1, /* -error bounds_check flag */
-    0x60001, /* Ndr library version */
+    0x50002, /* Ndr library version */
     0,
-    0x801026e, /* MIDL Version 8.1.622 */
+    0x700022b, /* MIDL Version 7.0.555 */
     0,
     UserMarshalRoutines,
     0,  /* notify & notify_flag routine table */
@@ -988,5 +986,5 @@ const ExtendedProxyFileInfo CoColorButton_ProxyFileInfo =
 #endif
 
 
-#endif /* !defined(_M_IA64) && !defined(_M_AMD64) && !defined(_ARM_) */
+#endif /* !defined(_M_IA64) && !defined(_M_AMD64)*/
 

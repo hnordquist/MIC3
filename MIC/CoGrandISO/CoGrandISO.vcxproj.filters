@@ -322,9 +322,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Notes.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="CoGrandISO.def">
       <Filter>Source Files</Filter>
     </CustomBuild>
