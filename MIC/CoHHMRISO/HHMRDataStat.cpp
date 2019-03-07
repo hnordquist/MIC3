@@ -128,6 +128,8 @@ BEGIN_MESSAGE_MAP(CHHMRDataStat, CPropertyPage)
 	ON_WM_LBUTTONDOWN()
 	//ON_BN_CLICKED(IDC_BUTTON_WATCH, OnButtonWatch)
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_RADIO_RAW, &CHHMRDataStat::OnBnClickedRadioRaw)
+	ON_BN_CLICKED(IDC_RADIO_RATES, &CHHMRDataStat::OnBnClickedRadioRates)
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
@@ -173,7 +175,7 @@ BOOL CHHMRDataStat::OnInitDialog()
 	
 	((CButton*)GetDlgItem(IDC_RADIO_RAW))->SetCheck(0);
 	((CButton*)GetDlgItem(IDC_RADIO_RATES))->SetCheck(1);
-	
+	currStatus = RATES;
 	return TRUE;
 }
 
@@ -211,4 +213,385 @@ BOOL CHHMRDataStat::OnSetActive()
 	// TODO: Add your specialized code here and/or call the base class
 	
 	return CPropertyPage::OnSetActive();
+}
+
+
+void CHHMRDataStat::OnBnClickedRadioRaw()
+{
+	// TODO: Add your control notification handler code here
+	if (currStatus == RATES)
+		RefreshView(RAW);
+	currStatus = RAW;
+}
+
+
+void CHHMRDataStat::OnBnClickedRadioRates()
+{
+	// TODO: Add your control notification handler code here
+	if (currStatus == RAW)
+		RefreshView(RATES);
+	currStatus = RATES;
+}
+
+void CHHMRDataStat::RefreshView(short toView)
+{
+	//We are switching from raw to rates or vice versa
+	char* temp = new char[32];
+	//get data and make it the right data view.
+	//First column
+	if (GetText(IDC_HHMRDATA_ETIME1, temp, sizeof(temp)) > 0)
+	{
+		//Store elapsed time for conversion
+		double  etime = atof(temp);
+		//Totals
+		if (GetText(IDC_HHMRDATA_TOTALS1, temp, sizeof(temp)) > 0)
+		{
+			double totals = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(totals*etime));
+				SetText(IDC_HHMRDATA_TOTALS1, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(totals / etime));
+				SetText(IDC_HHMRDATA_TOTALS1, temp);
+			}
+		}
+		
+		//Reals+ accidentals
+		if (GetText(IDC_HHMRDATA_REALACC1, temp, sizeof(temp)) > 0)
+		{
+			double reacc = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(reacc*etime));
+				SetText(IDC_HHMRDATA_REALACC1, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(reacc / etime));
+				SetText(IDC_HHMRDATA_REALACC1, temp);
+			}
+		}
+		//Reals --doh, this is actually labeled accidentals
+		if (GetText(IDC_HHMRDATA_ACCIDENT1, temp, sizeof(temp)) > 0)
+		{
+			double reals = atof(temp);
+			//convert reals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(reals*etime));
+				SetText(IDC_HHMRDATA_ACCIDENT1, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(reals / etime));
+				SetText(IDC_HHMRDATA_ACCIDENT1, temp);
+			}
+		}
+		//Aux1
+		if (GetText(IDC_HHMRDATA_AUX1TOTALS1, temp, sizeof(temp)) > 0)
+		{
+			double aux1 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				temp = "0";
+				SetText(IDC_HHMRDATA_AUX1TOTALS1, temp);
+				temp = new char[32];
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(aux1 / etime));
+				SetText(IDC_HHMRDATA_AUX1TOTALS1, temp);
+			}
+		}
+		//Aux2
+		if (GetText(IDC_HHMRDATA_AUX2TOTALS1, temp, sizeof(temp)) > 0)
+		{
+			double aux2 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				temp = "0";
+				SetText(IDC_HHMRDATA_AUX2TOTALS1, temp);
+				temp = new char[32];
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(aux2 / etime));
+				SetText(IDC_HHMRDATA_AUX2TOTALS1, temp);
+			}
+		}
+		//Second column
+		if (GetText(IDC_HHMRDATA_ETIME2, temp, sizeof(temp)) > 0)
+		{
+			//Store elapsed time for conversion
+			double etime2 = atoi(temp);
+			//Totals
+			if (GetText(IDC_HHMRDATA_TOTALS2, temp, sizeof(temp)) > 0)
+			{
+				double totals2 = atoi(temp);
+				//convert totals
+				if (toView == RAW)
+				{
+					sprintf(temp, "%d", (int)(totals2*etime2));
+					SetText(IDC_HHMRDATA_TOTALS2, temp);
+				}
+				else
+				{
+					sprintf(temp, "%11.4e", (double)(totals2 / etime2));
+					SetText(IDC_HHMRDATA_TOTALS2, temp);
+				}
+			}
+			
+			//Reals+ accidentals
+			if (GetText(IDC_HHMRDATA_REALACC2, temp, sizeof(temp)) > 0)
+			{
+				double reacc2 = atof(temp);
+				//convert totals
+				if (toView == RAW)
+				{
+					sprintf(temp, "%d", (int)(reacc2*etime2));
+					SetText(IDC_HHMRDATA_REALACC2, temp);
+				}
+				else
+				{
+					sprintf(temp, "%11.4e", (double)(reacc2 / etime2));
+					SetText(IDC_HHMRDATA_REALACC2, temp);
+				}
+			}
+			//Reals
+			if (GetText(IDC_HHMRDATA_ACCIDENT2, temp, sizeof(temp)) > 0)
+			{
+				double accident2 = atof(temp);
+				//convert totals
+				if (toView == RAW)
+				{
+					sprintf(temp, "%d", (int)(accident2*etime2));
+					SetText(IDC_HHMRDATA_ACCIDENT2, temp);
+				}
+				else
+				{
+					sprintf(temp, "%11.4e", (double)(accident2 / etime2));
+					SetText(IDC_HHMRDATA_ACCIDENT2, temp);
+				}
+			}
+			//Aux1
+			if (GetText(IDC_HHMRDATA_AUX1TOTALS2, temp, sizeof(temp)) > 0)
+			{
+				double aux12 = atoi(temp);
+				//convert totals
+				if (toView == RAW)
+				{
+					temp = "0";
+					SetText(IDC_HHMRDATA_AUX1TOTALS2, temp);
+					temp = new char[32];
+				}
+				else
+				{
+					sprintf(temp, "%11.4e", (double)aux12 / etime2);
+					SetText(IDC_HHMRDATA_AUX1TOTALS2, temp);
+				}
+			}
+			//Aux2
+			if (GetText(IDC_HHMRDATA_AUX2TOTALS2, temp, sizeof(temp)) > 0)
+			{
+				double aux22 = atof(temp);
+				//convert totals
+				if (toView == RAW)
+				{
+					temp = "0";
+					SetText(IDC_HHMRDATA_AUX2TOTALS2, temp);
+					temp = new char[32];
+				}
+				else
+				{
+					sprintf(temp, "%11.4e", (double)(aux22 / etime2));
+					SetText(IDC_HHMRDATA_AUX2TOTALS2, temp);
+				}
+			}
+		}
+	}
+	//Third column
+	if (GetText(IDC_HHMRDATA_ETIME3, temp, sizeof(temp)) > 0)
+	{
+		//Store elapsed time for conversion
+		double etime3 = atoi(temp);
+		//Totals
+		if (GetText(IDC_HHMRDATA_TOTALS3, temp, sizeof(temp)) > 0)
+		{
+			double totals3 = atoi(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(totals3*etime3));
+				SetText(IDC_HHMRDATA_TOTALS3, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(totals3 / etime3));
+				SetText(IDC_HHMRDATA_TOTALS3, temp);
+			}
+		}
+
+		//Reals+ accidentals
+		if (GetText(IDC_HHMRDATA_REALACC3, temp, sizeof(temp)) > 0)
+		{
+			double reacc3 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(reacc3*etime3));
+				SetText(IDC_HHMRDATA_REALACC3, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(reacc3 / etime3));
+				SetText(IDC_HHMRDATA_REALACC3, temp);
+			}
+		}
+		//Reals
+		if (GetText(IDC_HHMRDATA_ACCIDENT3, temp, sizeof(temp)) > 0)
+		{
+			double accident3 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(accident3*etime3));
+				SetText(IDC_HHMRDATA_ACCIDENT3, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(accident3 / etime3));
+				SetText(IDC_HHMRDATA_ACCIDENT3, temp);
+			}
+		}
+		//Aux1
+		if (GetText(IDC_HHMRDATA_AUX1TOTALS3, temp, sizeof(temp)) > 0)
+		{
+			double aux13 = atoi(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				temp = "0";
+				SetText(IDC_HHMRDATA_AUX1TOTALS3, temp);
+				temp = new char[32];
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)aux13 / etime3);
+				SetText(IDC_HHMRDATA_AUX1TOTALS3, temp);
+			}
+		}
+		//Aux2
+		if (GetText(IDC_HHMRDATA_AUX2TOTALS3, temp, sizeof(temp)) > 0)
+		{
+			double aux23 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				temp = "0";
+				SetText(IDC_HHMRDATA_AUX2TOTALS3, temp);
+				temp = new char[32];
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(aux23 / etime3));
+				SetText(IDC_HHMRDATA_AUX2TOTALS3, temp);
+			}
+		}
+	}
+	//Fourth column
+	if (GetText(IDC_HHMRDATA_ETIME4, temp, sizeof(temp)) > 0)
+	{
+		//Store elapsed time for conversion
+		double etime4 = atoi(temp);
+		//Totals
+		if (GetText(IDC_HHMRDATA_TOTALS4, temp, sizeof(temp)) > 0)
+		{
+			double totals4 = atoi(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(totals4*etime4));
+				SetText(IDC_HHMRDATA_TOTALS4, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(totals4 / etime4));
+				SetText(IDC_HHMRDATA_TOTALS4, temp);
+			}
+		}
+
+		//Reals+ accidentals
+		if (GetText(IDC_HHMRDATA_REALACC4, temp, sizeof(temp)) > 0)
+		{
+			double reacc4 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(reacc4*etime4));
+				SetText(IDC_HHMRDATA_REALACC4, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(reacc4 / etime4));
+				SetText(IDC_HHMRDATA_REALACC4, temp);
+			}
+		}
+		//Reals
+		if (GetText(IDC_HHMRDATA_ACCIDENT4, temp, sizeof(temp)) > 0)
+		{
+			double accident4 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				sprintf(temp, "%d", (int)(accident4*etime4));
+				SetText(IDC_HHMRDATA_ACCIDENT4, temp);
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(accident4 / etime4));
+				SetText(IDC_HHMRDATA_ACCIDENT4, temp);
+			}
+		}
+		//Aux1
+		if (GetText(IDC_HHMRDATA_AUX1TOTALS4, temp, sizeof(temp)) > 0)
+		{
+			double aux14 = atoi(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				temp = "0";
+				SetText(IDC_HHMRDATA_AUX1TOTALS4, temp);
+				temp = new char[32];
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)aux14 / etime4);
+				SetText(IDC_HHMRDATA_AUX1TOTALS4, temp);
+			}
+		}
+		//Aux2
+		if (GetText(IDC_HHMRDATA_AUX2TOTALS4, temp, sizeof(temp)) > 0)
+		{
+			double aux24 = atof(temp);
+			//convert totals
+			if (toView == RAW)
+			{
+				temp = "0";
+				SetText(IDC_HHMRDATA_AUX2TOTALS4, temp);
+				temp = new char[32];
+			}
+			else
+			{
+				sprintf(temp, "%11.4e", (double)(aux24 / etime4));
+				SetText(IDC_HHMRDATA_AUX2TOTALS4, temp);
+			}
+		}
+	}
 }

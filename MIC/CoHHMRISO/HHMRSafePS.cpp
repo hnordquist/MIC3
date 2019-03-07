@@ -729,9 +729,11 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 		//count time
-		HHMRAcquireRec.ElapsedTime = atoi(parseValue);
-		sprintf(temp, "%.1f", HHMRAcquireRec.ElapsedTime / 10.0);
+		HHMRAcquireRec.ElapsedTime = atoi(parseValue) / 10;
+		sprintf(temp, "%.1f", HHMRAcquireRec.ElapsedTime);
 		datapage->SetDlgItemText(IDC_HHMRDATA_ETIME1, temp);
 
 		//totals
@@ -747,7 +749,8 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
-
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 		//Store totals
 		HHMRAcquireRec.TotalsCount = atoi(parseValue);
 
@@ -763,7 +766,7 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 		
 		m_bZeroTransitionUp = false;
 		m_bZeroTransitionDown = false;
-		if ((HHMRAcquireRec.TotalsCount / (double)HHMRAcquireRec.ElapsedTime) < m_lTotalLThresh)
+		if ((HHMRAcquireRec.TotalsCount / (double)(HHMRAcquireRec.ElapsedTime)) < m_lTotalLThresh)
 		{
 			//set cstatic
 			summarypage->SetDlgItemText(IDC_HHMRSUMMARY_ZEROVALUE, show);
@@ -793,7 +796,7 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 		else
 		{
 			// Added * 10.0 to adjust for ElapsedTime in increments of 0.1 seconds
-			sprintf(show, "%11.4e", 10.0 * (HHMRAcquireRec.TotalsCount / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", (HHMRAcquireRec.TotalsCount / ((double)HHMRAcquireRec.ElapsedTime)));
 			datapage->SetDlgItemText(IDC_HHMRDATA_TOTALS1, show);
 		}
 
@@ -818,6 +821,8 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 
 		HHMRAcquireRec.RealAccCount = atoi(parseValue);
 		if (bDoingRaw)
@@ -825,7 +830,7 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 		else
 		{
 			// Added * 10.0 to adjust for ElapsedTime in increments of 0.1 seconds
-			sprintf(show, "%11.4e", 10.0 * (HHMRAcquireRec.RealAccCount));
+			sprintf(show, "%11.4e", (HHMRAcquireRec.RealAccCount / HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_REALACC1, show);
 		}
 		datapage->GetDlgItemText(IDC_HHMRDATA_ACCIDENT3, temp, sizeof(temp));
@@ -847,22 +852,24 @@ void CHHMRPropertySheet::T_TA_AValues(BYTE *pAccumulator)
 			j++;
 			i++;
 		}
+		for (int k = j; k < 32; k++)
+			parseValue[k] = '\0';
 		HHMRAcquireRec.AccidenCount = atoi(parseValue);
-		double Reals = HHMRAcquireRec.RealAccCount - HHMRAcquireRec.AccidenCount;
+		double Reals = (HHMRAcquireRec.RealAccCount) - (HHMRAcquireRec.AccidenCount);
 		if (bDoingRaw)
 			datapage->SetDlgItemInt(IDC_HHMRDATA_ACCIDENT1, (int)Reals);
 		else
 		{
-			sprintf(show, "%11.4e", 10.0*(Reals / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", (Reals / (double)HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_ACCIDENT1, show);
 		}
 
 		if (!bDoingRaw)
 		{
-			sprintf(show, "%11.4e", 10.0*((double)HHMRAcquireRec.Totals2Count / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", ((double)HHMRAcquireRec.Totals2Count / (double)HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_AUX1TOTALS1, show);
 
-			sprintf(show, "%11.4e", 10.0* ((double)HHMRAcquireRec.Totals3Count / (double)HHMRAcquireRec.ElapsedTime));
+			sprintf(show, "%11.4e", ((double)HHMRAcquireRec.Totals3Count / (double)HHMRAcquireRec.ElapsedTime));
 			datapage->SetDlgItemText(IDC_HHMRDATA_AUX2TOTALS1, show);
 		}
 		//consume trailing white space

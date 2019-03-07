@@ -2008,7 +2008,7 @@ void CJSRPropertySheet::IssuePrint(FILE* outfile)
 
 	fprintf(outfile," Most Recent ACQUIRE Records Received\n");
 
-
+	
 	if(((CButton*)datapage->GetDlgItem(IDC_RADIO_RAW))->GetCheck()==0)
 		temp = "Show Rates";
 	else

@@ -13,13 +13,11 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// English (U.S.) resources
+// English (United States) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
-#ifdef _WIN32
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 #pragma code_page(1252)
-#endif //_WIN32
 
 #ifdef APSTUDIO_INVOKED
 /////////////////////////////////////////////////////////////////////////////
@@ -64,7 +62,7 @@ END
 // Dialog
 //
 
-IDD_DIALOG1 DIALOG  0, 0, 207, 76
+IDD_DIALOG1 DIALOG 0, 0, 207, 76
 STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "MIC: File Copy"
 FONT 8, "MS Sans Serif"
@@ -86,7 +84,7 @@ BEGIN
     ICON            IDI_ICON_GRAYT,IDC_ICON_2,5,44,20,20
     ICON            IDI_ICON_GRAYT,IDC_ICON_3,5,69,20,20
     ICON            IDI_ICON_GRAYT,IDC_ICON_4,5,94,20,20
-    ICON            125,IDC_ICON_5,5,119,20,20
+    ICON            IDI_ICON_YELLOWR,IDC_ICON_5,5,119,20,20
     ICON            IDI_ICON_RED,IDC_ICON_6,5,169,20,20
     ICON            IDI_ICON_RED,IDC_ICON_7,5,144,20,20
     ICON            IDI_ICON_RED,IDC_ICON_8,5,194,20,20
@@ -201,7 +199,7 @@ BEGIN
     GROUPBOX        "All Instruments",IDC_ALL_STATIC,5,0,112,50,BS_CENTER
 END
 
-IDD_VALIDATE_DIALOG DIALOG  0, 0, 186, 95
+IDD_VALIDATE_DIALOG DIALOG 0, 0, 186, 95
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "MIC: Password Controlled Function"
 FONT 10, "System"
@@ -215,7 +213,7 @@ BEGIN
     CTEXT           "You have selected a password controlled function.  Enter your name and password and select ""OK"" or select ""Cancel"" to abort.",IDC_STATIC,13,43,160,27,SS_SUNKEN
 END
 
-IDD_MESSAGE_DIALOG DIALOG  0, 0, 186, 199
+IDD_MESSAGE_DIALOG DIALOG 0, 0, 186, 199
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Sans Serif"
@@ -238,7 +236,7 @@ BEGIN
     LISTBOX         IDC_USER_LIST,5,5,80,105,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
 END
 
-IDD_USERINFO_DIALOG DIALOG  0, 0, 186, 86
+IDD_USERINFO_DIALOG DIALOG 0, 0, 186, 86
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Multi-Instrument Collect: %s User Info"
 FONT 8, "MS Sans Serif"
@@ -393,7 +391,7 @@ BEGIN
     PUSHBUTTON      "Register New DLL ( CSO or ISO )",IDC_BUTTON_REGISTER,5,220,115,14
 END
 
-IDD_DIALOG_RENAME DIALOG  0, 0, 246, 118
+IDD_DIALOG_RENAME DIALOG 0, 0, 246, 118
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Rename Instrument Support Object"
 FONT 8, "MS Sans Serif"
@@ -414,7 +412,7 @@ BEGIN
     EDITTEXT        IDC_EDIT_NEWNODE,175,72,63,14,ES_AUTOHSCROLL
 END
 
-IDD_TIMED_INTEGER_DIALOG DIALOG  0, 0, 237, 174
+IDD_TIMED_INTEGER_DIALOG DIALOG 0, 0, 237, 174
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Sans Serif"
@@ -436,7 +434,7 @@ BEGIN
     CONTROL         "Do once per day at:",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,93,68,75,10
 END
 
-IDD_DIALOG2 DIALOG  0, 0, 186, 95
+IDD_DIALOG2 DIALOG 0, 0, 186, 95
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Sans Serif"
@@ -445,7 +443,7 @@ BEGIN
     PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
 END
 
-IDD_DIALOG3 DIALOG  0, 0, 186, 90
+IDD_DIALOG3 DIALOG 0, 0, 186, 90
 STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "Dialog"
 FONT 8, "MS Sans Serif"
@@ -472,16 +470,27 @@ END
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON                    "res\\mic.ico"
+
 IDI_ICON1               ICON                    "res\\icon1.ico"
+
 IDI_ICON_RED            ICON                    "res\\icon2.ico"
+
 IDI_ICON_GREENT         ICON                    "res\\ico00002.ico"
+
 IDI_ICON_GRAY           ICON                    "res\\ico00004.ico"
+
 IDI_ICON_GRAYT          ICON                    "res\\ico00005.ico"
+
 IDI_ICON9               ICON                    "res\\icon9.ico"
+
 IDI_ICON10              ICON                    "res\\icon10.ico"
+
 IDI_ICON11              ICON                    "res\\icon11.ico"
+
 IDI_ICON12              ICON                    "res\\icon12.ico"
+
 IDI_ICON13              ICON                    "res\\icon13.ico"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -489,8 +498,8 @@ IDI_ICON13              ICON                    "res\\icon13.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,0,0,0
- PRODUCTVERSION 3,0,0,0
+ FILEVERSION 3,0,0,1
+ PRODUCTVERSION 3,0,0,1
  FILEFLAGSMASK 0x37L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -507,13 +516,13 @@ BEGIN
         BEGIN
             VALUE "Comments", "Open Sourced at www.github.com/hnordquist/MIC3"
             VALUE "CompanyName", "Los Alamos National Laboratory"
-            VALUE "FileDescription", "MicMgr Application February 4, 2019"
-            VALUE "FileVersion", "3.0.0.0"
+            VALUE "FileDescription", "MicMgr Application March 7, 2019"
+            VALUE "FileVersion", "3.0.0.1"
             VALUE "InternalName", "MicMgr"
-            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2019"
+            VALUE "LegalCopyright", "© 2019 Triad National Security, LLC. All rights reserved."
             VALUE "OriginalFilename", "MicMgr.EXE"
-            VALUE "ProductName", "MicMgr Application February 4, 2019"
-            VALUE "ProductVersion", "3.0.0.0"
+            VALUE "ProductName", "MicMgr Application March 7, 2019"
+            VALUE "ProductVersion", "3.0.0.1"
         END
     END
     BLOCK "VarFileInfo"
@@ -529,16 +538,27 @@ END
 //
 
 IDB_BMP_GREEN           BITMAP                  "res\\bitmap1.bmp"
+
 IDB_BMP_ALL             BITMAP                  "res\\bmp_red.bmp"
+
 IDB_BMP_GREENT          BITMAP                  "res\\bmp_gree.bmp"
+
 IDB_BITMAP1             BITMAP                  "res\\bmp00001.bmp"
+
 IDB_BITMAP2             BITMAP                  "res\\bitmap2.bmp"
+
 IDB_BITMAP3             BITMAP                  "res\\bitmap3.bmp"
+
 IDB_BITMAP4             BITMAP                  "res\\bitmap4.bmp"
+
 IDB_BITMAP5             BITMAP                  "res\\bitmap5.bmp"
+
 IDB_BITMAP6             BITMAP                  "res\\bitmap6.bmp"
+
 IDB_BITMAP7             BITMAP                  "res\\bitmap7.bmp"
+
 IDB_BITMAP8             BITMAP                  "res\\bitmap8.bmp"
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -546,7 +566,7 @@ IDB_BITMAP8             BITMAP                  "res\\bitmap8.bmp"
 //
 
 #ifdef APSTUDIO_INVOKED
-GUIDELINES DESIGNINFO 
+GUIDELINES DESIGNINFO
 BEGIN
     IDD_ABOUTBOX, DIALOG
     BEGIN
@@ -595,12 +615,12 @@ END
 // String Table
 //
 
-STRINGTABLE 
+STRINGTABLE
 BEGIN
     IDS_ABOUTBOX            "&About MIC..."
 END
 
-#endif    // English (U.S.) resources
+#endif    // English (United States) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

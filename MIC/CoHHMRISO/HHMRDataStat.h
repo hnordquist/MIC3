@@ -61,6 +61,9 @@ public:
 	COLORREF StaticColors[IDC_HHMRDATA_LAST-IDC_HHMRDATA_FIRST+1];
 	CISO *m_pParent;
 
+	enum DataView { RAW, RATES };
+	short currStatus;
+
 // Dialog Data
 	//{{AFX_DATA(CHHMRDataStat)
 	enum { IDD = IDD_HHMRDATASTATUS_PAGE };
@@ -90,6 +93,10 @@ protected:
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 
+public:
+	afx_msg void OnBnClickedRadioRaw();
+	afx_msg void OnBnClickedRadioRates();
+	void RefreshView(short s);
 };
 
 //{{AFX_INSERT_LOCATION}}
