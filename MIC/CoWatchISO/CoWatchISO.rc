@@ -141,7 +141,7 @@ BEGIN
             VALUE "FileDescription", "CoWatchISO Module March 7, 2019"
             VALUE "FileVersion", "3.0.0.1"
             VALUE "InternalName", "CoWatchISO"
-            VALUE "LegalCopyright", "Copyright © Los Alamos National Security, LLC, (LANS), 2019"
+            VALUE "LegalCopyright", "© 2019 Triad National Security, LLC. All rights reserved."
             VALUE "OriginalFilename", "CoWatchISO.DLL"
             VALUE "ProductName", "CoWatchISO Module March 7, 2019"
             VALUE "ProductVersion", "3.0.0.1"
