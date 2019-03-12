@@ -110,9 +110,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\Notes.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <CustomBuild Include="CoWatchISO.def">
       <Filter>Source Files</Filter>
     </CustomBuild>

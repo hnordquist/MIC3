@@ -27,9 +27,6 @@
     <ClCompile Include="ComGrand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\CommonSource\CSO.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DirectSerialCSO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -45,7 +42,10 @@
     <ClCompile Include="..\CommonSource\VERSION.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp">
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\COMMONSOURCE\CSO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -72,12 +72,6 @@
     <ClInclude Include="ComGrand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\CommonSource\CSO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\CommonSource\CSO_definitions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DirectSerialCSO.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -96,7 +90,13 @@
     <ClInclude Include="..\CommonSource\VERSION.H">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h">
+    <ClInclude Include="..\COMMONSOURCE\CSO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\COMMONSOURCE\CSO_definitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -104,9 +104,6 @@
     <Image Include="res\icon1.ico">
       <Filter>Resource Files</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\Notes.txt" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="CoDirectSerialCSO.def">
