@@ -36,7 +36,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 */
 // version.cpp
  
-#include <stdafx.h>
+#include "stdafx.h"
 #include "Version.h"
 
 #ifdef _DEBUG

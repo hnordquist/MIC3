@@ -36,7 +36,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 */
 //ccbutton.cpp
 
-#include <stdafx.h> // changed "" to <> gjk
+#include "stdafx.h" // changed "" to <> gjk
 #include "ccbutton.h"
 #include "ccbutton_messages.h"
 #include "ini_definitions.h"

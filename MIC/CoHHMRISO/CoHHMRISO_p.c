@@ -3,11 +3,11 @@
 /* this ALWAYS GENERATED file contains the proxy stub code */
 
 
- /* File created by MIDL compiler version 8.01.0622 */
-/* at Mon Jan 18 20:14:07 2038
+ /* File created by MIDL compiler version 8.00.0603 */
+/* at Tue Mar 12 15:28:41 2019
  */
 /* Compiler settings for CoHHMRISO.idl:
-    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.01.0622 
+    Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 8.00.0603 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
     VC __declspec() decoration level: 
@@ -19,6 +19,7 @@
 #if !defined(_M_IA64) && !defined(_M_AMD64) && !defined(_ARM_)
 
 
+#pragma warning( disable: 4049 )  /* more than 64k source lines */
 #if _MSC_VER >= 1200
 #pragma warning(push)
 #endif
@@ -1551,7 +1552,7 @@ static const MIDL_STUB_DESC Object_StubDesc =
     1, /* -error bounds_check flag */
     0x60001, /* Ndr library version */
     0,
-    0x801026e, /* MIDL Version 8.1.622 */
+    0x800025b, /* MIDL Version 8.0.603 */
     0,
     UserMarshalRoutines,
     0,  /* notify & notify_flag routine table */
