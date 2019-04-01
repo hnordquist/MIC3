@@ -256,7 +256,6 @@
     <ClCompile Include="..\CommonSource\ListCtrlStyled.cpp" />
     <ClCompile Include="..\CommonSource\ORTECSpectrum.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\TPropertySheet.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
     <ClCompile Include="CoDSPECISO.cpp" />
@@ -278,6 +277,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="TimedMessageDialog.cpp" />
     <ClCompile Include="XYCtrl.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -318,7 +318,6 @@
     <ClInclude Include="..\CommonSource\JulianT.h" />
     <ClInclude Include="..\CommonSource\ListCtrlStyled.h" />
     <ClInclude Include="..\CommonSource\ORTECSpectrum.h" />
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\TPropertySheet.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
     <ClInclude Include="DSPECDataStat.h" />
@@ -335,6 +334,7 @@
     <ClInclude Include="DSPECSummary.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TimedMessageDialog.h" />
     <ClInclude Include="XYCtrl.h" />
   </ItemGroup>
   <ItemGroup>

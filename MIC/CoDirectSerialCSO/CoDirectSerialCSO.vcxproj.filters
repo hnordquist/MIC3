@@ -42,10 +42,10 @@
     <ClCompile Include="..\CommonSource\VERSION.CPP">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp">
+    <ClCompile Include="..\COMMONSOURCE\CSO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\COMMONSOURCE\CSO.cpp">
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -112,5 +112,8 @@
     <CustomBuild Include="DirectSerialCSO.rgs">
       <Filter>Resource Files</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Notes.txt" />
   </ItemGroup>
 </Project>

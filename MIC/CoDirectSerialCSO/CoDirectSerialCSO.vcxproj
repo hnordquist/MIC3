@@ -259,6 +259,7 @@
       <AdditionalIncludeDirectories>../CommonSource;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader>Create</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>.\ReleaseXP\CoDirectSerialCSO.pch</PrecompiledHeaderOutputFile>
+      <AdditionalUsingDirectories>../MicMgr</AdditionalUsingDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -266,8 +267,8 @@
     <ClCompile Include="..\CommonSource\COM_Utilities.cpp" />
     <ClCompile Include="..\CommonSource\CSO.cpp" />
     <ClCompile Include="..\CommonSource\RegisterByCategory.cpp" />
-    <ClCompile Include="..\COMMONSOURCE\TimedMessageDialog.cpp" />
     <ClCompile Include="..\CommonSource\VERSION.CPP" />
+    <ClCompile Include="..\MicMgr\TimedMessageDialog.cpp" />
     <ClCompile Include="CoDirectSerialCSO.cpp" />
     <ClCompile Include="ComGrand.cpp" />
     <ClCompile Include="DirectSerialCSO.cpp" />
@@ -315,8 +316,8 @@
     <ClInclude Include="..\CommonSource\CSO.h" />
     <ClInclude Include="..\CommonSource\CSO_definitions.h" />
     <ClInclude Include="..\CommonSource\RegisterByCategory.h" />
-    <ClInclude Include="..\COMMONSOURCE\TimedMessageDialog.h" />
     <ClInclude Include="..\CommonSource\VERSION.H" />
+    <ClInclude Include="..\MicMgr\TimedMessageDialog.h" />
     <ClInclude Include="ComGrand.h" />
     <ClInclude Include="DirectSerialCSO.h" />
     <ClInclude Include="NewSerialComm.h" />

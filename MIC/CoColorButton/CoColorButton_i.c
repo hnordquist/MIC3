@@ -6,7 +6,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Tue Mar 12 15:33:59 2019
+/* at Mon Apr 01 10:42:37 2019
  */
 /* Compiler settings for CoColorButton.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 
